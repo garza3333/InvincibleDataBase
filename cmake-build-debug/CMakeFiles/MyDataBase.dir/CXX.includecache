@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.cpp
+DataBase.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h
+Image.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h
+../Structures2/LinkedList.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h
+string
+-
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.cpp
+LinkedList.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
+iostream
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/iostream
+Node.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.h
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.h
+
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/main.cpp
+iostream
+-
+Structures2/LinkedList.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
+

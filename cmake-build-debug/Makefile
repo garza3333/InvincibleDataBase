@@ -122,6 +122,195 @@ MyDataBase/fast:
 	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/build
 .PHONY : MyDataBase/fast
 
+Objects/DataBase.obj: Objects/DataBase.cpp.obj
+
+.PHONY : Objects/DataBase.obj
+
+# target to build an object file
+Objects/DataBase.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.obj
+.PHONY : Objects/DataBase.cpp.obj
+
+Objects/DataBase.i: Objects/DataBase.cpp.i
+
+.PHONY : Objects/DataBase.i
+
+# target to preprocess a source file
+Objects/DataBase.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.i
+.PHONY : Objects/DataBase.cpp.i
+
+Objects/DataBase.s: Objects/DataBase.cpp.s
+
+.PHONY : Objects/DataBase.s
+
+# target to generate assembly for a file
+Objects/DataBase.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.s
+.PHONY : Objects/DataBase.cpp.s
+
+Objects/Image.obj: Objects/Image.cpp.obj
+
+.PHONY : Objects/Image.obj
+
+# target to build an object file
+Objects/Image.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/Image.cpp.obj
+.PHONY : Objects/Image.cpp.obj
+
+Objects/Image.i: Objects/Image.cpp.i
+
+.PHONY : Objects/Image.i
+
+# target to preprocess a source file
+Objects/Image.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/Image.cpp.i
+.PHONY : Objects/Image.cpp.i
+
+Objects/Image.s: Objects/Image.cpp.s
+
+.PHONY : Objects/Image.s
+
+# target to generate assembly for a file
+Objects/Image.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/Image.cpp.s
+.PHONY : Objects/Image.cpp.s
+
+Objects/JManager.obj: Objects/JManager.cpp.obj
+
+.PHONY : Objects/JManager.obj
+
+# target to build an object file
+Objects/JManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.obj
+.PHONY : Objects/JManager.cpp.obj
+
+Objects/JManager.i: Objects/JManager.cpp.i
+
+.PHONY : Objects/JManager.i
+
+# target to preprocess a source file
+Objects/JManager.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.i
+.PHONY : Objects/JManager.cpp.i
+
+Objects/JManager.s: Objects/JManager.cpp.s
+
+.PHONY : Objects/JManager.s
+
+# target to generate assembly for a file
+Objects/JManager.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s
+.PHONY : Objects/JManager.cpp.s
+
+Structures/AVLTree.obj: Structures/AVLTree.cpp.obj
+
+.PHONY : Structures/AVLTree.obj
+
+# target to build an object file
+Structures/AVLTree.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.obj
+.PHONY : Structures/AVLTree.cpp.obj
+
+Structures/AVLTree.i: Structures/AVLTree.cpp.i
+
+.PHONY : Structures/AVLTree.i
+
+# target to preprocess a source file
+Structures/AVLTree.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.i
+.PHONY : Structures/AVLTree.cpp.i
+
+Structures/AVLTree.s: Structures/AVLTree.cpp.s
+
+.PHONY : Structures/AVLTree.s
+
+# target to generate assembly for a file
+Structures/AVLTree.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.s
+.PHONY : Structures/AVLTree.cpp.s
+
+Structures/Node.obj: Structures/Node.cpp.obj
+
+.PHONY : Structures/Node.obj
+
+# target to build an object file
+Structures/Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.obj
+.PHONY : Structures/Node.cpp.obj
+
+Structures/Node.i: Structures/Node.cpp.i
+
+.PHONY : Structures/Node.i
+
+# target to preprocess a source file
+Structures/Node.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
+.PHONY : Structures/Node.cpp.i
+
+Structures/Node.s: Structures/Node.cpp.s
+
+.PHONY : Structures/Node.s
+
+# target to generate assembly for a file
+Structures/Node.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
+.PHONY : Structures/Node.cpp.s
+
+Structures2/LinkedList.obj: Structures2/LinkedList.cpp.obj
+
+.PHONY : Structures2/LinkedList.obj
+
+# target to build an object file
+Structures2/LinkedList.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.obj
+.PHONY : Structures2/LinkedList.cpp.obj
+
+Structures2/LinkedList.i: Structures2/LinkedList.cpp.i
+
+.PHONY : Structures2/LinkedList.i
+
+# target to preprocess a source file
+Structures2/LinkedList.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.i
+.PHONY : Structures2/LinkedList.cpp.i
+
+Structures2/LinkedList.s: Structures2/LinkedList.cpp.s
+
+.PHONY : Structures2/LinkedList.s
+
+# target to generate assembly for a file
+Structures2/LinkedList.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.s
+.PHONY : Structures2/LinkedList.cpp.s
+
+Structures2/Node.obj: Structures2/Node.cpp.obj
+
+.PHONY : Structures2/Node.obj
+
+# target to build an object file
+Structures2/Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.obj
+.PHONY : Structures2/Node.cpp.obj
+
+Structures2/Node.i: Structures2/Node.cpp.i
+
+.PHONY : Structures2/Node.i
+
+# target to preprocess a source file
+Structures2/Node.cpp.i:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.i
+.PHONY : Structures2/Node.cpp.i
+
+Structures2/Node.s: Structures2/Node.cpp.s
+
+.PHONY : Structures2/Node.s
+
+# target to generate assembly for a file
+Structures2/Node.cpp.s:
+	$(MAKE) -f CMakeFiles\MyDataBase.dir\build.make CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.s
+.PHONY : Structures2/Node.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +347,27 @@ help:
 	@echo ... MyDataBase
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Objects/DataBase.obj
+	@echo ... Objects/DataBase.i
+	@echo ... Objects/DataBase.s
+	@echo ... Objects/Image.obj
+	@echo ... Objects/Image.i
+	@echo ... Objects/Image.s
+	@echo ... Objects/JManager.obj
+	@echo ... Objects/JManager.i
+	@echo ... Objects/JManager.s
+	@echo ... Structures/AVLTree.obj
+	@echo ... Structures/AVLTree.i
+	@echo ... Structures/AVLTree.s
+	@echo ... Structures/Node.obj
+	@echo ... Structures/Node.i
+	@echo ... Structures/Node.s
+	@echo ... Structures2/LinkedList.obj
+	@echo ... Structures2/LinkedList.i
+	@echo ... Structures2/LinkedList.s
+	@echo ... Structures2/Node.obj
+	@echo ... Structures2/Node.i
+	@echo ... Structures2/Node.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

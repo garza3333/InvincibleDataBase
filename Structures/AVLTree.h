@@ -6,22 +6,41 @@
 #define MYDATABASE_AVLTREE_H
 
 #include<iostream>
+#include "Node.h"
 using namespace std;
-
+template <class T>
 class AVLTree {
 
+private:
+    Node<T> * root;
 
-    struct node
+public:
+
+    AVLTree()
     {
-        int data;
-        node* left;
-        node* right;
-        int height;
-    };
+        root = NULL;
+    }
 
-    node* root;
+    void insert(int x)
+    {
+        root = insert(x, this->getRoot());
+    }
 
-    void makeEmpty(node* t)
+    void remove(int x)
+    {
+        root = remove(x, this->getRoot());
+    }
+
+    void display()
+    {
+        inorder(root);
+        cout << endl;
+    }
+    Node<T> * getRoot(){
+        return this->root;
+    }
+
+    void makeEmpty(Node<T> * t)
     {
         if(t == NULL)
             return;
@@ -30,75 +49,71 @@ class AVLTree {
         delete t;
     }
 
-    node* insert(int x, node* t)
+    Node<T> * insert(T x, Node<T> * t)
     {
         if(t == NULL)
         {
-            t = new node;
-            t->data = x;
-            t->height = 0;
-            t->left = t->right = NULL;
+            t = new Node<T>(x);
         }
-        else if(x < t->data)
+        else if(x < t->getValue())
         {
-            t->left = insert(x, t->left);
-            if(height(t->left) - height(t->right) == 2)
+            t->setLeft(insert(x,t->getLeft()));
+            if(height(t->getLeft()) - height(t->getRight()) == 2)
             {
-                if(x < t->left->data)
+                if(x < t->getLeft()->getValue())
                     t = singleRightRotate(t);
                 else
                     t = doubleRightRotate(t);
             }
         }
-        else if(x > t->data)
+        else if(x > t->getValue())
         {
-            t->right = insert(x, t->right);
-            if(height(t->right) - height(t->left) == 2)
+            t->setRight(insert(x,t->getRight()));
+            if(height(t->getRight()) - height(t->getLeft()) == 2)
             {
-                if(x > t->right->data)
+                if(x > t->getRight()->getValue())
                     t = singleLeftRotate(t);
                 else
                     t = doubleLeftRotate(t);
             }
         }
-
-        t->height = max(height(t->left), height(t->right))+1;
+        t->setHeight(max(height(t->getLeft()),height(t->getRight())) +1);
         return t;
     }
 
-    node* singleRightRotate(node* &t)
+    Node<T> * singleRightRotate(Node<T>* &t)
     {
-        node* u = t->left;
-        t->left = u->right;
-        u->right = t;
-        t->height = max(height(t->left), height(t->right))+1;
-        u->height = max(height(u->left), t->height)+1;
+        Node<T>* u = t->getLeft();
+        t->setLeft(u->getRight());
+        u->setRight(t);
+        t->setHeight(max(height(t->getLeft()), height(t->getRight()))+1);
+        u->setHeight(max(height(u->getLeft()), t->getHeight())+1);
         return u;
     }
 
-    node* singleLeftRotate(node* &t)
+    Node<T>* singleLeftRotate(Node<T>* &t)
     {
-        node* u = t->right;
-        t->right = u->left;
-        u->left = t;
-        t->height = max(height(t->left), height(t->right))+1;
-        u->height = max(height(t->right), t->height)+1 ;
+        Node<T>* u = t->getRight();
+        t->setRight(u->getLeft());
+        u->setLeft(t);
+        t->setHeight(max(height(t->getLeft()), height(t->getRight()))+1);
+        u->setHeight(max(height(t->getRight()), t->getHeight())+1);
         return u;
     }
 
-    node* doubleLeftRotate(node* &t)
+    Node<T>* doubleLeftRotate(Node<T>* &t)
     {
-        t->right = singleRightRotate(t->right);
+        t->setRight(singleRightRotate(t->getRight()));
         return singleLeftRotate(t);
     }
 
-    node* doubleRightRotate(node* &t)
+    Node<T>* doubleRightRotate(Node<T>* &t)
     {
-        t->left = singleLeftRotate(t->left);
+        t->setLeft(singleLeftRotate(t->getLeft()));
         return singleRightRotate(t);
     }
 
-    node* findMin(node* t)
+    Node<T> * findMin(Node<T> * t)
     {
         if(t == NULL)
             return NULL;
@@ -108,7 +123,7 @@ class AVLTree {
             return findMin(t->left);
     }
 
-    node* findMax(node* t)
+    Node<T> * findMax(Node<T> * t)
     {
         if(t == NULL)
             return NULL;
@@ -118,18 +133,18 @@ class AVLTree {
             return findMax(t->right);
     }
 
-    node* remove(int x, node* t)
+    Node<T>* remove(int x, Node<T>* t)
     {
-        node* temp;
+        Node<T>* temp;
 
         // Element not found
         if(t == NULL)
             return NULL;
 
             // Searching for element
-        else if(x < t->data)
+        else if(x < t->getValue())
             t->left = remove(x, t->left);
-        else if(x > t->data)
+        else if(x > t->getValue())
             t->right = remove(x, t->right);
 
             // Element found
@@ -179,20 +194,20 @@ class AVLTree {
         return t;
     }
 
-    int height(node* t)
+    int height(Node<T> * t)
     {
         return (t == NULL ? -1 : t->height);
     }
 
-    int getBalance(node* t)
+    int getBalance(Node<T> * t)
     {
         if(t == NULL)
             return 0;
         else
-            return height(t->left) - height(t->right);
+            return height(t->getLeft()) - height(t->getRight());
     }
 
-    void inorder(node* t)
+    void inorder(Node<T> * t)
     {
         if(t == NULL)
             return;
@@ -201,28 +216,7 @@ class AVLTree {
         inorder(t->right);
     }
 
-public:
 
-    AVLTree()
-    {
-        root = NULL;
-    }
-
-    void insert(int x)
-    {
-        root = insert(x, root);
-    }
-
-    void remove(int x)
-    {
-        root = remove(x, root);
-    }
-
-    void display()
-    {
-        inorder(root);
-        cout << endl;
-    }
 
 };
 

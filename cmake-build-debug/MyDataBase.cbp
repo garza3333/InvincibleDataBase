@@ -80,6 +80,48 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/JManager.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/JManager.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/AVLTree.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/AVLTree.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/Node.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/Node.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.h">
+			<Option target="MyDataBase"/>
+		</Unit>
 		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/main.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
