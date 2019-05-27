@@ -27,6 +27,8 @@ CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.obj: ../Structures2/Node.h
 CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.obj: ../Structures2/Node.cpp
 CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.obj: ../Structures2/Node.h
 
+CMakeFiles/MyDataBase.dir/main.cpp.obj: ../Objects/DataBase.h
+CMakeFiles/MyDataBase.dir/main.cpp.obj: ../Objects/Image.h
 CMakeFiles/MyDataBase.dir/main.cpp.obj: ../Structures2/LinkedList.h
 CMakeFiles/MyDataBase.dir/main.cpp.obj: ../Structures2/Node.h
 CMakeFiles/MyDataBase.dir/main.cpp.obj: ../main.cpp

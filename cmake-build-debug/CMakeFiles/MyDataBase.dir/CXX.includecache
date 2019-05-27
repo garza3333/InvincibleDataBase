@@ -6,23 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.cpp
-DataBase.h
-C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h
-
 C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h
 Image.h
 C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h
 ../Structures2/LinkedList.h
 C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
-
-C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h
+iostream
+-
 string
 -
+string.h
+-
+vector
+-
 
-C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.cpp
-LinkedList.h
-C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h
+string.h
+-
+string
+-
 
 C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
 iostream
@@ -37,4 +39,6 @@ iostream
 -
 Structures2/LinkedList.h
 C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h
+Objects/DataBase.h
+C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h
 

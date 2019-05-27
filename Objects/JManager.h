@@ -11,8 +11,9 @@ class JManager {
 
 
 public:
-/*    ptree stringToPtree(string json);
-    string ptreeToString(ptree pt);*/
+    ptree stringToPtree(string json);
+    string ptreeToString(ptree pt);
+    void printJson(ptree json);
 };
 
 

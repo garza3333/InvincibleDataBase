@@ -43,3 +43,24 @@ int Image::getYear(){
 void Image::setYear(int y) {
     this->year = y;
 }
+
+Image::Image() {
+    this->name = "Default";
+    this->author = "NoneAuthor";
+    this->year = 0;
+    this->size = 0;
+    this->description = "nothing to describe";
+}
+
+Image::Image(string nam, string aut, int yea, int siz, string des) {
+
+    this->name = nam;
+    this->author = aut;
+    this->year = yea;
+    this->size = siz;
+    this->description = des;
+
+}
+
+
+

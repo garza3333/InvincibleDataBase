@@ -5,45 +5,48 @@
 #ifndef MYDATABASE_IMAGE_H
 #define MYDATABASE_IMAGE_H
 
+#include <string.h>
 #include <string>
-
+using namespace std;
 class Image {
 private:
     std::string name , author , description ;
     int size , year ;
 
 public:
+    Image();
+    Image(string nam , string aut , int yea , int siz , string des );
 
     /**
      *
      * @return name of this image
      */
-    std::string getName();
+    string getName();
     /**
      *
      * @param name assign the name of the image
      */
-    void setName(std::string name);
+    void setName(string name);
     /**
      *
      * @return author of this image
      */
-    std::string getAuthor();
+    string getAuthor();
     /**
      *
      * @param author assign the author of this image
      */
-    void setAuthor(std::string author);
+    void setAuthor(string author);
     /**
      *
      * @return description of this image
      */
-    std::string getDescription();
+    string getDescription();
     /**
      *
      * @param description  assign the description of this image
      */
-    void setDescription(std::string description);
+    void setDescription(string description);
     /**
      *
      * @return size of image

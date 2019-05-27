@@ -3,6 +3,7 @@
 //
 
 #include <sstream>
+#include <iostream>
 #include "JManager.h"
 
 
@@ -19,4 +20,9 @@ string JManager::ptreeToString(ptree pt) {
     std::ostringstream oss;
     write_json(oss, pt);
     return oss.str();
+}*/
+/*void JManager::printJson(ptree json) {
+    std::stringstream ss;
+    boost::property_tree::json_parser::write_json(ss, json);
+    std::cout << ss.str() << std::endl;
 }*/

@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Structures2/LinkedList.h"
+#include "Objects/DataBase.h"
 
 int main() {
-    auto * l = new LinkedList<int>();
+/*    auto * l = new LinkedList<int>();
     l->add(1);
     l->add(2);
     l->add(3);
@@ -16,7 +17,23 @@ int main() {
     l->see();
     if(l->in(2)){
         cout<<"true"<<endl;
-    }
+    }*/
+    DataBase db = DataBase();
+/*    vector<string> vec = db.split("name@author@year",'@');
+    for(int i = 0 ; i<vec.size() ; i++){
+        cout<<vec[i]<<endl;
+    }*/
+    cout<<endl;
+    db.insertImage("author@name@size@year","daniel@NuevaImagen@78@2019");
+    cout<<"insert: "<<"author@name@size@year"<<endl;
+    cout<<"values: "<<"daniel@NuevaImagen@78@2019"<<endl;
+    Image i = db.getMainList()->getHead()->getValue();
+    cout<<"name: "<<i.getName()<<endl;
+    cout<<"author: "<<i.getAuthor()<<endl;
+    cout<<"year: "<<i.getYear()<<endl;
+    cout<<"size: "<<i.getSize()<<endl;
+    cout<<"description: "<<i.getDescription()<<endl;
+
 
 /*    BST t;
     t.insert(20);
