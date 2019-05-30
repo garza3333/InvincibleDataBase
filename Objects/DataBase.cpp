@@ -5,6 +5,7 @@
 #include <sstream>
 #include "DataBase.h"
 
+
 DataBase::DataBase() {
     this->MainList = new LinkedList<Image>();
     this->jManager = new JManager();
@@ -46,15 +47,15 @@ void DataBase::insertImage(string atributes , string values) {
 }
 
 void DataBase::insertImage(string json) {
-/*    ptree ptImage = jManager->stringToPtree(json);
+    ptree ptImage = jManager->stringToPtree(json);
     string name = ptImage.get<string>("Name");
     string author = ptImage.get<string>("Author");
-    string year = ptImage.get<string>("Year");
-    string size = ptImage.get<string>("Size");
+    int year = stoi(ptImage.get<string>("Year"));
+    int size = stoi(ptImage.get<string>("Size"));
     string description = ptImage.get<string>("Description");
 
 
-    MainList->add(Image(name,author,year,size,description));*/
+    MainList->add(Image(name,author,year,size,description));
 
 }
 

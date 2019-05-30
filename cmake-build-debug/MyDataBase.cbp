@@ -8,124 +8,128 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug"/>
+				<Option working_dir="/home/garza/Desktop/MydataBase/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="MyDataBase">
-				<Option output="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/MyDataBase.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 MyDataBase"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="MyDataBase/fast">
-				<Option output="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/MyDataBase.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 MyDataBase/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug"/>
+				<Option working_dir="/home/garza/Desktop/MydataBase/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MyDataBase">
+				<Option output="/home/garza/Desktop/MydataBase/cmake-build-debug/MyDataBase" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/garza/Desktop/MydataBase/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 MyDataBase"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MyDataBase/fast">
+				<Option output="/home/garza/Desktop/MydataBase/cmake-build-debug/MyDataBase" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/garza/Desktop/MydataBase/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 MyDataBase/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/garza/Desktop/MydataBase/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/garza/Desktop/MydataBase/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Objects/DataBase.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Objects/DataBase.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Objects/Image.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Objects/Image.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/JManager.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Objects/JManager.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/JManager.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Objects/JManager.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/AVLTree.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/AVLTree.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/AVLTree.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/AVLTree.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/Node.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/Node.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/LinkedList.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/Node.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/Node.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/main.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/main.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/CMakeLists.txt">
+		<Unit filename="/home/garza/Desktop/MydataBase/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

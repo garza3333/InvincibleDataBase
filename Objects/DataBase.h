@@ -14,8 +14,12 @@
 #include <string.h>
 #include <vector>
 #include <algorithm>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
-using namespace std;
+
+using boost::property_tree::ptree;
+using  namespace std;
 class DataBase {
 
 

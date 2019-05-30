@@ -6,14 +6,20 @@
 #define MYDATABASE_JMANAGER_H
 
 
-using namespace std;
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
+
+
+using boost::property_tree::ptree;
+using  namespace std;
+
 class JManager {
 
 
 public:
     ptree stringToPtree(string json);
     string ptreeToString(ptree pt);
-    void printJson(ptree json);
+    void printJson(ptree const& pt);
 };
 
 

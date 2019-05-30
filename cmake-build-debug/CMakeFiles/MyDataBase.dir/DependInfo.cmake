@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/DataBase.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/Image.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/Image.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Objects/JManager.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/AVLTree.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures/Node.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/Node.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/LinkedList.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/Structures2/Node.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.obj"
-  "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/main.cpp" "C:/Users/Toshiba/Desktop/MyProyectDB/MyDataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.obj"
+  "/home/garza/Desktop/MydataBase/Objects/DataBase.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o"
+  "/home/garza/Desktop/MydataBase/Objects/Image.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o"
+  "/home/garza/Desktop/MydataBase/Objects/JManager.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o"
+  "/home/garza/Desktop/MydataBase/Structures/AVLTree.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o"
+  "/home/garza/Desktop/MydataBase/Structures/Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
+  "/home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o"
+  "/home/garza/Desktop/MydataBase/Structures2/Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o"
+  "/home/garza/Desktop/MydataBase/main.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
