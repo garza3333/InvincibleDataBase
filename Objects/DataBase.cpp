@@ -2,60 +2,80 @@
 // Created by Daniel on 26/05/2019.
 //
 
-#include <sstream>
+
 #include "DataBase.h"
 
 
 DataBase::DataBase() {
-    this->MainList = new LinkedList<Image>();
+
+    this->MainList = new LinkedList<LinkedList<Image>>();
     this->jManager = new JManager();
 
 }
 
-LinkedList<Image> *DataBase::getMainList() {
+LinkedList<LinkedList<Image>> *DataBase::getMainList() {
     return this->MainList;
 }
 
+bool DataBase::addGalery(string nameGalery) {
 
-void DataBase::insertImage(string name, string aut, int age, int size, string description) {
-    MainList->add(Image(name, aut , age , size ,description));
+    if(MainList->add(LinkedList<Image>(nameGalery))){
+        return true;
+    }else{
+        return false;
+    }
+
 }
 
-void DataBase::insertImage(string atributes , string values) {
-    vector<string> atributVector = this->split(atributes,'@');
-    vector<string> valueVector = this->split(values,'@');
+bool DataBase::insertImage(string json) {
+    if(!MainList->isEmpty()) {
 
-    string name = "default",author = "none",description = "nothing to describe";
-    int year = 0,size = 0;
+        ptree ptImage = jManager->stringToPtree(json);
+        string galery = ptImage.get<string>("FROM");
+        MainList->setTemp(MainList->getHead());
 
-    for(int i = 0 ; i<atributVector.size() ; i++){
-        string at = atributVector[i];
-        if(at.compare("name") == 0){
-            name = valueVector[i];
-        }else if(at.compare("author") == 0){
-            author = valueVector[i];
-        }else if(at.compare("year") == 0){
-            year = stoi(valueVector[i]);
-        }else if(at.compare("size") == 0){
-            size = stoi(valueVector[i]);
-        }else if(at.compare("description") == 0){
-            description = valueVector[i];
+        while (MainList->getTemp() != NULL && MainList->getTemp()->getValue().getID() != galery) {
+
+            MainList->setTemp(MainList->getTemp()->getNext());
+
         }
 
+        if(MainList->getTemp() == NULL){
+            cout<<"No se encontró la galeria, no se añadió imagen";
+            return false;
+        }else{
+
+            string name = "default", author = "none", description = "nothing to describe";
+            int year = 0, size = 0;
+
+            vector<string> atributVector = split(ptImage.get<string>("ATRIBUTES"), ',');
+            for (int i = 0; i < atributVector.size(); i++) {
+                string at = atributVector[i];
+                if (at.compare("name") == 0) {
+                    name = ptImage.get<string>("name");
+                } else if (at.compare("author") == 0) {
+                    author = ptImage.get<string>("author");
+                } else if (at.compare("year") == 0) {
+                    year = stoi(ptImage.get<string>("year"));
+                } else if (at.compare("size") == 0) {
+                    size = stoi(ptImage.get<string>("size"));
+                } else if (at.compare("description") == 0) {
+                    description = ptImage.get<string>("description");
+                }
+
+            }
+
+
+            MainList->getTemp()->getValue().add(Image(name, author, year, size, description));
+            cout<<"the image has been added!"<<endl;
+            return true;
+        }
+
+    }else{
+        cout<<"the list is empty! "<<endl;
+        return false;
     }
-    MainList->add(Image(name,author,year,size,description));
-}
 
-void DataBase::insertImage(string json) {
-    ptree ptImage = jManager->stringToPtree(json);
-    string name = ptImage.get<string>("Name");
-    string author = ptImage.get<string>("Author");
-    int year = stoi(ptImage.get<string>("Year"));
-    int size = stoi(ptImage.get<string>("Size"));
-    string description = ptImage.get<string>("Description");
-
-
-    MainList->add(Image(name,author,year,size,description));
 
 }
 
@@ -69,7 +89,7 @@ vector<string> DataBase::split(string word, char delim) {
 
 }
 
-ptree DataBase::findAll(string atributes, string values) {
+/*ptree DataBase::findAll(string atributes, string values) {
     vector<string> atributVector = this->split(atributes,'@');
     vector<string> valueVector = this->split(values,'@');
     Node<Image> * temp = MainList->getHead();
@@ -106,7 +126,7 @@ ptree DataBase::findAll(string atributes, string values) {
     return pt;
 
 
-}
+}*/
 
 
 

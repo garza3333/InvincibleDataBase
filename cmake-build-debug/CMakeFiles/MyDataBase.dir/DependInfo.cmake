@@ -11,16 +11,22 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/garza/Desktop/MydataBase/Structures/Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
   "/home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o"
   "/home/garza/Desktop/MydataBase/Structures2/Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o"
+  "/home/garza/Desktop/MydataBase/Tests/test.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
   "/home/garza/Desktop/MydataBase/main.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../lib/googletest-master/googlemock/include"
+  "../lib/googletest-master/googletest/include"
+  "../lib/googletest-master/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/garza/Desktop/MydataBase/cmake-build-debug/lib/googletest-master/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/garza/Desktop/MydataBase/cmake-build-debug/lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

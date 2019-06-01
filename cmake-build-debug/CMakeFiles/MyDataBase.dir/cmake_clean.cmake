@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o"
   "CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o"
   "CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o"
+  "CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
   "MyDataBase.pdb"
   "MyDataBase"
 )

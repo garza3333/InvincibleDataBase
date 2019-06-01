@@ -18,6 +18,7 @@ private:
     Node<T>* head;
     Node<T> * curr;
     Node<T> * temp;
+    string id;
 public:
     /**
      * Builder of the class
@@ -27,6 +28,15 @@ public:
          this->head = NULL;
          this->curr = NULL;
          this->temp = NULL;
+         this->id = "no name";
+    }
+
+    LinkedList(string nameGalery){
+        this->size = 0;
+        this->head = NULL;
+        this->curr = NULL;
+        this->temp = NULL;
+        this->id = nameGalery;
     }
 
     /**
@@ -78,10 +88,11 @@ public:
      * Add a value to the end of the list
      * @param v new element
      */
-    void add(T v){
+    bool add(T v){
 
         if (isEmpty()) {
             this->head = new Node<T>(v);
+
         } else {
             this->curr = this->getHead();
             while (curr->getNext() != 0) {
@@ -91,6 +102,7 @@ public:
             curr->setNext(n);
         }
         size++;
+        return true;
     }
     /**
      * Add a element in the begin of the list
@@ -124,6 +136,7 @@ public:
                 head = head->getNext();
                 delPtr->setNext(NULL);
                 delete delPtr;
+                this->size--;
                 return true;
             }
             while(curr != NULL && curr->getValue() != n){
@@ -140,6 +153,7 @@ public:
                 curr->setNext(NULL);
                 delPtr = curr;
                 delete delPtr;
+                this->size--;
                 return true;
             }
         }
@@ -176,6 +190,15 @@ public:
             cout<<"[]"<<endl;
         }
     }
+
+    string setID(string n){
+        this->id = n;
+    }
+
+    string getID(){
+        return this->id;
+    }
+
 
 
 
