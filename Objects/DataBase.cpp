@@ -8,22 +8,18 @@
 
 DataBase::DataBase() {
 
-    this->MainList = new LinkedList<LinkedList<Image>>();
+    this->MainList = new LinkedList<LinkedList<Image>*>();
     this->jManager = new JManager();
 
 }
 
-LinkedList<LinkedList<Image>> *DataBase::getMainList() {
+LinkedList<LinkedList<Image>*> *DataBase::getMainList() {
     return this->MainList;
 }
 
 bool DataBase::addGalery(string nameGalery) {
-
-    if(MainList->add(LinkedList<Image>(nameGalery))){
-        return true;
-    }else{
-        return false;
-    }
+    LinkedList<Image> * newGalery =  new LinkedList<Image>(nameGalery);
+    return MainList->add(newGalery);
 
 }
 
@@ -34,18 +30,18 @@ bool DataBase::insertImage(string json) {
         string galery = ptImage.get<string>("FROM");
         MainList->setTemp(MainList->getHead());
 
-        while (MainList->getTemp() != NULL && MainList->getTemp()->getValue().getID() != galery) {
+        while (MainList->getTemp() != NULL && MainList->getTemp()->getValue()->getID() != galery) {
 
             MainList->setTemp(MainList->getTemp()->getNext());
 
         }
 
         if(MainList->getTemp() == NULL){
-            cout<<"No se encontró la galeria, no se añadió imagen";
+            cout<<"Gallery not found , image not added ";
             return false;
         }else{
 
-            string name = "default", author = "none", description = "nothing to describe";
+            string name = "NULL", author = "NULL", description = "NULL";
             int year = 0, size = 0;
 
             vector<string> atributVector = split(ptImage.get<string>("ATRIBUTES"), ',');
@@ -65,14 +61,15 @@ bool DataBase::insertImage(string json) {
 
             }
 
+            Image newImage = Image(name, author, year, size, description);
 
-            MainList->getTemp()->getValue().add(Image(name, author, year, size, description));
-            cout<<"the image has been added!"<<endl;
+            MainList->getTemp()->getValue()->add(newImage);
+            cout<<"The image has been added!"<<endl;
             return true;
         }
 
     }else{
-        cout<<"the list is empty! "<<endl;
+        cout<<"The list is empty! "<<endl;
         return false;
     }
 
@@ -80,6 +77,7 @@ bool DataBase::insertImage(string json) {
 }
 
 vector<string> DataBase::split(string word, char delim) {
+
     vector<string> vec;
         std::stringstream ss(word);
         std::string token;
@@ -89,44 +87,63 @@ vector<string> DataBase::split(string word, char delim) {
 
 }
 
-/*ptree DataBase::findAll(string atributes, string values) {
-    vector<string> atributVector = this->split(atributes,'@');
-    vector<string> valueVector = this->split(values,'@');
-    Node<Image> * temp = MainList->getHead();
-    ptree pt;
-    int cont = 0;
-    while(temp != NULL){
+ptree DataBase::selectImage(string json) {
+    ptree ptImage = jManager->stringToPtree(json);
+    string from = ptImage.get<string>("FROM");
 
-        if(std::find(valueVector.begin(), valueVector.end(), temp->getValue().getName()) != valueVector.end()
-        || std::find(valueVector.begin(), valueVector.end(), temp->getValue().getAuthor()) != valueVector.end()
-        || std::find(valueVector.begin(), valueVector.end(), temp->getValue().getAuthor()) != valueVector.end()
-        || std::find(valueVector.begin(), valueVector.end(), temp->getValue().getYear()) != valueVector.end()
-        || std::find(valueVector.begin(), valueVector.end(), temp->getValue().getSize()) != valueVector.end()
-        || std::find(valueVector.begin(), valueVector.end(), temp->getValue().getDescription()) != valueVector.end()) {
-            ptree image;
-            if(std::find(atributVector.begin(), atributVector.end(), "Name") != atributVector.end()){
-                image.put("name",temp->getValue().getName());
-            }else if(std::find(atributVector.begin(), atributVector.end(), "Author") != atributVector.end()){
-                image.put("author",temp->getValue().getAuthor());
-            }else if(std::find(atributVector.begin(), atributVector.end(), "Year") != atributVector.end()){
-                image.put("year",temp->getValue().getYear());
-            }else if(std::find(atributVector.begin(), atributVector.end(), "Size") != atributVector.end()){
-                image.put("size",temp->getValue().getSize());
-            }else if(std::find(atributVector.begin(), atributVector.end(), "Description") != atributVector.end()){
-                image.put("description",temp->getValue().getDescription());
+    MainList->setTemp(MainList->getHead());
+
+    while(MainList->getTemp() != NULL && MainList->getTemp()->getValue()->getID() != from){
+        MainList->setTemp(MainList->getTemp()->getNext());
+    }
+    if(MainList->getTemp() == NULL){
+        cout<<"No se encontró una galeria con el nombre <<"<<from<<">>";
+
+    }else{
+        ptree imagesJson;
+        MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+        //vector<string> valuesVEC = this->split(ptImage.get<string>("WHERE"),',');
+        vector<string> atributesVEC = this->split(ptImage.get<string>("SELECT"),',');
+        int cont = 0;
+        while(MainList->getTemp()->getValue()->getTemp() != NULL){
+
+            //TODO : preguntarle a david si con formato name,author o name:name author:author
+            if(ptImage.get<string>("name") == MainList->getTemp()->getValue()->getTemp()->getValue().getName()
+            || ptImage.get<string>("author") == MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor()
+            || stoi(ptImage.get<string>("year")) == MainList->getTemp()->getValue()->getTemp()->getValue().getYear()
+            || stoi(ptImage.get<string>("size")) == MainList->getTemp()->getValue()->getTemp()->getValue().getSize()
+            || ptImage.get<string>("description") == MainList->getTemp()->getValue()->getTemp()->getValue().getDescription()){
+
+                imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(this->fillPtreeImage(MainList->getTemp()->getValue()->getTemp(),atributesVEC)));
+                cont++;
             }
-            pt.put("Image"+to_string(cont),jManager->ptreeToString(image));
-            cont++;
+            MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
+
+        }
+        return imagesJson;
+    }
+}
+
+ptree DataBase::fillPtreeImage(Node<Image> *image, vector<string> vec) {
+
+    ptree ptim;
+    for (int i = 0; i < vec.size(); i++) {
+        string at = vec[i];
+        if (at.compare("name") == 0) {
+            ptim.put("name",image->getValue().getName());
+        } else if (at.compare("author") == 0) {
+            ptim.put("author",image->getValue().getAuthor());
+        } else if (at.compare("year") == 0) {
+            ptim.put("year",image->getValue().getYear());
+        } else if (at.compare("size") == 0) {
+            ptim.put("size",image->getValue().getSize());
+        } else if (at.compare("description") == 0) {
+            ptim.put("description",image->getValue().getDescription());
         }
 
-
-        temp = temp->getNext();
     }
-    jManager->printJson(pt);
-    return pt;
 
-
-}*/
-
+    return ptim;
+}
 
 

@@ -510,10 +510,6 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/garza/Desktop/MydataBase/Objects/DataBase.cpp
-DataBase.h
-/home/garza/Desktop/MydataBase/Objects/DataBase.h
-
 /home/garza/Desktop/MydataBase/Objects/DataBase.h
 Image.h
 /home/garza/Desktop/MydataBase/Objects/Image.h
@@ -548,10 +544,6 @@ boost/property_tree/ptree.hpp
 boost/property_tree/json_parser.hpp
 -
 
-/home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp
-LinkedList.h
-/home/garza/Desktop/MydataBase/Structures2/LinkedList.h
-
 /home/garza/Desktop/MydataBase/Structures2/LinkedList.h
 iostream
 /home/garza/Desktop/MydataBase/Structures2/iostream
@@ -559,16 +551,6 @@ Node.h
 /home/garza/Desktop/MydataBase/Structures2/Node.h
 
 /home/garza/Desktop/MydataBase/Structures2/Node.h
-
-/home/garza/Desktop/MydataBase/Tests/test.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-../Structures2/LinkedList.h
-/home/garza/Desktop/MydataBase/Structures2/LinkedList.h
-../Objects/DataBase.h
-/home/garza/Desktop/MydataBase/Objects/DataBase.h
 
 /home/garza/Desktop/MydataBase/main.cpp
 iostream

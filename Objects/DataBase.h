@@ -24,7 +24,7 @@ class DataBase {
 
 
 private:
-    LinkedList<LinkedList<Image>> * MainList;
+    LinkedList<LinkedList<Image>*> * MainList;
     JManager * jManager;
 
 public:
@@ -32,9 +32,11 @@ public:
      * Builder of the class
      */
     DataBase();
-    LinkedList<LinkedList<Image>> * getMainList();
+    LinkedList<LinkedList<Image>*> * getMainList();
     bool addGalery(string nameGalery);
     bool insertImage(string json);
+    ptree selectImage(string json);
+    ptree fillPtreeImage(Node<Image> * image, vector<string> atributeVEC);
     //ptree findAll(string atributes , string values );
 
     vector<string> split(string word , char delim);
