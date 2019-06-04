@@ -302,32 +302,32 @@ Objects/JManager.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s
 .PHONY : Objects/JManager.cpp.s
 
-Structures/AVLTree.o: Structures/AVLTree.cpp.o
+Structures/LinkedList.o: Structures/LinkedList.cpp.o
 
-.PHONY : Structures/AVLTree.o
+.PHONY : Structures/LinkedList.o
 
 # target to build an object file
-Structures/AVLTree.cpp.o:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o
-.PHONY : Structures/AVLTree.cpp.o
+Structures/LinkedList.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o
+.PHONY : Structures/LinkedList.cpp.o
 
-Structures/AVLTree.i: Structures/AVLTree.cpp.i
+Structures/LinkedList.i: Structures/LinkedList.cpp.i
 
-.PHONY : Structures/AVLTree.i
+.PHONY : Structures/LinkedList.i
 
 # target to preprocess a source file
-Structures/AVLTree.cpp.i:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.i
-.PHONY : Structures/AVLTree.cpp.i
+Structures/LinkedList.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.i
+.PHONY : Structures/LinkedList.cpp.i
 
-Structures/AVLTree.s: Structures/AVLTree.cpp.s
+Structures/LinkedList.s: Structures/LinkedList.cpp.s
 
-.PHONY : Structures/AVLTree.s
+.PHONY : Structures/LinkedList.s
 
 # target to generate assembly for a file
-Structures/AVLTree.cpp.s:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.s
-.PHONY : Structures/AVLTree.cpp.s
+Structures/LinkedList.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.s
+.PHONY : Structures/LinkedList.cpp.s
 
 Structures/Node.o: Structures/Node.cpp.o
 
@@ -355,60 +355,6 @@ Structures/Node.s: Structures/Node.cpp.s
 Structures/Node.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
 .PHONY : Structures/Node.cpp.s
-
-Structures2/LinkedList.o: Structures2/LinkedList.cpp.o
-
-.PHONY : Structures2/LinkedList.o
-
-# target to build an object file
-Structures2/LinkedList.cpp.o:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o
-.PHONY : Structures2/LinkedList.cpp.o
-
-Structures2/LinkedList.i: Structures2/LinkedList.cpp.i
-
-.PHONY : Structures2/LinkedList.i
-
-# target to preprocess a source file
-Structures2/LinkedList.cpp.i:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.i
-.PHONY : Structures2/LinkedList.cpp.i
-
-Structures2/LinkedList.s: Structures2/LinkedList.cpp.s
-
-.PHONY : Structures2/LinkedList.s
-
-# target to generate assembly for a file
-Structures2/LinkedList.cpp.s:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.s
-.PHONY : Structures2/LinkedList.cpp.s
-
-Structures2/Node.o: Structures2/Node.cpp.o
-
-.PHONY : Structures2/Node.o
-
-# target to build an object file
-Structures2/Node.cpp.o:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o
-.PHONY : Structures2/Node.cpp.o
-
-Structures2/Node.i: Structures2/Node.cpp.i
-
-.PHONY : Structures2/Node.i
-
-# target to preprocess a source file
-Structures2/Node.cpp.i:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.i
-.PHONY : Structures2/Node.cpp.i
-
-Structures2/Node.s: Structures2/Node.cpp.s
-
-.PHONY : Structures2/Node.s
-
-# target to generate assembly for a file
-Structures2/Node.cpp.s:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.s
-.PHONY : Structures2/Node.cpp.s
 
 Tests/test.o: Tests/test.cpp.o
 
@@ -490,18 +436,12 @@ help:
 	@echo "... Objects/JManager.o"
 	@echo "... Objects/JManager.i"
 	@echo "... Objects/JManager.s"
-	@echo "... Structures/AVLTree.o"
-	@echo "... Structures/AVLTree.i"
-	@echo "... Structures/AVLTree.s"
+	@echo "... Structures/LinkedList.o"
+	@echo "... Structures/LinkedList.i"
+	@echo "... Structures/LinkedList.s"
 	@echo "... Structures/Node.o"
 	@echo "... Structures/Node.i"
 	@echo "... Structures/Node.s"
-	@echo "... Structures2/LinkedList.o"
-	@echo "... Structures2/LinkedList.i"
-	@echo "... Structures2/LinkedList.s"
-	@echo "... Structures2/Node.o"
-	@echo "... Structures2/Node.i"
-	@echo "... Structures2/Node.s"
 	@echo "... Tests/test.o"
 	@echo "... Tests/test.i"
 	@echo "... Tests/test.s"

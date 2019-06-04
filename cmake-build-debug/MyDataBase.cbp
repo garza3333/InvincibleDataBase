@@ -356,28 +356,16 @@
 		<Unit filename="/home/garza/Desktop/MydataBase/Objects/JManager.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures/AVLTree.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/LinkedList.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures/AVLTree.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/LinkedList.h">
 			<Option target="MyDataBase"/>
 		</Unit>
 		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
 		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.h">
-			<Option target="MyDataBase"/>
-		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp">
-			<Option target="MyDataBase"/>
-		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/LinkedList.h">
-			<Option target="MyDataBase"/>
-		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/Node.cpp">
-			<Option target="MyDataBase"/>
-		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures2/Node.h">
 			<Option target="MyDataBase"/>
 		</Unit>
 		<Unit filename="/home/garza/Desktop/MydataBase/Tests/test.cpp">

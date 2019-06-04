@@ -6,28 +6,21 @@ CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o
  /home/garza/Desktop/MydataBase/Objects/DataBase.h
  /home/garza/Desktop/MydataBase/Objects/Image.h
  /home/garza/Desktop/MydataBase/Objects/JManager.h
- /home/garza/Desktop/MydataBase/Structures2/LinkedList.h
- /home/garza/Desktop/MydataBase/Structures2/Node.h
+ /home/garza/Desktop/MydataBase/Structures/LinkedList.h
+ /home/garza/Desktop/MydataBase/Structures/Node.h
 CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o
  /home/garza/Desktop/MydataBase/Objects/Image.cpp
  /home/garza/Desktop/MydataBase/Objects/Image.h
 CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o
  /home/garza/Desktop/MydataBase/Objects/JManager.cpp
  /home/garza/Desktop/MydataBase/Objects/JManager.h
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o
- /home/garza/Desktop/MydataBase/Structures/AVLTree.cpp
- /home/garza/Desktop/MydataBase/Structures/AVLTree.h
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o
+ /home/garza/Desktop/MydataBase/Structures/LinkedList.cpp
+ /home/garza/Desktop/MydataBase/Structures/LinkedList.h
  /home/garza/Desktop/MydataBase/Structures/Node.h
 CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
  /home/garza/Desktop/MydataBase/Structures/Node.cpp
  /home/garza/Desktop/MydataBase/Structures/Node.h
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o
- /home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp
- /home/garza/Desktop/MydataBase/Structures2/LinkedList.h
- /home/garza/Desktop/MydataBase/Structures2/Node.h
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o
- /home/garza/Desktop/MydataBase/Structures2/Node.cpp
- /home/garza/Desktop/MydataBase/Structures2/Node.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h
@@ -70,8 +63,8 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
  /home/garza/Desktop/MydataBase/Objects/DataBase.h
  /home/garza/Desktop/MydataBase/Objects/Image.h
  /home/garza/Desktop/MydataBase/Objects/JManager.h
- /home/garza/Desktop/MydataBase/Structures2/LinkedList.h
- /home/garza/Desktop/MydataBase/Structures2/Node.h
+ /home/garza/Desktop/MydataBase/Structures/LinkedList.h
+ /home/garza/Desktop/MydataBase/Structures/Node.h
  /home/garza/Desktop/MydataBase/Tests/test.cpp
 CMakeFiles/MyDataBase.dir/main.cpp.o
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
@@ -115,6 +108,6 @@ CMakeFiles/MyDataBase.dir/main.cpp.o
  /home/garza/Desktop/MydataBase/Objects/DataBase.h
  /home/garza/Desktop/MydataBase/Objects/Image.h
  /home/garza/Desktop/MydataBase/Objects/JManager.h
- /home/garza/Desktop/MydataBase/Structures2/LinkedList.h
- /home/garza/Desktop/MydataBase/Structures2/Node.h
+ /home/garza/Desktop/MydataBase/Structures/LinkedList.h
+ /home/garza/Desktop/MydataBase/Structures/Node.h
  /home/garza/Desktop/MydataBase/main.cpp

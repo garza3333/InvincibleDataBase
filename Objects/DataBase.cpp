@@ -10,7 +10,16 @@ DataBase::DataBase() {
 
     this->MainList = new LinkedList<LinkedList<Image>*>();
     this->jManager = new JManager();
+    this->root = "../Master/";
 
+}
+
+string DataBase::getRoot() {
+    return this->root;
+}
+
+void DataBase::setRoot(string newRoot) {
+    this->root = "../"+newRoot+"/";
 }
 
 LinkedList<LinkedList<Image>*> *DataBase::getMainList() {
@@ -73,18 +82,6 @@ bool DataBase::insertImage(string json) {
         return false;
     }
 
-
-}
-
-vector<string> DataBase::split(string word, char delim) {
-
-    vector<string> vec;
-        std::stringstream ss(word);
-        std::string token;
-        while (std::getline(ss, token, delim)) {
-            vec.push_back(token);}
-        return vec;
-
 }
 
 ptree DataBase::selectImage(string json) {
@@ -124,6 +121,14 @@ ptree DataBase::selectImage(string json) {
     }
 }
 
+bool DataBase::updateImage() {
+    return false;
+}
+
+bool DataBase::deleteImage() {
+    return false;
+}
+
 ptree DataBase::fillPtreeImage(Node<Image> *image, vector<string> vec) {
 
     ptree ptim;
@@ -144,6 +149,106 @@ ptree DataBase::fillPtreeImage(Node<Image> *image, vector<string> vec) {
     }
 
     return ptim;
+}
+
+vector<string> DataBase::split(string word, char delim) {
+
+    vector<string> vec;
+    std::stringstream ss(word);
+    std::string token;
+    while (std::getline(ss, token, delim)) {
+        vec.push_back(token);}
+    return vec;
+
+}
+
+void DataBase::saveToDisk() {
+    if(MainList->isEmpty()){
+        cout<<"NO hay ninguna galeria para ser creada";
+    }else {
+        vector<string> folders;
+        vector<string> foldersNot;
+        MainList->setTemp(MainList->getHead());
+
+        while (MainList->getTemp() != NULL) {
+
+            string newFolder = this->root + MainList->getTemp()->getValue()->getID();
+            if (mkdir(newFolder.c_str(), 0777) == 0) {
+                MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+                ptree allImages;
+                int cont = 0;
+                while(MainList->getTemp()->getValue()->getTemp() != NULL){
+                    ptree image;
+                    image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue().getName());
+                    image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor());
+                    image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue().getYear());
+                    image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue().getSize());
+                    image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue().getDescription());
+                    allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
+                    cont++;
+                    MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
+                }
+                //TODO: Aqui iria la creacion del archivo se debe crear la ruta con el temp
+                ofstream file;
+                file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
+                file << jManager->ptreeToString(allImages);
+                file.close();
+                folders.push_back(MainList->getTemp()->getValue()->getID());
+            } else {
+                MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+                ptree allImages;
+                int cont = 0;
+                while(MainList->getTemp()->getValue()->getTemp() != NULL){
+                    ptree image;
+                    image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue().getName());
+                    image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor());
+                    image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue().getYear());
+                    image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue().getSize());
+                    image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue().getDescription());
+                    allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
+                    cont++;
+                    MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
+                }
+                //TODO: Aqui iria la creacion del archivo pero hay que crear la ruta con el temp
+                ofstream file;
+                file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
+                file << jManager->ptreeToString(allImages);
+                file.close();
+                foldersNot.push_back(MainList->getTemp()->getValue()->getID());
+            }
+            MainList->setTemp(MainList->getTemp()->getNext());
+        }
+        cout<<"-- Carpetas creadas:"<<"\n"<<endl;
+        for(int i = 0 ; i<folders.size() ; i++){
+            cout<<"-> "<<folders[i]<<endl;
+        }cout<<endl;
+        cout<<"-- Carpetas NO creadas:"<<"\n"<<endl;
+        for(int j = 0 ; j<foldersNot.size() ; j++){
+            cout<<"-> "<<foldersNot[j]<<endl;
+        }
+    }
+
+}
+
+void DataBase::loadInMemory() {
+
+}
+
+void DataBase::showDirs() {
+    if(!MainList->isEmpty()){
+
+        MainList->setTemp(MainList->getHead());
+        cout<<"[";
+        while(MainList->getTemp()->getNext() != NULL){
+
+            cout<<MainList->getTemp()->getValue()->getID()<<",";
+            MainList->setTemp(MainList->getTemp()->getNext());
+        }MainList->setTemp(MainList->getTemp());
+        cout<<MainList->getTemp()->getValue()->getID()<<"]"<<endl;
+    }else{
+        cout<<"[]"<<endl;
+    }
+
 }
 
 

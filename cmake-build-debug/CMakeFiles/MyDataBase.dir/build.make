@@ -70,35 +70,9 @@ CMakeFiles/MyDataBase.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/main.cpp -o CMakeFiles/MyDataBase.dir/main.cpp.s
 
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o: ../Structures/AVLTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o -c /home/garza/Desktop/MydataBase/Structures/AVLTree.cpp
-
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/AVLTree.cpp > CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.i
-
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/AVLTree.cpp -o CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.s
-
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o -c /home/garza/Desktop/MydataBase/Structures/Node.cpp
-
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/Node.cpp > CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
-
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/Node.cpp -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
-
 CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
 CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o: ../Objects/Image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o -c /home/garza/Desktop/MydataBase/Objects/Image.cpp
 
 CMakeFiles/MyDataBase.dir/Objects/Image.cpp.i: cmake_force
@@ -111,7 +85,7 @@ CMakeFiles/MyDataBase.dir/Objects/Image.cpp.s: cmake_force
 
 CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
 CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o: ../Objects/JManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o -c /home/garza/Desktop/MydataBase/Objects/JManager.cpp
 
 CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.i: cmake_force
@@ -122,35 +96,35 @@ CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Objects/JManager.cpp -o CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s
 
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o: ../Structures2/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o -c /home/garza/Desktop/MydataBase/Structures2/Node.cpp
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o -c /home/garza/Desktop/MydataBase/Structures/Node.cpp
 
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures2/Node.cpp > CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.i
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/Node.cpp > CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
 
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures2/Node.cpp -o CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.s
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/Node.cpp -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
 
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o: ../Structures2/LinkedList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o -c /home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o -c /home/garza/Desktop/MydataBase/Structures/LinkedList.cpp
 
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp > CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.i
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/LinkedList.cpp > CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.i
 
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures2/LinkedList.cpp -o CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.s
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/LinkedList.cpp -o CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.s
 
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/DataBase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o -c /home/garza/Desktop/MydataBase/Objects/DataBase.cpp
 
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.i: cmake_force
@@ -163,7 +137,7 @@ CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.s: cmake_force
 
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Tests/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Tests/test.cpp.o -c /home/garza/Desktop/MydataBase/Tests/test.cpp
 
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.i: cmake_force
@@ -177,12 +151,10 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.s: cmake_force
 # Object files for target MyDataBase
 MyDataBase_OBJECTS = \
 "CMakeFiles/MyDataBase.dir/main.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
 
@@ -190,12 +162,10 @@ MyDataBase_OBJECTS = \
 MyDataBase_EXTERNAL_OBJECTS =
 
 MyDataBase: CMakeFiles/MyDataBase.dir/main.cpp.o
-MyDataBase: CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o
-MyDataBase: CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o
-MyDataBase: CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o
-MyDataBase: CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/build.make
@@ -203,7 +173,7 @@ MyDataBase: lib/libgtestd.a
 MyDataBase: lib/libgtest_maind.a
 MyDataBase: lib/libgtestd.a
 MyDataBase: CMakeFiles/MyDataBase.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable MyDataBase"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MyDataBase"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyDataBase.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

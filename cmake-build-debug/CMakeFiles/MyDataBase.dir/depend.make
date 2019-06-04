@@ -5,8 +5,8 @@ CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/DataBase.cpp
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/DataBase.h
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/Image.h
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/JManager.h
-CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Structures2/LinkedList.h
-CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Structures2/Node.h
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Structures/LinkedList.h
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Structures/Node.h
 
 CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o: ../Objects/Image.cpp
 CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o: ../Objects/Image.h
@@ -14,19 +14,12 @@ CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o: ../Objects/Image.h
 CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o: ../Objects/JManager.cpp
 CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o: ../Objects/JManager.h
 
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o: ../Structures/AVLTree.cpp
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o: ../Structures/AVLTree.h
-CMakeFiles/MyDataBase.dir/Structures/AVLTree.cpp.o: ../Structures/Node.h
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.cpp
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.h
+CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/Node.h
 
 CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
 CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.h
-
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o: ../Structures2/LinkedList.cpp
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o: ../Structures2/LinkedList.h
-CMakeFiles/MyDataBase.dir/Structures2/LinkedList.cpp.o: ../Structures2/Node.h
-
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o: ../Structures2/Node.cpp
-CMakeFiles/MyDataBase.dir/Structures2/Node.cpp.o: ../Structures2/Node.h
 
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h
@@ -69,8 +62,8 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Objects/DataBase.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Objects/Image.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Objects/JManager.h
-CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Structures2/LinkedList.h
-CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Structures2/Node.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Structures/LinkedList.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Structures/Node.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Tests/test.cpp
 
 CMakeFiles/MyDataBase.dir/main.cpp.o: ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
@@ -114,7 +107,7 @@ CMakeFiles/MyDataBase.dir/main.cpp.o: ../lib/googletest-master/googletest/includ
 CMakeFiles/MyDataBase.dir/main.cpp.o: ../Objects/DataBase.h
 CMakeFiles/MyDataBase.dir/main.cpp.o: ../Objects/Image.h
 CMakeFiles/MyDataBase.dir/main.cpp.o: ../Objects/JManager.h
-CMakeFiles/MyDataBase.dir/main.cpp.o: ../Structures2/LinkedList.h
-CMakeFiles/MyDataBase.dir/main.cpp.o: ../Structures2/Node.h
+CMakeFiles/MyDataBase.dir/main.cpp.o: ../Structures/LinkedList.h
+CMakeFiles/MyDataBase.dir/main.cpp.o: ../Structures/Node.h
 CMakeFiles/MyDataBase.dir/main.cpp.o: ../main.cpp
 

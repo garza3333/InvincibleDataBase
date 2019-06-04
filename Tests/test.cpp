@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../Structures2/LinkedList.h"
+#include "../Structures/LinkedList.h"
 #include "../Objects/DataBase.h"
 
 using  testing::Eq;
