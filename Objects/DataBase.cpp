@@ -36,16 +36,16 @@ bool DataBase::insertImage(string json) {
     if(!MainList->isEmpty()) {
 
         ptree ptImage = jManager->stringToPtree(json);
-        string galery = ptImage.get<string>("FROM");
+        string galery = ptImage.get<string>("INTO");
         MainList->setTemp(MainList->getHead());
 
-        while (MainList->getTemp() != NULL && MainList->getTemp()->getValue()->getID() != galery) {
+        while (MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != galery) {
 
             MainList->setTemp(MainList->getTemp()->getNext());
 
         }
 
-        if(MainList->getTemp() == NULL){
+        if(MainList->getTemp() == nullptr){
             cout<<"Gallery not found , image not added ";
             return false;
         }else{
@@ -90,10 +90,10 @@ ptree DataBase::selectImage(string json) {
 
     MainList->setTemp(MainList->getHead());
 
-    while(MainList->getTemp() != NULL && MainList->getTemp()->getValue()->getID() != from){
+    while(MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != from){
         MainList->setTemp(MainList->getTemp()->getNext());
     }
-    if(MainList->getTemp() == NULL){
+    if(MainList->getTemp() == nullptr){
         cout<<"No se encontró una galeria con el nombre <<"<<from<<">>";
 
     }else{
@@ -102,14 +102,14 @@ ptree DataBase::selectImage(string json) {
         //vector<string> valuesVEC = this->split(ptImage.get<string>("WHERE"),',');
         vector<string> atributesVEC = this->split(ptImage.get<string>("SELECT"),',');
         int cont = 0;
-        while(MainList->getTemp()->getValue()->getTemp() != NULL){
+        while(MainList->getTemp()->getValue()->getTemp() != nullptr){
 
             //TODO : preguntarle a david si con formato name,author o name:name author:author
-            if(ptImage.get<string>("name") == MainList->getTemp()->getValue()->getTemp()->getValue().getName()
-            || ptImage.get<string>("author") == MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor()
-            || stoi(ptImage.get<string>("year")) == MainList->getTemp()->getValue()->getTemp()->getValue().getYear()
-            || stoi(ptImage.get<string>("size")) == MainList->getTemp()->getValue()->getTemp()->getValue().getSize()
-            || ptImage.get<string>("description") == MainList->getTemp()->getValue()->getTemp()->getValue().getDescription()){
+            if(ptImage.get_optional<string>("name") == MainList->getTemp()->getValue()->getTemp()->getValue().getName()
+            || ptImage.get_optional<string>("author") == MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor()
+            || ptImage.get_optional<string>("year") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue().getYear())
+            || ptImage.get_optional<string>("size") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue().getSize())
+            || ptImage.get_optional<string>("description") == MainList->getTemp()->getValue()->getTemp()->getValue().getDescription()){
 
                 imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(this->fillPtreeImage(MainList->getTemp()->getValue()->getTemp(),atributesVEC)));
                 cont++;
@@ -121,11 +121,61 @@ ptree DataBase::selectImage(string json) {
     }
 }
 
-bool DataBase::updateImage() {
-    return false;
+bool DataBase::updateImage(string json) {
+    ptree ptImage = jManager->stringToPtree(json);
+    string from = ptImage.get<string>("UPDATE");
+    MainList->setTemp(MainList->getHead());
+    while(MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != from){
+        MainList->setTemp(MainList->getTemp()->getNext());
+    }
+    if(MainList->getTemp() == nullptr){
+        cout<<"No se encontró la galeria >>"<<MainList->getTemp()->getValue()->getID()<<">>"<<endl;
+        return false;
+
+    }else{
+        MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+        vector<string> setVEC = split(ptImage.get<string>("SET"),',');
+        string name = "n-u*l-l";
+        string author = "n-u*l-l";
+        int year = -2;
+        int size =-2;
+        string description = "n-u*l-l";
+
+        for(int i = 0 ; i<setVEC.size() ; i++ ){
+            setVEC[i].erase(remove(setVEC[i].begin(), setVEC[i].end(), ' '), setVEC[i].end()); //delete the spaces ' '
+            vector<string> set = split(setVEC[i],'=');
+            if(set[0] == "name"){
+                name = set[1];
+            }else if(set[0] == "author"){
+                author = set[1];
+            }else if(set[0] == "year"){
+                year = stoi(set[1]);
+            }else if(set[0] == "size"){
+                size = stoi(set[1]);
+            }else if(set[0] == "description"){
+                description = set[1];
+            }
+        }
+        while(MainList->getTemp()->getValue()->getTemp() != nullptr){
+            if(MainList->getTemp()->getValue()->getTemp()->getValue().getName() == name
+            ||MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor() == author
+            ||MainList->getTemp()->getValue()->getTemp()->getValue().getYear() == year
+            ||MainList->getTemp()->getValue()->getTemp()->getValue().getSize() == size
+            ||MainList->getTemp()->getValue()->getTemp()->getValue().getDescription() == description){
+                //TODO: aqui van los ifs para saber que modificar
+                MainList->getTemp()->getValue()->getTemp()
+            }
+
+            MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
+        }
+        return true;
+
+
+    }
+
 }
 
-bool DataBase::deleteImage() {
+bool DataBase::deleteImage(string json) {
     return false;
 }
 
@@ -170,14 +220,14 @@ void DataBase::saveToDisk() {
         vector<string> foldersNot;
         MainList->setTemp(MainList->getHead());
 
-        while (MainList->getTemp() != NULL) {
+        while (MainList->getTemp() != nullptr) {
 
             string newFolder = this->root + MainList->getTemp()->getValue()->getID();
             if (mkdir(newFolder.c_str(), 0777) == 0) {
                 MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
                 ptree allImages;
                 int cont = 0;
-                while(MainList->getTemp()->getValue()->getTemp() != NULL){
+                while(MainList->getTemp()->getValue()->getTemp() != nullptr){
                     ptree image;
                     image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue().getName());
                     image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor());
@@ -198,7 +248,7 @@ void DataBase::saveToDisk() {
                 MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
                 ptree allImages;
                 int cont = 0;
-                while(MainList->getTemp()->getValue()->getTemp() != NULL){
+                while(MainList->getTemp()->getValue()->getTemp() != nullptr){
                     ptree image;
                     image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue().getName());
                     image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor());
@@ -239,7 +289,7 @@ void DataBase::showDirs() {
 
         MainList->setTemp(MainList->getHead());
         cout<<"[";
-        while(MainList->getTemp()->getNext() != NULL){
+        while(MainList->getTemp()->getNext() != nullptr){
 
             cout<<MainList->getTemp()->getValue()->getID()<<",";
             MainList->setTemp(MainList->getTemp()->getNext());

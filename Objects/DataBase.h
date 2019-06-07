@@ -48,8 +48,8 @@ public:
     LinkedList<LinkedList<Image>*> * getMainList();
     bool addGalery(string nameGalery);
     bool insertImage(string json);
-    bool updateImage();
-    bool deleteImage();
+    bool updateImage(string json);
+    bool deleteImage(string json);
     ptree selectImage(string json);
     ptree fillPtreeImage(Node<Image> * image, vector<string> atributeVEC);
     vector<string> split(string word , char delim);

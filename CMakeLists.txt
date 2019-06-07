@@ -3,7 +3,7 @@ project(MyDataBase)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MyDataBase main.cpp Objects/Image.cpp Objects/Image.h Objects/JManager.cpp Objects/JManager.h Structures/Node.cpp Structures/Node.h Structures/LinkedList.cpp Structures/LinkedList.h Objects/DataBase.cpp Objects/DataBase.h  Tests/test.cpp)
+add_executable(MyDataBase main.cpp Objects/Image.cpp Objects/Image.h Objects/JManager.cpp Objects/JManager.h Structures/Node.cpp Structures/Node.h Structures/LinkedList.cpp Structures/LinkedList.h Objects/DataBase.cpp Objects/DataBase.h  Tests/test.cpp main.cpp)
 
 add_subdirectory(lib/googletest-master)
 include_directories(lib/googletest-master/googletest/include)
