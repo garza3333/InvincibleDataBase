@@ -221,6 +221,87 @@ gtest/fast:
 	$(MAKE) -f lib/googletest-master/googletest/CMakeFiles/gtest.dir/build.make lib/googletest-master/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+Compressor/Compressor.o: Compressor/Compressor.cpp.o
+
+.PHONY : Compressor/Compressor.o
+
+# target to build an object file
+Compressor/Compressor.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o
+.PHONY : Compressor/Compressor.cpp.o
+
+Compressor/Compressor.i: Compressor/Compressor.cpp.i
+
+.PHONY : Compressor/Compressor.i
+
+# target to preprocess a source file
+Compressor/Compressor.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.i
+.PHONY : Compressor/Compressor.cpp.i
+
+Compressor/Compressor.s: Compressor/Compressor.cpp.s
+
+.PHONY : Compressor/Compressor.s
+
+# target to generate assembly for a file
+Compressor/Compressor.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.s
+.PHONY : Compressor/Compressor.cpp.s
+
+Compressor/Huffman_Node.o: Compressor/Huffman_Node.cpp.o
+
+.PHONY : Compressor/Huffman_Node.o
+
+# target to build an object file
+Compressor/Huffman_Node.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o
+.PHONY : Compressor/Huffman_Node.cpp.o
+
+Compressor/Huffman_Node.i: Compressor/Huffman_Node.cpp.i
+
+.PHONY : Compressor/Huffman_Node.i
+
+# target to preprocess a source file
+Compressor/Huffman_Node.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.i
+.PHONY : Compressor/Huffman_Node.cpp.i
+
+Compressor/Huffman_Node.s: Compressor/Huffman_Node.cpp.s
+
+.PHONY : Compressor/Huffman_Node.s
+
+# target to generate assembly for a file
+Compressor/Huffman_Node.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.s
+.PHONY : Compressor/Huffman_Node.cpp.s
+
+Compressor/Huffman_Tree.o: Compressor/Huffman_Tree.cpp.o
+
+.PHONY : Compressor/Huffman_Tree.o
+
+# target to build an object file
+Compressor/Huffman_Tree.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o
+.PHONY : Compressor/Huffman_Tree.cpp.o
+
+Compressor/Huffman_Tree.i: Compressor/Huffman_Tree.cpp.i
+
+.PHONY : Compressor/Huffman_Tree.i
+
+# target to preprocess a source file
+Compressor/Huffman_Tree.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.i
+.PHONY : Compressor/Huffman_Tree.cpp.i
+
+Compressor/Huffman_Tree.s: Compressor/Huffman_Tree.cpp.s
+
+.PHONY : Compressor/Huffman_Tree.s
+
+# target to generate assembly for a file
+Compressor/Huffman_Tree.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.s
+.PHONY : Compressor/Huffman_Tree.cpp.s
+
 Objects/DataBase.o: Objects/DataBase.cpp.o
 
 .PHONY : Objects/DataBase.o
@@ -329,32 +410,32 @@ Structures/LinkedList.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.s
 .PHONY : Structures/LinkedList.cpp.s
 
-Structures/Node.o: Structures/Node.cpp.o
+Structures/NodeHuff.o: Structures/NodeHuff.cpp.o
 
-.PHONY : Structures/Node.o
+.PHONY : Structures/NodeHuff.o
 
 # target to build an object file
-Structures/Node.cpp.o:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
-.PHONY : Structures/Node.cpp.o
+Structures/NodeHuff.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o
+.PHONY : Structures/NodeHuff.cpp.o
 
-Structures/Node.i: Structures/Node.cpp.i
+Structures/NodeHuff.i: Structures/NodeHuff.cpp.i
 
-.PHONY : Structures/Node.i
+.PHONY : Structures/NodeHuff.i
 
 # target to preprocess a source file
-Structures/Node.cpp.i:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
-.PHONY : Structures/Node.cpp.i
+Structures/NodeHuff.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i
+.PHONY : Structures/NodeHuff.cpp.i
 
-Structures/Node.s: Structures/Node.cpp.s
+Structures/NodeHuff.s: Structures/NodeHuff.cpp.s
 
-.PHONY : Structures/Node.s
+.PHONY : Structures/NodeHuff.s
 
 # target to generate assembly for a file
-Structures/Node.cpp.s:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
-.PHONY : Structures/Node.cpp.s
+Structures/NodeHuff.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s
+.PHONY : Structures/NodeHuff.cpp.s
 
 Tests/test.o: Tests/test.cpp.o
 
@@ -427,6 +508,15 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... Compressor/Compressor.o"
+	@echo "... Compressor/Compressor.i"
+	@echo "... Compressor/Compressor.s"
+	@echo "... Compressor/Huffman_Node.o"
+	@echo "... Compressor/Huffman_Node.i"
+	@echo "... Compressor/Huffman_Node.s"
+	@echo "... Compressor/Huffman_Tree.o"
+	@echo "... Compressor/Huffman_Tree.i"
+	@echo "... Compressor/Huffman_Tree.s"
 	@echo "... Objects/DataBase.o"
 	@echo "... Objects/DataBase.i"
 	@echo "... Objects/DataBase.s"
@@ -439,9 +529,9 @@ help:
 	@echo "... Structures/LinkedList.o"
 	@echo "... Structures/LinkedList.i"
 	@echo "... Structures/LinkedList.s"
-	@echo "... Structures/Node.o"
-	@echo "... Structures/Node.i"
-	@echo "... Structures/Node.s"
+	@echo "... Structures/NodeHuff.o"
+	@echo "... Structures/NodeHuff.i"
+	@echo "... Structures/NodeHuff.s"
 	@echo "... Tests/test.o"
 	@echo "... Tests/test.i"
 	@echo "... Tests/test.s"

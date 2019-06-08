@@ -48,6 +48,41 @@ bool DataBase::addGalery(string nameGalery) {
 
 }
 
+bool DataBase::deleteGalery(string galery) {
+
+    if(!MainList->isEmpty()){
+        NodeHuff<LinkedList<Image*> *> * delPtr = nullptr;
+
+        MainList->setTemp(MainList->getHead());
+        MainList->setCurr(MainList->getHead());
+        if(MainList->getCurr()->getValue()->getID() == galery){
+            delPtr = MainList->getHead();
+            MainList->setHEAD(MainList->getHead()->getNext());
+            delPtr->setNext(nullptr);
+            delete delPtr;
+            MainList->substractSize();
+            return true;
+        }
+        while(MainList->getCurr() != nullptr && MainList->getCurr()->getValue()->getID() != galery){
+            MainList->setTemp(MainList->getCurr());
+            MainList->setCurr(MainList->getCurr()->getNext());
+        }
+        if(MainList->getCurr() == nullptr){
+            cout<<"Galery not found to delete"<<endl;
+            delete delPtr;
+            return false;
+        }else{
+            MainList->getTemp()->setNext(MainList->getCurr()->getNext());
+            MainList->getCurr()->setNext(nullptr);
+            delPtr = MainList->getCurr();
+            delete delPtr;
+            MainList->substractSize();
+            return true;
+        }
+    }
+
+}
+
 bool DataBase::insertImage(string json) {
     if(!MainList->isEmpty()) {
 
@@ -209,10 +244,84 @@ bool DataBase::updateImage(string json) {
 
 bool DataBase::deleteImage(string json) {
 
-    return false;
+    ptree imageJson = jManager->stringToPtree(json);
+    MainList->setTemp(MainList->getHead());
+    while(MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != imageJson.get<string>("FROM")){
+        MainList->setTemp(MainList->getTemp()->getNext());
+    }
+    if(MainList->getTemp() == nullptr){
+        cout<<"Galery not found";
+        return false;
+    }else{
+
+        string name = "n-u*l-l";
+        string author = "n-u*l-l";
+        int year = -2;
+        int size = -2;
+        string description = "n-u*l-l";
+        vector<string> whereVEC = split(imageJson.get<string>("WHERE"),',');
+
+
+        for(int i = 0 ; i<whereVEC.size() ; i++ ){
+            whereVEC[i].erase(remove(whereVEC[i].begin(), whereVEC[i].end(), ' '), whereVEC[i].end()); //delete the spaces ' '
+            vector<string> set = split(whereVEC[i],'=');
+            if(set[0] == "name"){
+                name = set[1];
+            }else if(set[0] == "author"){
+                author = set[1];
+            }else if(set[0] == "year"){
+                year = stoi(set[1]);
+            }else if(set[0] == "size"){
+                size = stoi(set[1]);
+            }else if(set[0] == "description"){
+                description = set[1];
+            }
+        }
+
+        NodeHuff<Image*> * delPtr = nullptr;
+        MainList->getTemp()->getValue()->setTemp(MainList->getHead()->getValue()->getHead());
+        MainList->getTemp()->getValue()->setCurr(MainList->getTemp()->getValue()->getHead());
+
+        if(MainList->getTemp()->getValue()->getCurr()->getValue()->getName() == name
+           || MainList->getTemp()->getValue()->getCurr()->getValue()->getAuthor() == author
+           || MainList->getTemp()->getValue()->getCurr()->getValue()->getYear() == year
+           || MainList->getTemp()->getValue()->getCurr()->getValue()->getSize() == size
+           || MainList->getTemp()->getValue()->getCurr()->getValue()->getDescription() == description){
+            delPtr = MainList->getTemp()->getValue()->getHead();
+            MainList->setHEAD(MainList->getHead()->getNext());
+            delPtr->setNext(nullptr);
+            delete delPtr;
+            MainList->getTemp()->getValue()->substractSize();
+            return this->deleteImage(json);
+        }
+
+        while(MainList->getTemp()->getValue()->getTemp() != nullptr && MainList->getTemp()->getValue()->getCurr()->getValue()->getName() != name
+            && MainList->getTemp()->getValue()->getCurr()->getValue()->getAuthor() != author
+            && MainList->getTemp()->getValue()->getCurr()->getValue()->getYear() != year
+            && MainList->getTemp()->getValue()->getCurr()->getValue()->getSize() != size
+            && MainList->getTemp()->getValue()->getCurr()->getValue()->getDescription() != description ){
+
+            MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getCurr());
+            MainList->getTemp()->getValue()->setCurr(MainList->getTemp()->getValue()->getCurr()->getNext());
+        }
+        if(MainList->getTemp()->getValue()->getCurr() == nullptr){
+            delete delPtr;
+            return true;
+        }else{
+            MainList->getTemp()->getValue()->getTemp()->setNext(MainList->getTemp()->getValue()->getCurr()->getNext());
+            MainList->getTemp()->getValue()->getCurr()->setNext(nullptr);
+            delPtr = MainList->getTemp()->getValue()->getCurr();
+            delete delPtr;
+            MainList->getTemp()->getValue()->substractSize();
+            return this->deleteImage(json);
+        }
+
+    }
+
+
 }
 
-ptree DataBase::fillPtreeImage(Node<Image*> *image, vector<string> vec) {
+ptree DataBase::fillPtreeImage(NodeHuff<Image*> *image, vector<string> vec) {
 
     ptree ptim;
     for (int i = 0; i < vec.size(); i++) {
@@ -271,7 +380,7 @@ void DataBase::saveToDisk() {
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
                 }
-                //TODO: Aqui iria la creacion del archivo se debe crear la ruta con el temp
+                //Making a file
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 file << jManager->ptreeToString(allImages);
@@ -292,7 +401,7 @@ void DataBase::saveToDisk() {
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
                 }
-                //TODO: Aqui iria la creacion del archivo pero hay que crear la ruta con el temp
+                //Making a file
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 file << jManager->ptreeToString(allImages);
@@ -336,6 +445,77 @@ void DataBase::showDirs() {
     }else{
         cout<<"[]"<<endl;
     }
+
+}
+
+void DataBase::showALLImages(string galery) {
+
+    MainList->setTemp(MainList->getHead());
+
+    while(MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != galery){
+        MainList->setTemp(MainList->getTemp()->getNext());
+    }
+    if(MainList->getTemp() == nullptr){
+        cout<<"No se encontró una galeria con el nombre <<"<<galery<<">>";
+
+    }else{
+        ptree imagesJson;
+
+        MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+        int cont = 0;
+        while(MainList->getTemp()->getValue()->getTemp() != nullptr){
+
+            ptree ptim;
+            ptim.put("name",MainList->getTemp()->getValue()->getTemp()->getValue()->getName());
+            ptim.put("author",MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor());
+            ptim.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
+            ptim.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
+            ptim.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
+
+            imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(ptim));
+            cont++;
+
+            MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
+
+        }
+        this->jManager->printJson(imagesJson);
+    }
+
+}
+
+void DataBase::compressData(string json , string galery) {
+
+    vector<char> ch;
+    for(int i=0;i<json.size();i++)
+    {
+        ch.push_back(json.at(i));
+    }
+    Compressor::Codified_File * code = this->compressor->compress(ch,"txt",this->root+galery+"/compress");
+    this->compressor->writeToDiskComp(code);
+
+}
+//TODO: agregar a los archivos un identificador code + i tree + i para poder identificarlos en esta parte
+// agregar tambien el numero de imagenes que hay para poder hacer unn for y descomprimir todas las imagenes
+
+string DataBase::descompressData(string galery, string tree , string code) {
+    Compressor::Codified_File * c = this->compressor->treeReconstructor(this->root+galery+"/"+tree+".txt",this->root+galery+"/"+code+".txt");
+    Compressor::Decodified_File * d = this->compressor->decompress(c);
+    this->compressor->writeToDiskDecomp(d);
+
+    ifstream inFile;
+    //TODO: completar esta parte con el iterador de las imagenes
+    inFile.open(this->root+galery);
+    string json = "";
+    string x;
+    if(inFile.is_open()){
+        while(inFile >> x){
+            json = json +x;
+        }
+        inFile.close();
+    }else{
+        cout<<"Cant open the file!"<<endl;
+    }
+    return json;
 
 }
 

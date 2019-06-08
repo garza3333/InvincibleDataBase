@@ -2,16 +2,16 @@
 // Created by Daniel on 26/05/2019.
 //
 
-#ifndef MYDATABASE_NODE_H
+#ifndef MYDATABASE_NODEH_H
 #define MYDATABASE_NODE_H
 
 
 
 template <class T>
-class Node {
+class NodeHuff {
 
 private:
-    Node<T>* next;
+    NodeHuff<T>* next;
     T value;
 
 public:
@@ -19,7 +19,7 @@ public:
     /**
      * Builder of node
      */
-    Node(){
+    NodeHuff(){
         this->value = 0;
         this->next = 0;
     }
@@ -27,7 +27,7 @@ public:
      * Second builder of node
      * @param v
      */
-    Node(T v){
+    NodeHuff(T v){
         this->value = v;
         this->next = 0;
     }
@@ -36,7 +36,7 @@ public:
      * @param v
      * @param n
      */
-    Node(T v , Node<T>* n ){
+    NodeHuff(T v , NodeHuff<T>* n ){
         this->value = v;
         this->next = n;
     }
@@ -44,7 +44,7 @@ public:
      *
      * @return the next node
      */
-    Node<T>* getNext(){
+    NodeHuff<T>* getNext(){
         return this->next;
     }
     /**
@@ -65,17 +65,17 @@ public:
      * assign the next node of this
      * @param n
      */
-    void setNext(Node<T>* n){
+    void setNext(NodeHuff<T>* n){
         this->next = n;
     }
     /**
      * destroy the pointer of the node
      */
-    virtual ~Node(){
+    virtual ~NodeHuff(){
         delete next;
     }
 
 };
 
 
-#endif //MYDATABASE_NODE_H
+#endif //MYDATABASE_NODEH_H

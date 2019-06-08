@@ -15,9 +15,9 @@ class LinkedList {
 
 private:
     int size;
-    Node<T>* head;
-    Node<T> * curr;
-    Node<T> * temp;
+    NodeHuff<T>* head;
+    NodeHuff<T> * curr;
+    NodeHuff<T> * temp;
     string id;
 public:
     /**
@@ -50,19 +50,19 @@ public:
      * Assign the head of the list
      * @param newNode
      */
-    void setHEAD(Node<T> * newNode){
+    void setHEAD(NodeHuff<T> * newNode){
         head = newNode;
     }
-    Node<T> * getCurr(){
+    NodeHuff<T> * getCurr(){
         return this->curr;
     }
-    Node<T> * getTemp(){
+    NodeHuff<T> * getTemp(){
         return this->temp;
     }
-    void setCurr(Node<T> * node){
+    void setCurr(NodeHuff<T> * node){
         this->curr = node;
     }
-    void setTemp(Node<T> * node){
+    void setTemp(NodeHuff<T> * node){
         this->temp = node;
     }
     /**
@@ -74,7 +74,7 @@ public:
      *
      * @return head node of list
      */
-    Node<T>* getHead(){
+    NodeHuff<T>* getHead(){
         return this->head;
     }
     /**
@@ -91,14 +91,14 @@ public:
     bool add(T v){
 
         if (isEmpty()) {
-            this->head = new Node<T>(v);
+            this->head = new NodeHuff<T>(v);
 
         } else {
             this->curr = this->getHead();
             while (curr->getNext() != 0) {
                 curr = curr->getNext();
             }
-            Node<T> *n = new Node<T>(v);
+            NodeHuff<T> *n = new NodeHuff<T>(v);
             curr->setNext(n);
         }
         size++;
@@ -111,11 +111,11 @@ public:
     void addFirst(T v){
         if(isEmpty()){
 
-            this->head = new Node<T>(v);
+            this->head = new NodeHuff<T>(v);
 
         }else{
-            Node<T>* temp = this->getHead();
-            Node<T>* n = new Node<T>(v);
+            NodeHuff<T>* temp = this->getHead();
+            NodeHuff<T>* n = new NodeHuff<T>(v);
             n->setNext(this->getHead());
             this->head = n;
         }size++;
@@ -125,32 +125,32 @@ public:
      * @param n node to delete
      */
     bool delNode(T n){
+
         if(!this->isEmpty()){
 
-
-            Node<T> * delPtr = NULL;
+            NodeHuff<T> * delPtr = nullptr;
             temp = head;
             curr = head;
             if(curr->getValue() == n){
                 delPtr = head;
                 head = head->getNext();
-                delPtr->setNext(NULL);
+                delPtr->setNext(nullptr);
                 delete delPtr;
                 this->size--;
                 return true;
             }
-            while(curr != NULL && curr->getValue() != n){
+            while(curr != nullptr && curr->getValue() != n){
                 temp = curr;
                 curr = curr->getNext();
             }
-            if(curr == NULL){
+            if(curr == nullptr){
                 cout<<"Ese valor no se encontraba en la lista"<<endl;
                 delete delPtr;
                 return false;
 
             }else{
                 temp->setNext(curr->getNext());
-                curr->setNext(NULL);
+                curr->setNext(nullptr);
                 delPtr = curr;
                 delete delPtr;
                 this->size--;
@@ -164,7 +164,7 @@ public:
      * @return true if it exists , false if not
      */
     bool in(T v){
-        Node<T>* temp = this->getHead();
+        NodeHuff<T>* temp = this->getHead();
         while(temp!=0){
             if(temp->getValue() == v){
                 return true;
@@ -180,7 +180,7 @@ public:
     void see(){
 
         if(!isEmpty()){
-            Node<T>* temp = this->getHead();
+            NodeHuff<T>* temp = this->getHead();
             cout<<"[";
             while(temp->getNext() != 0){
                 cout<<temp->getValue()<<", ";

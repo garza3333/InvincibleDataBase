@@ -4,11 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/garza/Desktop/MydataBase/Compressor/Compressor.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o"
+  "/home/garza/Desktop/MydataBase/Compressor/Huffman_Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o"
+  "/home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o"
   "/home/garza/Desktop/MydataBase/Objects/DataBase.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o"
   "/home/garza/Desktop/MydataBase/Objects/Image.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o"
   "/home/garza/Desktop/MydataBase/Objects/JManager.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o"
   "/home/garza/Desktop/MydataBase/Structures/LinkedList.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o"
-  "/home/garza/Desktop/MydataBase/Structures/Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
+  "/home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o"
   "/home/garza/Desktop/MydataBase/Tests/test.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
   "/home/garza/Desktop/MydataBase/main.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o"
   )

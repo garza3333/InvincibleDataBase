@@ -96,18 +96,18 @@ CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Objects/JManager.cpp -o CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s
 
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o -c /home/garza/Desktop/MydataBase/Structures/Node.cpp
+CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o: ../Structures/NodeHuff.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o -c /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp
 
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/Node.cpp > CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
+CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp > CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i
 
-CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/Node.cpp -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
+CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp -o CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s
 
 CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
 CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.cpp
@@ -148,15 +148,57 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Tests/test.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Tests/test.cpp -o CMakeFiles/MyDataBase.dir/Tests/test.cpp.s
 
+CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o: ../Compressor/Compressor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o -c /home/garza/Desktop/MydataBase/Compressor/Compressor.cpp
+
+CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Compressor/Compressor.cpp > CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.i
+
+CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Compressor/Compressor.cpp -o CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.s
+
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o: ../Compressor/Huffman_Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o -c /home/garza/Desktop/MydataBase/Compressor/Huffman_Node.cpp
+
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Compressor/Huffman_Node.cpp > CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.i
+
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Compressor/Huffman_Node.cpp -o CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.s
+
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o: ../Compressor/Huffman_Tree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o -c /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.cpp
+
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.cpp > CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.i
+
+CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.cpp -o CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.s
+
 # Object files for target MyDataBase
 MyDataBase_OBJECTS = \
 "CMakeFiles/MyDataBase.dir/main.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
+"CMakeFiles/MyDataBase.dir/Tests/test.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o"
 
 # External object files for target MyDataBase
 MyDataBase_EXTERNAL_OBJECTS =
@@ -164,16 +206,19 @@ MyDataBase_EXTERNAL_OBJECTS =
 MyDataBase: CMakeFiles/MyDataBase.dir/main.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o
-MyDataBase: CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Compressor/Compressor.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Compressor/Huffman_Node.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/build.make
 MyDataBase: lib/libgtestd.a
 MyDataBase: lib/libgtest_maind.a
 MyDataBase: lib/libgtestd.a
 MyDataBase: CMakeFiles/MyDataBase.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MyDataBase"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable MyDataBase"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyDataBase.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

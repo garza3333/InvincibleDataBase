@@ -9,6 +9,7 @@
 #include "Image.h"
 #include "../Structures/LinkedList.h"
 #include "JManager.h"
+#include "../Compressor/Compressor.h"
 #include <iostream>
 #include <string>
 #include <string.h>
@@ -35,6 +36,7 @@ class DataBase {
 
 private:
     LinkedList<LinkedList<Image*>*> * MainList;
+    Compressor * compressor;
     JManager * jManager;
     string root;
     int imageID;
@@ -48,15 +50,19 @@ public:
     void setRoot(string newRoot);
     LinkedList<LinkedList<Image*>*> * getMainList();
     bool addGalery(string nameGalery);
+    bool deleteGalery(string galery);
     bool insertImage(string json);
     bool updateImage(string json);
     bool deleteImage(string json);
     ptree selectImage(string json);
-    ptree fillPtreeImage(Node<Image*> * image, vector<string> atributeVEC);
+    static ptree fillPtreeImage(NodeHuff<Image*> * image, vector<string> atributeVEC);
     vector<string> split(string word , char delim);
     void saveToDisk();
     void loadInMemory();
     void showDirs();
+    void showALLImages(string galery);
+    void compressData(string json , string galery);
+    string descompressData(string galery , string tree , string code);
 
 
 };

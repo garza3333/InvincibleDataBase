@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Structures/LinkedList.h"
 #include "Objects/DataBase.h"
+#include "Compressor/Compressor.h"
+#include "Compressor/List.h"
+#include "Compressor/NodeH.h"
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 //includes for directories
@@ -16,8 +19,10 @@ int main(int argc , char * argv[]) {
     //testing::InitGoogleTest(&argc , argv);
     //RUN_ALL_TESTS();
 
+
     JManager jsonM = JManager();
-    DataBase * dataB = new DataBase();
+    auto comp = new Compressor();
+    /*DataBase * dataB = new DataBase();
     dataB->addGalery("Photos");
     cout<<endl;
 
@@ -125,12 +130,63 @@ int main(int argc , char * argv[]) {
     selectPT6.put("author","SOFIA");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT6)));
 
+    cout<<"PHOTOS"<<endl;
+    dataB->showALLImages("Photos");
+
 
     dataB->addGalery("galeria1");
     dataB->addGalery("galeria2");
     dataB->addGalery("galeria3");
 
+    dataB->deleteGalery("galeria1");
+    dataB->deleteGalery("galeria3");
+    dataB->showDirs();
     dataB->saveToDisk();
+*/
+
+    ptree prueba;
+    ptree Galery;
+    ptree ima1;
+    ptree ima2;
+
+
+    ima1.put("name","sing");
+    ima1.put("author","GARZA");
+    ima1.put("year","2019");
+    ima1.put("size","2000");
+    ima1.put("description","this is a description");
+
+    ima2.put("name","daniel");
+    ima2.put("author","DAVID");
+    ima2.put("year","2017");
+    ima2.put("size","3000");
+    ima2.put("description","fucking shit");
+
+    Galery.put("NumImages",2);
+    Galery.put("Name","Photos");
+    Galery.put("Image0",jsonM.ptreeToString(ima1));
+    Galery.put("Image1",jsonM.ptreeToString(ima2));
+
+
+    prueba.put("NUM",1);
+    prueba.put("Galery0",jsonM.ptreeToString(Galery));
+
+    string s = jsonM.ptreeToString(prueba);
+
+    vector<char> ch;
+    for(int i=0;i<s.size();i++)
+    {
+        ch.push_back(s.at(i));
+    }
+    Compressor::Codified_File * code = comp->compress(ch,"txt","../Master/compress");
+    Compressor::Decodified_File
+    * decode = comp->decompress(code);
+    comp->writeToDiskComp(code);
+    comp->writeToDiskDecomp(decode);
+
+
+
+
 
 
 

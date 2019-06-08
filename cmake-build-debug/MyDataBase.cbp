@@ -338,6 +338,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/Compressor.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/Compressor.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/Huffman_Node.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/Huffman_Node.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.cpp">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/List.h">
+			<Option target="MyDataBase"/>
+		</Unit>
+		<Unit filename="/home/garza/Desktop/MydataBase/Compressor/NodeH.h">
+			<Option target="MyDataBase"/>
+		</Unit>
 		<Unit filename="/home/garza/Desktop/MydataBase/Objects/DataBase.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
@@ -362,10 +386,10 @@
 		<Unit filename="/home/garza/Desktop/MydataBase/Structures/LinkedList.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
 		<Unit filename="/home/garza/Desktop/MydataBase/Tests/test.cpp">
