@@ -7,7 +7,6 @@
 #include "JManager.h"
 
 
-
 ptree JManager::stringToPtree(string s)
 {
     std::istringstream iss(s);

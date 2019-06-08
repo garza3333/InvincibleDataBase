@@ -12,6 +12,22 @@ DataBase::DataBase() {
     this->jManager = new JManager();
     this->root = "../Master/";
 
+    ifstream inFile;
+    inFile.open("../Master/imagesID.txt");
+
+    if (inFile.is_open()) {
+
+        string line;
+        getline(inFile,line);
+        this->imageID = stoi(line);
+        cout<<"imagesID: "<<this->imageID<<endl;
+        inFile.close();
+    }else{
+        cout << "Cant pen the file";
+        this->imageID = 0;
+    }
+
+
 }
 
 string DataBase::getRoot() {
@@ -70,7 +86,8 @@ bool DataBase::insertImage(string json) {
 
             }
 
-            Image * newImage = new Image(name, author, year, size, description);
+            Image * newImage = new Image(name, author, year, size, description , this->imageID);
+            this->imageID++;
 
             MainList->getTemp()->getValue()->add(newImage);
             cout<<"The image has been added!"<<endl;
@@ -191,6 +208,7 @@ bool DataBase::updateImage(string json) {
 }
 
 bool DataBase::deleteImage(string json) {
+
     return false;
 }
 
@@ -292,6 +310,11 @@ void DataBase::saveToDisk() {
             cout<<"-> "<<foldersNot[j]<<endl;
         }
     }
+
+    ofstream file;
+    file.open("../Master/imagesID.txt");
+    file << this->imageID;
+    file.close();
 
 }
 

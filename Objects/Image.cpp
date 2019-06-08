@@ -4,6 +4,27 @@
 
 #include "Image.h"
 
+
+Image::Image() {
+    this->name = "Default";
+    this->author = "NoneAuthor";
+    this->year = 0;
+    this->size = 0;
+    this->description = "nothing to describe";
+    this->ID = 0;
+}
+
+Image::Image(string nam, string aut, int yea, int siz, string des ,int id) {
+
+    this->name = nam;
+    this->author = aut;
+    this->year = yea;
+    this->size = siz;
+    this->description = des;
+    this->ID = id;
+
+}
+
  std::string Image::getName(){
     return this->name;
 }
@@ -44,23 +65,10 @@ void Image::setYear(int y) {
     this->year = y;
 }
 
-Image::Image() {
-    this->name = "Default";
-    this->author = "NoneAuthor";
-    this->year = 0;
-    this->size = 0;
-    this->description = "nothing to describe";
+int Image::getID() {
+    this->ID;
 }
 
-Image::Image(string nam, string aut, int yea, int siz, string des) {
-
-    this->name = nam;
-    this->author = aut;
-    this->year = yea;
-    this->size = siz;
-    this->description = des;
-
-}
 
 
 

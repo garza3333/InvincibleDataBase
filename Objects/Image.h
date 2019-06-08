@@ -11,11 +11,11 @@ using namespace std;
 class Image {
 private:
     std::string name , author , description ;
-    int size , year ;
+    int size , year ,ID;
 
 public:
     Image();
-    Image(string nam , string aut , int yea , int siz , string des );
+    Image(string nam , string aut , int yea , int siz , string des ,int id);
 
     /**
      *
@@ -67,6 +67,8 @@ public:
      * @param year assign the year of creation
      */
     void setYear(int year);
+
+    int getID();
 
 };
 

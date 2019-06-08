@@ -37,6 +37,7 @@ private:
     LinkedList<LinkedList<Image*>*> * MainList;
     JManager * jManager;
     string root;
+    int imageID;
 
 public:
     /**

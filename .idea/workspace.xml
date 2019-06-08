@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="MyDataBase" targetName="MyDataBase" />
+      <config projectName="MyDataBase" targetName="gmock" />
       <config projectName="MyDataBase" targetName="gtest" />
       <config projectName="MyDataBase" targetName="gmock_main" />
-      <config projectName="MyDataBase" targetName="gmock" />
+      <config projectName="MyDataBase" targetName="MyDataBase" />
       <config projectName="MyDataBase" targetName="gtest_main" />
     </generated>
   </component>
@@ -17,16 +17,11 @@
   <component name="ChangeListManager">
     <list default="true" id="208134d6-86d5-426b-ac5f-ee8bb2cf9494" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/GARAZGALERY/MetaData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/Galeria1/MetaData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/Photos/MetaData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/Photos/MetaData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/carpetitagalery/MetaData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MyDataBase" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MyDataBase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Image.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Image.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Image.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/JManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/JManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -42,24 +37,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-              <folding>
-                <element signature="e#105#123#0" expanded="true" />
-                <element signature="e#437#456#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="252" selection-start-line="252" selection-end-line="252" />
+            <state relative-caret-position="235">
+              <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
             </state>
           </provider>
         </entry>
@@ -67,8 +49,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Objects/Image.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="15">
+              <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Objects/Image.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#98#117#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="1027">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#162#189#0" expanded="true" />
@@ -114,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="240">
               <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
@@ -141,10 +135,7 @@
         <option value="$PROJECT_DIR$/Logic/Node.h" />
         <option value="$PROJECT_DIR$/Structures/Node.h" />
         <option value="$PROJECT_DIR$/Structures/AVLTree.h" />
-        <option value="$PROJECT_DIR$/Objects/Image.h" />
-        <option value="$PROJECT_DIR$/Objects/Image.cpp" />
         <option value="$PROJECT_DIR$/Objects/JManager.h" />
-        <option value="$PROJECT_DIR$/Objects/JManager.cpp" />
         <option value="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
         <option value="$PROJECT_DIR$/Structures2/Node.h" />
         <option value="$PROJECT_DIR$/Structures2/LinkedList.h" />
@@ -152,16 +143,19 @@
         <option value="$PROJECT_DIR$/Main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Objects/DataBase.h" />
-        <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
+        <option value="$PROJECT_DIR$/Objects/JManager.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Objects/Image.h" />
+        <option value="$PROJECT_DIR$/Objects/Image.cpp" />
+        <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="716" />
+    <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="650" />
-    <option name="height" value="741" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,16 +176,10 @@
               <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
               <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="Structures" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,12 +269,13 @@
       <workItem from="1559789263430" duration="421000" />
       <workItem from="1559791359550" duration="226000" />
       <workItem from="1559875861343" duration="2085000" />
-      <workItem from="1559951484872" duration="6588000" />
+      <workItem from="1559951484872" duration="7878000" />
+      <workItem from="1559969787390" duration="8602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87381000" />
+    <option name="totallyTimeSpent" value="97273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +295,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8631922" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4267101" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5358306" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -327,34 +317,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Structures/AVLTree.cpp" />
-    <entry file="file://$PROJECT_DIR$/Structures/Node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Structures/AVLTree.h" />
-    <entry file="file://$PROJECT_DIR$/Objects/Image.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="e#98#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/JManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#105#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/7/bits/predefined_ops.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
@@ -373,19 +336,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test.h" />
-    <entry file="file://$PROJECT_DIR$/Objects/JManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#43#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Structures/LinkedList.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///usr/include/boost/property_tree/detail/ptree_implementation.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -414,13 +364,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Structures/Node.h">
+    <entry file="file://$PROJECT_DIR$/Structures/Node.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding>
-            <element signature="e#107#116#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -435,27 +382,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-          <folding>
-            <element signature="e#105#123#0" expanded="true" />
-            <element signature="e#437#456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="240">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
             <element signature="e#40#64#0" expanded="true" />
@@ -463,21 +392,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Structures/LinkedList.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Structures/Node.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="e#107#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/Image.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#98#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Objects/Image.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="15">
+          <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/JManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#105#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/JManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#437#456#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="1027">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <element signature="e#162#189#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
         </state>
       </provider>
     </entry>
