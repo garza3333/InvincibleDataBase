@@ -34,7 +34,7 @@ class DataBase {
 
 
 private:
-    LinkedList<LinkedList<Image>*> * MainList;
+    LinkedList<LinkedList<Image*>*> * MainList;
     JManager * jManager;
     string root;
 
@@ -45,13 +45,13 @@ public:
     DataBase();
     string getRoot();
     void setRoot(string newRoot);
-    LinkedList<LinkedList<Image>*> * getMainList();
+    LinkedList<LinkedList<Image*>*> * getMainList();
     bool addGalery(string nameGalery);
     bool insertImage(string json);
     bool updateImage(string json);
     bool deleteImage(string json);
     ptree selectImage(string json);
-    ptree fillPtreeImage(Node<Image> * image, vector<string> atributeVEC);
+    ptree fillPtreeImage(Node<Image*> * image, vector<string> atributeVEC);
     vector<string> split(string word , char delim);
     void saveToDisk();
     void loadInMemory();

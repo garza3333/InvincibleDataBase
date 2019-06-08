@@ -8,7 +8,7 @@
 
 DataBase::DataBase() {
 
-    this->MainList = new LinkedList<LinkedList<Image>*>();
+    this->MainList = new LinkedList<LinkedList<Image*>*>();
     this->jManager = new JManager();
     this->root = "../Master/";
 
@@ -22,12 +22,12 @@ void DataBase::setRoot(string newRoot) {
     this->root = "../"+newRoot+"/";
 }
 
-LinkedList<LinkedList<Image>*> *DataBase::getMainList() {
+LinkedList<LinkedList<Image*>*> *DataBase::getMainList() {
     return this->MainList;
 }
 
 bool DataBase::addGalery(string nameGalery) {
-    LinkedList<Image> * newGalery =  new LinkedList<Image>(nameGalery);
+    LinkedList<Image*> * newGalery =  new LinkedList<Image*>(nameGalery);
     return MainList->add(newGalery);
 
 }
@@ -70,7 +70,7 @@ bool DataBase::insertImage(string json) {
 
             }
 
-            Image newImage = Image(name, author, year, size, description);
+            Image * newImage = new Image(name, author, year, size, description);
 
             MainList->getTemp()->getValue()->add(newImage);
             cout<<"The image has been added!"<<endl;
@@ -105,11 +105,11 @@ ptree DataBase::selectImage(string json) {
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
 
             //TODO : preguntarle a david si con formato name,author o name:name author:author
-            if(ptImage.get_optional<string>("name") == MainList->getTemp()->getValue()->getTemp()->getValue().getName()
-            || ptImage.get_optional<string>("author") == MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor()
-            || ptImage.get_optional<string>("year") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue().getYear())
-            || ptImage.get_optional<string>("size") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue().getSize())
-            || ptImage.get_optional<string>("description") == MainList->getTemp()->getValue()->getTemp()->getValue().getDescription()){
+            if(ptImage.get_optional<string>("name") == MainList->getTemp()->getValue()->getTemp()->getValue()->getName()
+            || ptImage.get_optional<string>("author") == MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor()
+            || ptImage.get_optional<string>("year") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getYear())
+            || ptImage.get_optional<string>("size") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getSize())
+            || ptImage.get_optional<string>("description") == MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription()){
 
                 imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(this->fillPtreeImage(MainList->getTemp()->getValue()->getTemp(),atributesVEC)));
                 cont++;
@@ -157,13 +157,28 @@ bool DataBase::updateImage(string json) {
             }
         }
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
-            if(MainList->getTemp()->getValue()->getTemp()->getValue().getName() == name
-            ||MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor() == author
-            ||MainList->getTemp()->getValue()->getTemp()->getValue().getYear() == year
-            ||MainList->getTemp()->getValue()->getTemp()->getValue().getSize() == size
-            ||MainList->getTemp()->getValue()->getTemp()->getValue().getDescription() == description){
+            if(MainList->getTemp()->getValue()->getTemp()->getValue()->getName() == ptImage.get_optional<string>("name")
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor() == ptImage.get_optional<string>("author")
+            ||to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getYear()) == ptImage.get_optional<string>("year")
+            ||to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getSize()) == ptImage.get_optional<string>("size")
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription() == ptImage.get_optional<string>("description")){
                 //TODO: aqui van los ifs para saber que modificar
-                MainList->getTemp()->getValue()->getTemp()
+                if(name != "n-u*l-l"){
+                    MainList->getTemp()->getValue()->getTemp()->getValue()->setName(name);
+                }
+                if(author != "n-u*l-l"){
+                    MainList->getTemp()->getValue()->getTemp()->getValue()->setAuthor(author);
+                }
+                if(year != -2){
+                    MainList->getTemp()->getValue()->getTemp()->getValue()->setYear(year);
+                }
+                if(size != -2){
+                    MainList->getTemp()->getValue()->getTemp()->getValue()->setSize(size);
+                }
+                if(description != "n-u*l-l"){
+                    MainList->getTemp()->getValue()->getTemp()->getValue()->setDescription(description);
+                }
+                MainList->getTemp()->getValue()->getTemp();
             }
 
             MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -179,21 +194,21 @@ bool DataBase::deleteImage(string json) {
     return false;
 }
 
-ptree DataBase::fillPtreeImage(Node<Image> *image, vector<string> vec) {
+ptree DataBase::fillPtreeImage(Node<Image*> *image, vector<string> vec) {
 
     ptree ptim;
     for (int i = 0; i < vec.size(); i++) {
         string at = vec[i];
         if (at.compare("name") == 0) {
-            ptim.put("name",image->getValue().getName());
+            ptim.put("name",image->getValue()->getName());
         } else if (at.compare("author") == 0) {
-            ptim.put("author",image->getValue().getAuthor());
+            ptim.put("author",image->getValue()->getAuthor());
         } else if (at.compare("year") == 0) {
-            ptim.put("year",image->getValue().getYear());
+            ptim.put("year",image->getValue()->getYear());
         } else if (at.compare("size") == 0) {
-            ptim.put("size",image->getValue().getSize());
+            ptim.put("size",image->getValue()->getSize());
         } else if (at.compare("description") == 0) {
-            ptim.put("description",image->getValue().getDescription());
+            ptim.put("description",image->getValue()->getDescription());
         }
 
     }
@@ -229,11 +244,11 @@ void DataBase::saveToDisk() {
                 int cont = 0;
                 while(MainList->getTemp()->getValue()->getTemp() != nullptr){
                     ptree image;
-                    image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue().getName());
-                    image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor());
-                    image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue().getYear());
-                    image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue().getSize());
-                    image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue().getDescription());
+                    image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue()->getName());
+                    image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor());
+                    image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
+                    image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
+                    image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
                     allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -250,11 +265,11 @@ void DataBase::saveToDisk() {
                 int cont = 0;
                 while(MainList->getTemp()->getValue()->getTemp() != nullptr){
                     ptree image;
-                    image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue().getName());
-                    image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue().getAuthor());
-                    image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue().getYear());
-                    image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue().getSize());
-                    image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue().getDescription());
+                    image.put("name",MainList->getTemp()->getValue()->getTemp()->getValue()->getName());
+                    image.put("author",MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor());
+                    image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
+                    image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
+                    image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
                     allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());

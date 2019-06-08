@@ -10,14 +10,12 @@
 #include <algorithm>
 
 
-
-
-
 using namespace std;
 int main(int argc , char * argv[]) {
 
     //testing::InitGoogleTest(&argc , argv);
     //RUN_ALL_TESTS();
+
     JManager jsonM = JManager();
     DataBase * dataB = new DataBase();
     dataB->addGalery("Photos");
@@ -106,27 +104,26 @@ int main(int argc , char * argv[]) {
     selectPT4.put("author","GARZA");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT4)));
 
-    ptree updatept;
-    updatept.put("UPDATE","Photos");
-    updatept.put("SET","name = danielImage,author = SOFIA");
-    updatept.put("name","gabriel");
-
-/*    dataB->updateImage(jsonM.ptreeToString(updatept));
-
     //find -> author = SOFIA
     ptree selectPT5;
     selectPT5.put("FROM","Photos");
     selectPT5.put("SELECT","name,author,description,year,size");
     selectPT5.put("author","SOFIA");
-    jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT5)));*/
+    jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT5)));
 
+    ptree updatept;
+    updatept.put("UPDATE","Photos");
+    updatept.put("SET","name = DAVID,author = SOFIA");
+    updatept.put("name","gabriel");
 
+    dataB->updateImage(jsonM.ptreeToString(updatept));
 
-
-
-
-
-
+    //find -> author = SOFIA
+    ptree selectPT6;
+    selectPT6.put("FROM","Photos");
+    selectPT6.put("SELECT","name,author,description,year,size");
+    selectPT6.put("author","SOFIA");
+    jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT6)));
 
 
     dataB->addGalery("galeria1");
@@ -134,11 +131,6 @@ int main(int argc , char * argv[]) {
     dataB->addGalery("galeria3");
 
     dataB->saveToDisk();
-
-
-
-
-
 
 
     return 0;
