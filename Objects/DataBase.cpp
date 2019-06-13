@@ -5,7 +5,6 @@
 
 #include "DataBase.h"
 
-
 DataBase::DataBase() {
 
     this->MainList = new LinkedList<LinkedList<Image*>*>();
@@ -59,6 +58,7 @@ bool DataBase::deleteGalery(string galery) {
             delPtr = MainList->getHead();
             MainList->setHEAD(MainList->getHead()->getNext());
             delPtr->setNext(nullptr);
+            delFolder(this->root+delPtr->getValue()->getID()); // eliminando folder
             delete delPtr;
             MainList->substractSize();
             return true;
@@ -75,6 +75,7 @@ bool DataBase::deleteGalery(string galery) {
             MainList->getTemp()->setNext(MainList->getCurr()->getNext());
             MainList->getCurr()->setNext(nullptr);
             delPtr = MainList->getCurr();
+            delFolder(this->root+delPtr->getValue()->getID()); // eliminando folder
             delete delPtr;
             MainList->substractSize();
             return true;
@@ -82,6 +83,20 @@ bool DataBase::deleteGalery(string galery) {
     }
 
 }
+
+void DataBase::delFolder(string name) {
+
+
+/*
+    const int result = rmdir(name.c_str());
+    if( result == 0 ){
+        cout<<"success"<<endl;
+    } else {
+        cout<<"cant delete the galery >> "<<name<<" <<"<<endl;
+    }*/
+
+}
+
 
 bool DataBase::insertImage(string json) {
     if(!MainList->isEmpty()) {
@@ -507,11 +522,18 @@ string DataBase::descompressData(string galery, string tree , string code) {
     inFile.open(this->root+galery);
     string json = "";
     string x;
+
     if(inFile.is_open()){
         while(inFile >> x){
             json = json +x;
         }
         inFile.close();
+
+        string fileroot = this->getRoot()+galery;
+
+        if(remove(fileroot.c_str()) != 0){
+            cout<<"Error al eliminar"<<endl;
+        }
     }else{
         cout<<"Cant open the file!"<<endl;
     }

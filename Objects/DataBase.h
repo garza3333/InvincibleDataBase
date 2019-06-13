@@ -19,6 +19,7 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <iostream>
 #include <fstream>
+#include <stdio.h>
 
 
 //includes for directories
@@ -51,6 +52,7 @@ public:
     LinkedList<LinkedList<Image*>*> * getMainList();
     bool addGalery(string nameGalery);
     bool deleteGalery(string galery);
+    void delFolder(string name);
     bool insertImage(string json);
     bool updateImage(string json);
     bool deleteImage(string json);

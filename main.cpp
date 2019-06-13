@@ -22,7 +22,7 @@ int main(int argc , char * argv[]) {
 
     JManager jsonM = JManager();
     auto comp = new Compressor();
-    /*DataBase * dataB = new DataBase();
+    DataBase * dataB = new DataBase();
     dataB->addGalery("Photos");
     cout<<endl;
 
@@ -142,9 +142,8 @@ int main(int argc , char * argv[]) {
     dataB->deleteGalery("galeria3");
     dataB->showDirs();
     dataB->saveToDisk();
-*/
 
-    ptree prueba;
+/*    ptree prueba;
     ptree Galery;
     ptree ima1;
     ptree ima2;
@@ -182,13 +181,7 @@ int main(int argc , char * argv[]) {
     Compressor::Decodified_File
     * decode = comp->decompress(code);
     comp->writeToDiskComp(code);
-    comp->writeToDiskDecomp(decode);
-
-
-
-
-
-
+    comp->writeToDiskDecomp(decode);*/
 
 
     return 0;

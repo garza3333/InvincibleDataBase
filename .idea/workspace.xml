@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="MyDataBase" targetName="gtest_main" />
-      <config projectName="MyDataBase" targetName="gmock_main" />
-      <config projectName="MyDataBase" targetName="gtest" />
       <config projectName="MyDataBase" targetName="MyDataBase" />
+      <config projectName="MyDataBase" targetName="gtest" />
+      <config projectName="MyDataBase" targetName="gmock_main" />
       <config projectName="MyDataBase" targetName="gmock" />
+      <config projectName="MyDataBase" targetName="gtest_main" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -16,45 +16,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="208134d6-86d5-426b-ac5f-ee8bb2cf9494" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Compressor/Compressor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/Compressor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/Huffman_Node.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/Huffman_Node.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/Huffman_Tree.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/Huffman_Tree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/List.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compressor/NodeH.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/garza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/garza.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Master/imagesID.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/imagesID.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structures/LinkedList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Structures/LinkedList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structures/Node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Structures/NodeHuff.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structures/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/Structures/Node.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Tests/test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Tests/test.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/Tests/test.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MyDataBase.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MyDataBase" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MyDataBase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MyDataBase.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MyDataBase.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googlemock/CMakeFiles/gmock.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googlemock/CMakeFiles/gmock.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googletest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MyDataBase" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -69,60 +41,39 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="179">
-                  <caret line="507" column="21" selection-start-line="507" selection-start-column="21" selection-end-line="507" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="183" column="32" lean-forward="true" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                    <element signature="e#205#232#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="74">
-                  <caret line="64" column="70" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
-                  <folding>
-                    <element signature="e#105#123#0" expanded="true" />
-                    <element signature="e#437#456#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="497" column="107" lean-forward="true" selection-start-line="497" selection-start-column="107" selection-end-line="497" selection-end-column="107" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1861">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+              <folding>
+                <element signature="e#105#123#0" expanded="true" />
+                <element signature="e#494#513#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -179,46 +130,18 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="716" />
-    <option name="y" value="25" />
-    <option name="width" value="650" />
-    <option name="height" value="743" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-2" />
+    <option name="y" value="30" />
+    <option name="width" value="1161" />
+    <option name="height" value="662" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="Compressor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="Objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="Structures" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -313,12 +236,14 @@
       <workItem from="1559875861343" duration="2085000" />
       <workItem from="1559951484872" duration="7878000" />
       <workItem from="1559969787390" duration="8656000" />
-      <workItem from="1560003360657" duration="20643000" />
+      <workItem from="1560003360657" duration="21984000" />
+      <workItem from="1560033123549" duration="356000" />
+      <workItem from="1560379945227" duration="5805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117970000" />
+    <option name="totallyTimeSpent" value="125472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,15 +255,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="716" y="25" width="650" height="743" extended-state="4" />
-    <editor active="true" />
+    <frame x="198" y="169" width="1161" height="662" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.37417218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4267101" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36970684" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5358306" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,7 +272,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32736155" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.57491857" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.30769232" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -467,47 +391,11 @@
     <entry file="file://$PROJECT_DIR$/Structures/LinkedList.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/HuffmanList.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/HuffmanList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding>
-            <element signature="e#116#140#0" expanded="true" />
-            <element signature="e#176#185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/HuffmanNode.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="e#116#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Compressor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2917">
-          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-          <folding>
-            <element signature="e#48#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="19" selection-start-line="19" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/HuffmanList.cpp" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/HuffmanList.h" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/HuffmanNode.h" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Compressor.cpp" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Node.cpp" />
     <entry file="file://$PROJECT_DIR$/Structures/LinkedList.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -519,50 +407,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/List.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Tree.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Tree.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Node.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Compressor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#106#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/NodeHuff.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compressor/List.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/List.h" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Tree.h" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Tree.cpp" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Huffman_Node.h" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/Compressor.h" />
+    <entry file="file://$PROJECT_DIR$/Huffman_Compressor/NodeHuff.h" />
+    <entry file="file://$PROJECT_DIR$/Compressor/List.cpp" />
     <entry file="file://$PROJECT_DIR$/Compressor/Huffman_Tree.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -591,9 +442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compressor/Node.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Compressor/Node.cpp" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -628,28 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="183" column="32" lean-forward="true" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#205#232#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="64" column="70" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
-          <folding>
-            <element signature="e#105#123#0" expanded="true" />
-            <element signature="e#437#456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Compressor/Compressor.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -660,10 +487,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1861">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding>
+            <element signature="e#105#123#0" expanded="true" />
+            <element signature="e#494#513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="507" column="21" selection-start-line="507" selection-start-column="21" selection-end-line="507" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>

@@ -16,6 +16,11 @@ CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o
  /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.cpp
  /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.h
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o
+ /home/garza/Desktop/MydataBase/Compressor/Compressor.h
+ /home/garza/Desktop/MydataBase/Compressor/Huffman_Node.h
+ /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.h
+ /home/garza/Desktop/MydataBase/Compressor/List.h
+ /home/garza/Desktop/MydataBase/Compressor/NodeH.h
  /home/garza/Desktop/MydataBase/Objects/DataBase.cpp
  /home/garza/Desktop/MydataBase/Objects/DataBase.h
  /home/garza/Desktop/MydataBase/Objects/Image.h
@@ -74,6 +79,11 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+ /home/garza/Desktop/MydataBase/Compressor/Compressor.h
+ /home/garza/Desktop/MydataBase/Compressor/Huffman_Node.h
+ /home/garza/Desktop/MydataBase/Compressor/Huffman_Tree.h
+ /home/garza/Desktop/MydataBase/Compressor/List.h
+ /home/garza/Desktop/MydataBase/Compressor/NodeH.h
  /home/garza/Desktop/MydataBase/Objects/DataBase.h
  /home/garza/Desktop/MydataBase/Objects/Image.h
  /home/garza/Desktop/MydataBase/Objects/JManager.h

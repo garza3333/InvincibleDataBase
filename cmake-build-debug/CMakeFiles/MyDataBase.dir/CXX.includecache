@@ -536,6 +536,10 @@ iostream
 
 /home/garza/Desktop/MydataBase/Compressor/NodeH.h
 
+/home/garza/Desktop/MydataBase/Objects/DataBase.cpp
+DataBase.h
+/home/garza/Desktop/MydataBase/Objects/DataBase.h
+
 /home/garza/Desktop/MydataBase/Objects/DataBase.h
 Image.h
 /home/garza/Desktop/MydataBase/Objects/Image.h
@@ -543,6 +547,8 @@ Image.h
 /home/garza/Desktop/MydataBase/Structures/LinkedList.h
 JManager.h
 /home/garza/Desktop/MydataBase/Objects/JManager.h
+../Compressor/Compressor.h
+/home/garza/Desktop/MydataBase/Compressor/Compressor.h
 iostream
 -
 string
@@ -560,6 +566,8 @@ boost/property_tree/json_parser.hpp
 iostream
 -
 fstream
+-
+stdio.h
 -
 dirent.h
 -
@@ -591,6 +599,16 @@ Node.h
 /home/garza/Desktop/MydataBase/Structures/Node.h
 
 /home/garza/Desktop/MydataBase/Structures/Node.h
+
+/home/garza/Desktop/MydataBase/Tests/test.cpp
+gtest/gtest.h
+-
+gmock/gmock.h
+-
+../Structures/LinkedList.h
+/home/garza/Desktop/MydataBase/Structures/LinkedList.h
+../Objects/DataBase.h
+/home/garza/Desktop/MydataBase/Objects/DataBase.h
 
 /home/garza/Desktop/MydataBase/main.cpp
 iostream

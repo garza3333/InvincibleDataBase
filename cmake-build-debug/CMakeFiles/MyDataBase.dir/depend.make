@@ -15,6 +15,11 @@ CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o: ../Compressor/Huffman_N
 CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o: ../Compressor/Huffman_Tree.cpp
 CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o: ../Compressor/Huffman_Tree.h
 
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Compressor/Compressor.h
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Compressor/Huffman_Node.h
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Compressor/Huffman_Tree.h
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Compressor/List.h
+CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Compressor/NodeH.h
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/DataBase.cpp
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/DataBase.h
 CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o: ../Objects/Image.h
@@ -73,6 +78,11 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Compressor/Compressor.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Compressor/Huffman_Node.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Compressor/Huffman_Tree.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Compressor/List.h
+CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Compressor/NodeH.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Objects/DataBase.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Objects/Image.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../Objects/JManager.h
