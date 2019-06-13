@@ -29,6 +29,9 @@ DataBase::DataBase() {
 
 }
 
+int DataBase::getImageId() {
+    return this->imageID;
+}
 string DataBase::getRoot() {
     return this->root;
 }
@@ -102,7 +105,7 @@ bool DataBase::insertImage(string json) {
     if(!MainList->isEmpty()) {
 
         ptree ptImage = jManager->stringToPtree(json);
-        string galery = ptImage.get<string>("INTO");
+        string galery = ptImage.get<string>("table");
         MainList->setTemp(MainList->getHead());
 
         while (MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != galery) {
@@ -119,19 +122,20 @@ bool DataBase::insertImage(string json) {
             string name = "NULL", author = "NULL", description = "NULL";
             int year = 0, size = 0;
 
-            vector<string> atributVector = split(ptImage.get<string>("ATRIBUTES"), ',');
+            vector<string> atributVector = split(ptImage.get<string>("cols"), ',');
+            vector<string> valuesVector = split(ptImage.get<string>("values"),',');
             for (int i = 0; i < atributVector.size(); i++) {
                 string at = atributVector[i];
                 if (at.compare("name") == 0) {
-                    name = ptImage.get<string>("name");
+                    name = valuesVector[i];
                 } else if (at.compare("author") == 0) {
-                    author = ptImage.get<string>("author");
+                    author = valuesVector[i];
                 } else if (at.compare("year") == 0) {
-                    year = stoi(ptImage.get<string>("year"));
+                    year = stoi(valuesVector[i]);
                 } else if (at.compare("size") == 0) {
-                    size = stoi(ptImage.get<string>("size"));
+                    size = stoi(valuesVector[i]);
                 } else if (at.compare("description") == 0) {
-                    description = ptImage.get<string>("description");
+                    description = valuesVector[i];
                 }
 
             }
@@ -539,6 +543,36 @@ string DataBase::descompressData(string galery, string tree , string code) {
     }
     return json;
 
+}
+
+string DataBase::initIdleTree() {
+
+    ptree allGalery;
+    int contGaleries = 0;
+
+    MainList->setTemp(MainList->getHead());
+
+    while(MainList->getTemp() != nullptr){
+        ptree oneGalery;
+        oneGalery.put("Name",MainList->getTemp()->getValue()->getID());
+        int contImages = 0;
+        MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+        while(MainList->getTemp()->getValue()->getTemp() != nullptr){
+            ptree oneImage;
+            oneImage.put("name",MainList->getTemp()->getValue()->getTemp()->getValue()->getName());
+            oneImage.put("code",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+            oneGalery.put("Image"+to_string(contImages),this->jManager->ptreeToString(oneImage));
+            contImages++;
+            MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
+        }
+        oneGalery.put("NumImages",to_string(contImages));
+        allGalery.put("Galery"+to_string(contGaleries),this->jManager->ptreeToString(oneGalery));
+        contGaleries++;
+        MainList->setTemp(MainList->getTemp()->getNext());
+    }
+    allGalery.put("NUM",to_string(contGaleries));
+
+    return this->jManager->ptreeToString(allGalery);
 }
 
 

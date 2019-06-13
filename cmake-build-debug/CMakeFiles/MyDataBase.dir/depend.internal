@@ -91,6 +91,63 @@ CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
  /home/garza/Desktop/MydataBase/Structures/Node.h
  /home/garza/Desktop/MydataBase/Tests/test.cpp
 CMakeFiles/MyDataBase.dir/main.cpp.o
+ ..//nlohmann/adl_serializer.hpp
+ ..//nlohmann/detail/conversions/from_json.hpp
+ ..//nlohmann/detail/conversions/to_chars.hpp
+ ..//nlohmann/detail/conversions/to_json.hpp
+ ..//nlohmann/detail/exceptions.hpp
+ ..//nlohmann/detail/input/binary_reader.hpp
+ ..//nlohmann/detail/input/input_adapters.hpp
+ ..//nlohmann/detail/input/json_sax.hpp
+ ..//nlohmann/detail/input/lexer.hpp
+ ..//nlohmann/detail/input/parser.hpp
+ ..//nlohmann/detail/input/position_t.hpp
+ ..//nlohmann/detail/iterators/internal_iterator.hpp
+ ..//nlohmann/detail/iterators/iter_impl.hpp
+ ..//nlohmann/detail/iterators/iteration_proxy.hpp
+ ..//nlohmann/detail/iterators/iterator_traits.hpp
+ ..//nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ..//nlohmann/detail/iterators/primitive_iterator.hpp
+ ..//nlohmann/detail/json_pointer.hpp
+ ..//nlohmann/detail/json_ref.hpp
+ ..//nlohmann/detail/macro_scope.hpp
+ ..//nlohmann/detail/macro_unscope.hpp
+ ..//nlohmann/detail/meta/cpp_future.hpp
+ ..//nlohmann/detail/meta/detected.hpp
+ ..//nlohmann/detail/meta/is_sax.hpp
+ ..//nlohmann/detail/meta/type_traits.hpp
+ ..//nlohmann/detail/meta/void_t.hpp
+ ..//nlohmann/detail/output/binary_writer.hpp
+ ..//nlohmann/detail/output/output_adapters.hpp
+ ..//nlohmann/detail/output/serializer.hpp
+ ..//nlohmann/detail/value_t.hpp
+ ..//nlohmann/json.hpp
+ ..//nlohmann/json_fwd.hpp
+ ..//pistache/async.h
+ ..//pistache/common.h
+ ..//pistache/config.h
+ ..//pistache/cookie.h
+ ..//pistache/endpoint.h
+ ..//pistache/flags.h
+ ..//pistache/http.h
+ ..//pistache/http_defs.h
+ ..//pistache/http_header.h
+ ..//pistache/http_headers.h
+ ..//pistache/listener.h
+ ..//pistache/mailbox.h
+ ..//pistache/mime.h
+ ..//pistache/net.h
+ ..//pistache/optional.h
+ ..//pistache/os.h
+ ..//pistache/peer.h
+ ..//pistache/prototype.h
+ ..//pistache/reactor.h
+ ..//pistache/stream.h
+ ..//pistache/tcp.h
+ ..//pistache/transport.h
+ ..//pistache/type_checkers.h
+ ..//pistache/typeid.h
+ ..//pistache/view.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-function-mocker.h
@@ -140,3 +197,4 @@ CMakeFiles/MyDataBase.dir/main.cpp.o
  /home/garza/Desktop/MydataBase/Structures/LinkedList.h
  /home/garza/Desktop/MydataBase/Structures/Node.h
  /home/garza/Desktop/MydataBase/main.cpp
+ /home/garza/Desktop/MydataBase/server/requestHandler.h

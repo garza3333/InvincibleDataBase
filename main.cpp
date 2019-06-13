@@ -11,6 +11,7 @@
 #include <string>
 #include <string.h>
 #include <algorithm>
+#include "server/requestHandler.h"
 
 
 using namespace std;
@@ -20,7 +21,7 @@ int main(int argc , char * argv[]) {
     //RUN_ALL_TESTS();
 
 
-    JManager jsonM = JManager();
+/*    JManager jsonM = JManager();
     auto comp = new Compressor();
     DataBase * dataB = new DataBase();
     dataB->addGalery("Photos");
@@ -28,43 +29,30 @@ int main(int argc , char * argv[]) {
 
     //IMAGEN 1
     ptree pt;
-    pt.put("INTO","Photos");
-    pt.put("ATRIBUTES","name,author,description,year,size");
-    pt.put("name","danielImage");
-    pt.put("author","GARZA");
-    pt.put("size","3");
-    pt.put("year","2019");
-    pt.put("description","its a test image");
+    pt.put("table","Photos");
+    pt.put("cols","name,author,description,year,size");
+    pt.put("values","danielImage,GARZA,its a test image,2019,3");
+
 
     //IMAGEN2
     ptree pt2;
-    pt2.put("INTO","Photos");
-    pt2.put("ATRIBUTES","name,description,size,author,year");
-    pt2.put("name","danielImage");
-    pt2.put("author","SOFIA");
-    pt2.put("year","2018");
-    pt2.put("size","2000");
-    pt2.put("description","this shit");
+    pt2.put("table","Photos");
+    pt2.put("cols","name,description,size,author,year");
+    pt2.put("values","danielImage,this shit,2000,SOFIA,2018");
+
 
     //IMAGEN3
     ptree pt3;
-    pt3.put("INTO","Photos");
-    pt3.put("ATRIBUTES","name,description,size,author,year");
-    pt3.put("name","gabriel");
-    pt3.put("author","GARZA");
-    pt3.put("year","2019");
-    pt3.put("size","2000");
-    pt3.put("description","this is a description");
+    pt3.put("table","Photos");
+    pt3.put("cols","name,description,size,author,year");
+    pt3.put("values","gabriel,this is a description,2000,GARZA,2019");
+
 
     //IMAGEN4
     ptree pt4;
-    pt4.put("INTO","Photos");
-    pt4.put("ATRIBUTES","name,description,size,author,year");
-    pt4.put("name","danielImage");
-    pt4.put("author","SOFIA");
-    pt4.put("year","2019");
-    pt4.put("size","1023");
-    pt4.put("description","i need coffee");
+    pt4.put("table","Photos");
+    pt4.put("cols","name,description,size,author,year");
+    pt4.put("values","danielImage,i need coffee,1023,SOFIA,2019");
 
 
     dataB->insertImage(jsonM.ptreeToString(pt));
@@ -141,7 +129,10 @@ int main(int argc , char * argv[]) {
     dataB->deleteGalery("galeria1");
     dataB->deleteGalery("galeria3");
     dataB->showDirs();
-    dataB->saveToDisk();
+    dataB->saveToDisk();*/
+
+
+    //PRUEBA PARA INICIALIZAR EL IDLE
 
 /*    ptree prueba;
     ptree Galery;
@@ -183,6 +174,25 @@ int main(int argc , char * argv[]) {
     comp->writeToDiskComp(code);
     comp->writeToDiskDecomp(decode);*/
 
+/*    cout<<"\nINIT TREE "<<endl;
+    cout<<dataB->initIdleTree()<<endl;*/
+
+
+
+
+
+// SERVIDOR
+
+    Address addr(Ipv4::any(), Port(9082));
+    auto opts = Http::Endpoint::options()
+            .threads(1);
+
+    Http::Endpoint server(addr);
+    server.init(opts);
+    server.setHandler(Http::make_handler<requestHandler>());
+    server.serve();
+
+    server.shutdown();
 
     return 0;
 

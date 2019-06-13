@@ -45,7 +45,7 @@ std::string Image::getDescription(){
     return this->description;
 }
 
-void Image::setDescription(std::string des) {
+void Image::setDescription(string des) {
     this->description= des;
 }
 
@@ -53,8 +53,8 @@ int Image::getSize() {
     return this->size;
 }
 
-void Image::setSize(int size) {
-    this->size = size;
+void Image::setSize(int siz) {
+    this->size = siz;
 }
 
 int Image::getYear(){
@@ -66,7 +66,7 @@ void Image::setYear(int y) {
 }
 
 int Image::getID() {
-    this->ID;
+    return this->ID;
 }
 
 

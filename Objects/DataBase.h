@@ -47,6 +47,7 @@ public:
      * Builder of the class
      */
     DataBase();
+    int getImageId();
     string getRoot();
     void setRoot(string newRoot);
     LinkedList<LinkedList<Image*>*> * getMainList();
@@ -65,6 +66,7 @@ public:
     void showALLImages(string galery);
     void compressData(string json , string galery);
     string descompressData(string galery , string tree , string code);
+    string initIdleTree();
 
 
 };

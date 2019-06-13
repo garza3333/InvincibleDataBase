@@ -9,17 +9,25 @@
 #include <nlohmann/json.hpp>
 #include <iostream>
 #include <sstream>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
 using namespace Pistache;
 using nlohmann::json;
+using boost::property_tree::ptree;
 
 class requestHandler: public Http::Handler {
+private:
+    DataBase * dataBase = new DataBase();
+    JManager * jMan = new JManager();
+
 public:
 
 HTTP_PROTOTYPE(requestHandler);
 
     void onRequest(const Http::Request& request, Http::ResponseWriter response) {
         std::string datos;
+        std::string respuesta  = "false";
         if (request.method() == Http::Method::Post) {
             if (request.resource() == "/INSERT") {
                 datos = request.body();
@@ -32,11 +40,20 @@ HTTP_PROTOTYPE(requestHandler);
                  * var valor = jsonRequest[nomDeLaLlave]
                  */
 
+                //std::string jsonString = jsonRequest.dump();
+
                 // TODO aqui debe estar logica del insert
 
+                dataBase->addGalery("vacaciones");
+                if(this->dataBase->insertImage(jsonRequest.dump())){
+                        ptree pt;
+                        pt.put("id",dataBase->getImageId()-1);
+                        respuesta = this->jMan->ptreeToString(pt);
+                }
 
-                // TODO definir respuesta
-                response.send(Pistache::Http::Code::Ok, jsonRequest.dump(4));
+                cout<<respuesta<<endl;
+
+                response.send(Pistache::Http::Code::Ok, respuesta);
             }
 
             else if (request.resource() == "/SELECT") {
@@ -93,6 +110,7 @@ HTTP_PROTOTYPE(requestHandler);
             response.send(Pistache::Http::Code::Ok, "<h1>Esta es la respuesta por defecto</h1>");
         }
     }
+
 };
 
 #endif //INVINCIBLE_SERVER_REQUESTHANDLER_H

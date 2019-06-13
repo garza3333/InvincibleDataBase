@@ -216,6 +216,7 @@ MyDataBase: CMakeFiles/MyDataBase.dir/Compressor/Huffman_Tree.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/build.make
 MyDataBase: lib/libgtestd.a
 MyDataBase: lib/libgtest_maind.a
+MyDataBase: ~/pistache/build/src/libpistache.so.0
 MyDataBase: lib/libgtestd.a
 MyDataBase: CMakeFiles/MyDataBase.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable MyDataBase"

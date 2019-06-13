@@ -56,7 +56,7 @@ public:
      *
      * @param size assign size of image
      */
-    void setSize(int size);
+    void setSize(int siz);
     /**
      *
      * @return year of creation
