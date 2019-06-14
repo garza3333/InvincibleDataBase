@@ -165,7 +165,7 @@ ptree DataBase::selectImage(string json) {
         MainList->setTemp(MainList->getTemp()->getNext());
     }
     if(MainList->getTemp() == nullptr){
-        cout<<"No se encontró una galeria con el nombre <<"<<from<<">>";
+        cout<<"Gallery not found <<"<<from<<">>";
 
     }else{
         ptree imagesJson;
@@ -226,7 +226,7 @@ bool DataBase::updateImage(string json) {
         MainList->setTemp(MainList->getTemp()->getNext());
     }
     if(MainList->getTemp() == nullptr){
-        cout<<"No se encontró la galeria >>"<<MainList->getTemp()->getValue()->getID()<<">>"<<endl;
+        cout<<"Gallery not found>>"<<MainList->getTemp()->getValue()->getID()<<">>"<<endl;
         return false;
 
     }else{
@@ -286,7 +286,6 @@ bool DataBase::updateImage(string json) {
 
 
 
-        //TODO cambiar el where a vector para poder leer bien la sintaxis
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
             if(MainList->getTemp()->getValue()->getTemp()->getValue()->getName() == nameID
             ||MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor() == authorID
@@ -439,6 +438,8 @@ void DataBase::saveToDisk() {
     }else {
         vector<string> folders;
         vector<string> foldersNot;
+        vector<string> allFolders;
+
         MainList->setTemp(MainList->getHead());
 
         while (MainList->getTemp() != nullptr) {
@@ -466,6 +467,7 @@ void DataBase::saveToDisk() {
                 file << jManager->ptreeToString(allImages);
                 file.close();
                 folders.push_back(MainList->getTemp()->getValue()->getID());
+                allFolders.push_back(MainList->getTemp()->getValue()->getID());
             } else {
                 MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
                 ptree allImages;
@@ -488,17 +490,27 @@ void DataBase::saveToDisk() {
                 file << jManager->ptreeToString(allImages);
                 file.close();
                 foldersNot.push_back(MainList->getTemp()->getValue()->getID());
+                allFolders.push_back(MainList->getTemp()->getValue()->getID());
             }
             MainList->setTemp(MainList->getTemp()->getNext());
         }
         cout<<"-- Carpetas creadas:"<<"\n"<<endl;
-        for(int i = 0 ; i<folders.size() ; i++){
-            cout<<"-> "<<folders[i]<<endl;
+        for(const auto & folder : folders){
+            cout<<"-> "<<folder<<endl;
         }cout<<endl;
         cout<<"-- Carpetas NO creadas:"<<"\n"<<endl;
-        for(int j = 0 ; j<foldersNot.size() ; j++){
-            cout<<"-> "<<foldersNot[j]<<endl;
+        for(const auto & j : foldersNot){
+            cout<<"-> "<<j<<endl;
         }
+        ofstream foldersFile;
+        foldersFile.open(root+"/FileNames.txt");
+        string filenames;
+        for(const auto & allFolder : allFolders){
+            filenames += allFolder+"@";
+        }
+        foldersFile<<filenames;
+        foldersFile.close();
+
     }
 
     ofstream file;
@@ -622,6 +634,10 @@ string DataBase::initIdleTree() {
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
             ptree oneImage;
             oneImage.put("name",MainList->getTemp()->getValue()->getTemp()->getValue()->getName());
+            oneImage.put("author",MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor());
+            oneImage.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
+            oneImage.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
+            oneImage.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
             oneImage.put("code",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
             oneGalery.put("Image"+to_string(contImages),this->jManager->ptreeToString(oneImage));
             contImages++;
@@ -646,6 +662,23 @@ string DataBase::replace_ALL(string str , const string &from , const string &to)
         pos += tlen;
     }
     return str;
+}
+
+void DataBase::loadToMemory() {
+
+    ifstream inFile;
+    inFile.open("../Master/FileNames.txt");
+
+    if (inFile.is_open()) {
+        string line;
+        getline(inFile,line);
+        this->imageID = stoi(line);
+        cout<<"imagesID: "<<this->imageID<<endl;
+        inFile.close();
+    }else{
+        cout << "Cant pen the file";
+        this->imageID = 0;
+    }
 }
 
 

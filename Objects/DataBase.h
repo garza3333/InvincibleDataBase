@@ -70,6 +70,7 @@ public:
     string descompressData(string galery , string tree , string code);
     string initIdleTree();
     string replace_ALL(string str , const string &from , const string &to);
+    void loadToMemory();
 
 
 };

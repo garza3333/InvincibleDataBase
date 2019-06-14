@@ -16,7 +16,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf5f3c3-ab60-4361-9001-61352538b9b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/requestHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/requestHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/imagesID.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/imagesID.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
+            <state relative-caret-position="52">
               <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -47,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+            <state relative-caret-position="382">
+              <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
               <folding>
                 <element signature="e#105#123#0" expanded="true" />
                 <element signature="e#494#513#0" expanded="true" />
@@ -57,41 +59,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-502">
-              <caret line="569" column="34" selection-start-line="569" selection-start-column="34" selection-end-line="569" selection-end-column="34" />
+            <state relative-caret-position="323">
+              <caret line="635" column="37" selection-start-line="635" selection-start-column="37" selection-end-line="635" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="87" column="53" lean-forward="true" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
+            <state relative-caret-position="120">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
               <folding>
                 <element signature="e#131#161#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -148,15 +132,15 @@
         <option value="$PROJECT_DIR$/Objects/Image.h" />
         <option value="$PROJECT_DIR$/Objects/Image.cpp" />
         <option value="$PROJECT_DIR$/Structures/LinkedList.h" />
-        <option value="$PROJECT_DIR$/Objects/DataBase.h" />
         <option value="$PROJECT_DIR$/Structures/Node.h" />
-        <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/server/requestHandler.h" />
+        <option value="$PROJECT_DIR$/Objects/DataBase.h" />
+        <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="650" />
@@ -174,11 +158,6 @@
             <path>
               <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
               <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyDataBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MydataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -291,7 +270,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153970000" />
+    <option name="totallyTimeSpent" value="159218000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -303,10 +282,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="67" y="25" width="650" height="743" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26336792" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.54635763" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -554,20 +533,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
+    <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        <state relative-caret-position="120">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
           <folding>
-            <element signature="e#105#123#0" expanded="true" />
-            <element signature="e#494#513#0" expanded="true" />
+            <element signature="e#131#161#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
+        <state relative-caret-position="52">
           <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -576,20 +554,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-502">
-          <caret line="569" column="34" selection-start-line="569" selection-start-column="34" selection-end-line="569" selection-end-column="34" />
+        <state relative-caret-position="382">
+          <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+          <folding>
+            <element signature="e#105#123#0" expanded="true" />
+            <element signature="e#494#513#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="87" column="53" lean-forward="true" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
-          <folding>
-            <element signature="e#131#161#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="635" column="37" selection-start-line="635" selection-start-column="37" selection-end-line="635" selection-end-column="37" />
         </state>
       </provider>
     </entry>
