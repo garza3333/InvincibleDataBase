@@ -198,7 +198,7 @@ int main(int argc , char * argv[]) {
 //
 // SERVIDOR
 
-/*    Address addr(Ipv4::any(), Port(9082));
+    Address addr(Ipv4::any(), Port(9082));
     auto opts = Http::Endpoint::options()
             .threads(1);
 
@@ -207,7 +207,7 @@ int main(int argc , char * argv[]) {
     server.setHandler(Http::make_handler<requestHandler>());
     server.serve();
 
-    server.shutdown();*/
+    server.shutdown();
 
     return 0;
 

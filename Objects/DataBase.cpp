@@ -460,6 +460,7 @@ void DataBase::saveToDisk() {
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
                 }
                 //Making a file
+                //TODO AGREGAR EL COMPRESOR
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 file << jManager->ptreeToString(allImages);
@@ -481,6 +482,7 @@ void DataBase::saveToDisk() {
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
                 }
                 //Making a file
+                //TODO: AGREGAR EL COMPRESOR
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 file << jManager->ptreeToString(allImages);

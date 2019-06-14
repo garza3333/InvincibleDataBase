@@ -45,15 +45,11 @@ HTTP_PROTOTYPE(requestHandler);
                 // TODO aqui debe estar logica del insert
 
                 dataBase->addGalery("vacaciones");
-                try {
 
-                    if(this->dataBase->insertImage(jsonRequest.dump())){
-                        ptree pt;
-                        pt.put("id",dataBase->getImageId()-1);
-                        respuesta = this->jMan->ptreeToString(pt);
-                    }
-                }catch(...){
-                    cout<<"Exception in server INSERT"<<endl;
+                if(this->dataBase->insertImage(jsonRequest.dump())){
+                    ptree pt;
+                    pt.put("id",dataBase->getImageId()-1);
+                    respuesta = this->jMan->ptreeToString(pt);
                 }
 
 
@@ -72,13 +68,45 @@ HTTP_PROTOTYPE(requestHandler);
                  * var valor = jsonRequest[nomDeLaLlave]
                  */
 
-                // TODO aqui debe estar logica del select
-                try{
+                dataBase->addGalery("Photos");
 
-                    respuesta = this->jMan->ptreeToString(dataBase->selectImage(jsonRequest.dump()));
-                }catch(...){
-                    cout<<"Exception in server SELECT"<<endl;
-                }
+                //IMAGEN 1
+                ptree pt;
+                pt.put("table","Photos");
+                pt.put("cols","name,author,description,year,size");
+                pt.put("values","danielImage,GARZA,its a test image,2019,3");
+
+
+                //IMAGEN2
+                ptree pt2;
+                pt2.put("table","Photos");
+                pt2.put("cols","name,description,size,author,year");
+                pt2.put("values","danielImage,this shit,2000,SOFIA,2018");
+
+
+                //IMAGEN3
+                ptree pt3;
+                pt3.put("table","Photos");
+                pt3.put("cols","name,description,size,author,year");
+                pt3.put("values","gabriel,this is a description,2000,GARZA,2019");
+
+
+                //IMAGEN4
+                ptree pt4;
+                pt4.put("table","Photos");
+                pt4.put("cols","name,description,size,author,year");
+                pt4.put("values","danielImage,i need coffee,1023,SOFIA,2019");
+
+                dataBase->insertImage(jMan->ptreeToString(pt));
+                dataBase->insertImage(jMan->ptreeToString(pt2));
+                dataBase->insertImage(jMan->ptreeToString(pt3));
+                dataBase->insertImage(jMan->ptreeToString(pt4));
+
+
+                // TODO aqui debe estar logica del select
+
+                respuesta = this->jMan->ptreeToString(dataBase->selectImage(jsonRequest.dump()));
+
 
                 cout<<respuesta<<endl;
 
