@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/garza/Desktop/MydataBase/Objects/Image.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o"
   "/home/garza/Desktop/MydataBase/Objects/JManager.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o"
   "/home/garza/Desktop/MydataBase/Structures/LinkedList.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o"
-  "/home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o"
+  "/home/garza/Desktop/MydataBase/Structures/Node.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
   "/home/garza/Desktop/MydataBase/Tests/test.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/Tests/test.cpp.o"
   "/home/garza/Desktop/MydataBase/main.cpp" "/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles/MyDataBase.dir/main.cpp.o"
   )

@@ -45,11 +45,17 @@ HTTP_PROTOTYPE(requestHandler);
                 // TODO aqui debe estar logica del insert
 
                 dataBase->addGalery("vacaciones");
-                if(this->dataBase->insertImage(jsonRequest.dump())){
+                try {
+
+                    if(this->dataBase->insertImage(jsonRequest.dump())){
                         ptree pt;
                         pt.put("id",dataBase->getImageId()-1);
                         respuesta = this->jMan->ptreeToString(pt);
+                    }
+                }catch(...){
+                    cout<<"Exception in server INSERT"<<endl;
                 }
+
 
                 cout<<respuesta<<endl;
 
@@ -67,9 +73,17 @@ HTTP_PROTOTYPE(requestHandler);
                  */
 
                 // TODO aqui debe estar logica del select
+                try{
+
+                    respuesta = this->jMan->ptreeToString(dataBase->selectImage(jsonRequest.dump()));
+                }catch(...){
+                    cout<<"Exception in server SELECT"<<endl;
+                }
+
+                cout<<respuesta<<endl;
 
                 // TODO definir respuesta
-                response.send(Pistache::Http::Code::Ok, jsonRequest.dump(4));
+                response.send(Pistache::Http::Code::Ok, respuesta);
             }
 
             else if (request.resource() == "/UPDATE") {

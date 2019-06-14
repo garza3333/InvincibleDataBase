@@ -388,10 +388,10 @@
 		<Unit filename="/home/garza/Desktop/MydataBase/Structures/LinkedList.h">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.h">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.cpp">
 			<Option target="MyDataBase"/>
 		</Unit>
-		<Unit filename="/home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp">
+		<Unit filename="/home/garza/Desktop/MydataBase/Structures/Node.h">
 			<Option target="MyDataBase"/>
 		</Unit>
 		<Unit filename="/home/garza/Desktop/MydataBase/Tests/test.cpp">

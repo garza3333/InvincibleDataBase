@@ -37,8 +37,8 @@ CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.
 CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.h
 CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/Node.h
 
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o: ../Structures/Node.h
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o: ../Structures/NodeHuff.cpp
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.h
 
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o: ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h

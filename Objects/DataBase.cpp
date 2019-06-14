@@ -53,7 +53,7 @@ bool DataBase::addGalery(string nameGalery) {
 bool DataBase::deleteGalery(string galery) {
 
     if(!MainList->isEmpty()){
-        NodeHuff<LinkedList<Image*> *> * delPtr = nullptr;
+        Node<LinkedList<Image*> *> * delPtr = nullptr;
 
         MainList->setTemp(MainList->getHead());
         MainList->setCurr(MainList->getHead());
@@ -157,7 +157,7 @@ bool DataBase::insertImage(string json) {
 
 ptree DataBase::selectImage(string json) {
     ptree ptImage = jManager->stringToPtree(json);
-    string from = ptImage.get<string>("FROM");
+    string from = ptImage.get<string>("table");
 
     MainList->setTemp(MainList->getHead());
 
@@ -169,18 +169,44 @@ ptree DataBase::selectImage(string json) {
 
     }else{
         ptree imagesJson;
+
+        vector<string> atributesVEC = this->split(ptImage.get<string>("cols"),',');
+        vector<string> whereVEC = split(replace_ALL(ptImage.get<string>("WHERE"),"OR",","),',');
+        string name = "n-u*l-l";
+        string author = "n-u*l-l";
+        int year = -2;
+        int size =-2;
+        int id = -2;
+        string description = "n-u*l-l";
+
+        for(int i = 0 ; i<whereVEC.size() ; i++ ){
+            whereVEC[i].erase(remove(whereVEC[i].begin(), whereVEC[i].end(), ' '), whereVEC[i].end()); //delete the spaces ' '
+            vector<string> set = split(whereVEC[i],'=');
+            if(set[0] == "name"){
+                name = set[1];
+            }else if(set[0] == "author"){
+                author = set[1];
+            }else if(set[0] == "year"){
+                year = stoi(set[1]);
+            }else if(set[0] == "size"){
+                size = stoi(set[1]);
+            }else if(set[0] == "description"){
+                description = set[1];
+            }else if(set[0] == "id"){
+                id = stoi(set[1]);
+            }
+        }
+
         MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
-        //vector<string> valuesVEC = this->split(ptImage.get<string>("WHERE"),',');
-        vector<string> atributesVEC = this->split(ptImage.get<string>("SELECT"),',');
         int cont = 0;
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
 
-            //TODO : preguntarle a david si con formato name,author o name:name author:author
-            if(ptImage.get_optional<string>("name") == MainList->getTemp()->getValue()->getTemp()->getValue()->getName()
-            || ptImage.get_optional<string>("author") == MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor()
-            || ptImage.get_optional<string>("year") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getYear())
-            || ptImage.get_optional<string>("size") == to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getSize())
-            || ptImage.get_optional<string>("description") == MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription()){
+            if(name == MainList->getTemp()->getValue()->getTemp()->getValue()->getName()
+            || author == MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor()
+            || year == MainList->getTemp()->getValue()->getTemp()->getValue()->getYear()
+            || size == MainList->getTemp()->getValue()->getTemp()->getValue()->getSize()
+            || description == MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription()
+            || id == MainList->getTemp()->getValue()->getTemp()->getValue()->getID()){
 
                 imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(this->fillPtreeImage(MainList->getTemp()->getValue()->getTemp(),atributesVEC)));
                 cont++;
@@ -204,6 +230,9 @@ bool DataBase::updateImage(string json) {
         return false;
 
     }else{
+
+
+
         MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
         vector<string> setVEC = split(ptImage.get<string>("SET"),',');
         string name = "n-u*l-l";
@@ -227,13 +256,45 @@ bool DataBase::updateImage(string json) {
                 description = set[1];
             }
         }
+
+
+        vector<string> whereVEC = split(replace_ALL(ptImage.get<string>("WHERE"),"OR",","),',');
+        string nameID = "n-u*l-l";
+        string authorID = "n-u*l-l";
+        int yearID = -2;
+        int sizeID =-2;
+        int idID = -2;
+        string descriptionID = "n-u*l-l";
+
+        for(int i = 0 ; i<whereVEC.size() ; i++ ){
+            whereVEC[i].erase(remove(whereVEC[i].begin(), whereVEC[i].end(), ' '), whereVEC[i].end()); //delete the spaces ' '
+            vector<string> set = split(whereVEC[i],'=');
+            if(set[0] == "name"){
+                nameID = set[1];
+            }else if(set[0] == "author"){
+                authorID = set[1];
+            }else if(set[0] == "year"){
+                yearID = stoi(set[1]);
+            }else if(set[0] == "size"){
+                sizeID = stoi(set[1]);
+            }else if(set[0] == "description"){
+                descriptionID = set[1];
+            }else if(set[0] == "id"){
+                idID = stoi(set[1]);
+            }
+        }
+
+
+
+        //TODO cambiar el where a vector para poder leer bien la sintaxis
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
-            if(MainList->getTemp()->getValue()->getTemp()->getValue()->getName() == ptImage.get_optional<string>("name")
-            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor() == ptImage.get_optional<string>("author")
-            ||to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getYear()) == ptImage.get_optional<string>("year")
-            ||to_string(MainList->getTemp()->getValue()->getTemp()->getValue()->getSize()) == ptImage.get_optional<string>("size")
-            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription() == ptImage.get_optional<string>("description")){
-                //TODO: aqui van los ifs para saber que modificar
+            if(MainList->getTemp()->getValue()->getTemp()->getValue()->getName() == nameID
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getAuthor() == authorID
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getYear() == yearID
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getSize() == sizeID
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription() == descriptionID
+            ||MainList->getTemp()->getValue()->getTemp()->getValue()->getID() == idID){
+
                 if(name != "n-u*l-l"){
                     MainList->getTemp()->getValue()->getTemp()->getValue()->setName(name);
                 }
@@ -278,8 +339,7 @@ bool DataBase::deleteImage(string json) {
         int year = -2;
         int size = -2;
         string description = "n-u*l-l";
-        vector<string> whereVEC = split(imageJson.get<string>("WHERE"),',');
-
+        vector<string> whereVEC = split(replace_ALL(imageJson.get<string>("WHERE"),"OR",","),',');
 
         for(int i = 0 ; i<whereVEC.size() ; i++ ){
             whereVEC[i].erase(remove(whereVEC[i].begin(), whereVEC[i].end(), ' '), whereVEC[i].end()); //delete the spaces ' '
@@ -297,7 +357,7 @@ bool DataBase::deleteImage(string json) {
             }
         }
 
-        NodeHuff<Image*> * delPtr = nullptr;
+        Node<Image*> * delPtr = nullptr;
         MainList->getTemp()->getValue()->setTemp(MainList->getHead()->getValue()->getHead());
         MainList->getTemp()->getValue()->setCurr(MainList->getTemp()->getValue()->getHead());
 
@@ -340,7 +400,7 @@ bool DataBase::deleteImage(string json) {
 
 }
 
-ptree DataBase::fillPtreeImage(NodeHuff<Image*> *image, vector<string> vec) {
+ptree DataBase::fillPtreeImage(Node<Image*> *image, vector<string> vec) {
 
     ptree ptim;
     for (int i = 0; i < vec.size(); i++) {
@@ -573,6 +633,17 @@ string DataBase::initIdleTree() {
     allGalery.put("NUM",to_string(contGaleries));
 
     return this->jManager->ptreeToString(allGalery);
+}
+
+string DataBase::replace_ALL(string str , const string &from , const string &to) {
+    int pos = 0;
+    int flen = from.length();
+    int tlen = to.length();
+    while((pos = str.find(from,pos)) != -1){
+        str.replace(pos,flen,to);
+        pos += tlen;
+    }
+    return str;
 }
 
 

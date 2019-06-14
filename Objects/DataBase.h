@@ -8,6 +8,8 @@
 
 #include "Image.h"
 #include "../Structures/LinkedList.h"
+#include "../Structures/Node.h"
+
 #include "JManager.h"
 #include "../Compressor/Compressor.h"
 #include <iostream>
@@ -58,7 +60,7 @@ public:
     bool updateImage(string json);
     bool deleteImage(string json);
     ptree selectImage(string json);
-    static ptree fillPtreeImage(NodeHuff<Image*> * image, vector<string> atributeVEC);
+    static ptree fillPtreeImage(Node<Image*> * image, vector<string> atributeVEC);
     vector<string> split(string word , char delim);
     void saveToDisk();
     void loadInMemory();
@@ -67,6 +69,7 @@ public:
     void compressData(string json , string galery);
     string descompressData(string galery , string tree , string code);
     string initIdleTree();
+    string replace_ALL(string str , const string &from , const string &to);
 
 
 };

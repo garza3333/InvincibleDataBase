@@ -1495,6 +1495,8 @@ Image.h
 /home/garza/Desktop/MydataBase/Objects/Image.h
 ../Structures/LinkedList.h
 /home/garza/Desktop/MydataBase/Structures/LinkedList.h
+../Structures/Node.h
+/home/garza/Desktop/MydataBase/Structures/Node.h
 JManager.h
 /home/garza/Desktop/MydataBase/Objects/JManager.h
 ../Compressor/Compressor.h

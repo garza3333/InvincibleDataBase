@@ -21,7 +21,7 @@ int main(int argc , char * argv[]) {
     //RUN_ALL_TESTS();
 
 
-/*    JManager jsonM = JManager();
+    JManager jsonM = JManager();
     auto comp = new Compressor();
     DataBase * dataB = new DataBase();
     dataB->addGalery("Photos");
@@ -62,63 +62,66 @@ int main(int argc , char * argv[]) {
 
     //find -> name = danielImage
     ptree selectPT;
-    selectPT.put("FROM","Photos");
-    selectPT.put("SELECT","name,author,description,year");
-    selectPT.put("name","danielImage");
+    selectPT.put("table","Photos");
+    selectPT.put("cols","name,author,description,year");
+    selectPT.put("WHERE","name = danielImage");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT)));
     //find -> size = 2000
     ptree selectPT1;
-    selectPT1.put("FROM","Photos");
-    selectPT1.put("SELECT","name,author,description,year,size");
-    selectPT1.put("size","2000");
+    selectPT1.put("table","Photos");
+    selectPT1.put("cols","name,author,description,year,size");
+    selectPT1.put("WHERE","size = 2000");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT1)));
 
     //find -> year = 2019
     ptree selectPT2;
-    selectPT2.put("FROM","Photos");
-    selectPT2.put("SELECT","name,author,description,year,size");
-    selectPT2.put("year","2019");
+    selectPT2.put("table","Photos");
+    selectPT2.put("cols","name,author,description,year,size");
+    selectPT2.put("WHERE","year = 2019");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT2)));
 
     //find -> year = 2019
     //find -> name = danielImage
     ptree selectPT3;
-    selectPT3.put("FROM","Photos");
-    selectPT3.put("SELECT","name,author,description,year,size");
-    selectPT3.put("year","2019");
-    selectPT3.put("name","danielImage");
+    selectPT3.put("table","Photos");
+    selectPT3.put("cols","name,author,description,year,size");
+    selectPT3.put("WHERE","year = 2019 OR name = danielImage");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT3)));
 
 
     //find -> author = GARZA
     ptree selectPT4;
-    selectPT4.put("FROM","Photos");
-    selectPT4.put("SELECT","name,author,description,year,size");
-    selectPT4.put("author","GARZA");
+    selectPT4.put("table","Photos");
+    selectPT4.put("cols","name,author,description,year,size");
+    selectPT4.put("WHERE","author = GARZA");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT4)));
 
     //find -> author = SOFIA
     ptree selectPT5;
-    selectPT5.put("FROM","Photos");
-    selectPT5.put("SELECT","name,author,description,year,size");
-    selectPT5.put("author","SOFIA");
+    selectPT5.put("table","Photos");
+    selectPT5.put("cols","name,author,description,year,size");
+    selectPT5.put("WHERE","author = SOFIA");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT5)));
 
     ptree updatept;
     updatept.put("UPDATE","Photos");
     updatept.put("SET","name = DAVID,author = SOFIA");
-    updatept.put("name","gabriel");
+    updatept.put("WHERE","name = gabriel");
 
     dataB->updateImage(jsonM.ptreeToString(updatept));
 
     //find -> author = SOFIA
     ptree selectPT6;
-    selectPT6.put("FROM","Photos");
-    selectPT6.put("SELECT","name,author,description,year,size");
-    selectPT6.put("author","SOFIA");
+    selectPT6.put("table","Photos");
+    selectPT6.put("cols","name,author,description,year,size");
+    selectPT6.put("WHERE","author = SOFIA");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT6)));
 
     cout<<"PHOTOS"<<endl;
+    ptree delete1;
+    delete1.put("FROM","Photos");
+    delete1.put("WHERE","name =  danielImage");
+    //dataB->deleteImage(jsonM.ptreeToString(delete1));
     dataB->showALLImages("Photos");
 
 
@@ -129,7 +132,7 @@ int main(int argc , char * argv[]) {
     dataB->deleteGalery("galeria1");
     dataB->deleteGalery("galeria3");
     dataB->showDirs();
-    dataB->saveToDisk();*/
+    dataB->saveToDisk();
 
 
     //PRUEBA PARA INICIALIZAR EL IDLE
@@ -174,16 +177,28 @@ int main(int argc , char * argv[]) {
     comp->writeToDiskComp(code);
     comp->writeToDiskDecomp(decode);*/
 
-/*    cout<<"\nINIT TREE "<<endl;
-    cout<<dataB->initIdleTree()<<endl;*/
+    cout<<"\nINIT TREE "<<endl;
+    cout<<dataB->initIdleTree()<<endl;
+
+/*    string a = "name = daniel OR year = 2000";
+    string b = dataB->replace_ALL(a,"OR",",");
+    b.erase(remove(b.begin(), b.end(), ' '), b.end());
+    cout<<a<<endl;
+    cout<<b<<endl;
+    vector<string> vector = dataB->split(b,',');
+    for(int i = 0 ; i<vector.size() ; i++){
+        cout<<vector[i]<<endl;
+    }*/
 
 
 
 
 
+//cgas
+//
 // SERVIDOR
 
-    Address addr(Ipv4::any(), Port(9082));
+/*    Address addr(Ipv4::any(), Port(9082));
     auto opts = Http::Endpoint::options()
             .threads(1);
 
@@ -192,7 +207,7 @@ int main(int argc , char * argv[]) {
     server.setHandler(Http::make_handler<requestHandler>());
     server.serve();
 
-    server.shutdown();
+    server.shutdown();*/
 
     return 0;
 

@@ -96,18 +96,18 @@ CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Objects/JManager.cpp -o CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.s
 
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o: ../Structures/NodeHuff.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o -c /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/garza/Desktop/MydataBase/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o -c /home/garza/Desktop/MydataBase/Structures/Node.cpp
 
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp > CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/garza/Desktop/MydataBase/Structures/Node.cpp > CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
 
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp -o CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/garza/Desktop/MydataBase/Structures/Node.cpp -o CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
 
 CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: CMakeFiles/MyDataBase.dir/flags.make
 CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.cpp
@@ -192,7 +192,7 @@ MyDataBase_OBJECTS = \
 "CMakeFiles/MyDataBase.dir/main.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o" \
-"CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o" \
+"CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o" \
 "CMakeFiles/MyDataBase.dir/Tests/test.cpp.o" \
@@ -206,7 +206,7 @@ MyDataBase_EXTERNAL_OBJECTS =
 MyDataBase: CMakeFiles/MyDataBase.dir/main.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/Image.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/JManager.cpp.o
-MyDataBase: CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o
+MyDataBase: CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Objects/DataBase.cpp.o
 MyDataBase: CMakeFiles/MyDataBase.dir/Tests/test.cpp.o

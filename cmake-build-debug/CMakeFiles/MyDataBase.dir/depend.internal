@@ -37,9 +37,9 @@ CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.o
  /home/garza/Desktop/MydataBase/Structures/LinkedList.cpp
  /home/garza/Desktop/MydataBase/Structures/LinkedList.h
  /home/garza/Desktop/MydataBase/Structures/Node.h
-CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o
+CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
+ /home/garza/Desktop/MydataBase/Structures/Node.cpp
  /home/garza/Desktop/MydataBase/Structures/Node.h
- /home/garza/Desktop/MydataBase/Structures/NodeHuff.cpp
 CMakeFiles/MyDataBase.dir/Tests/test.cpp.o
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h

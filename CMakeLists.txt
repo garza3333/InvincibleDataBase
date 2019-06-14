@@ -9,7 +9,7 @@ add_executable(MyDataBase
         Objects/Image.h
         Objects/JManager.cpp
         Objects/JManager.h
-        Structures/NodeHuff.cpp
+        Structures/Node.cpp
         Structures/Node.h
         Structures/LinkedList.cpp
         Structures/LinkedList.h

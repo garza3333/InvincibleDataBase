@@ -15,9 +15,9 @@ class LinkedList {
 
 private:
     int size;
-    NodeHuff<T>* head;
-    NodeHuff<T> * curr;
-    NodeHuff<T> * temp;
+    Node<T>* head;
+    Node<T> * curr;
+    Node<T> * temp;
     string id;
 public:
     /**
@@ -50,19 +50,19 @@ public:
      * Assign the head of the list
      * @param newNode
      */
-    void setHEAD(NodeHuff<T> * newNode){
+    void setHEAD(Node<T> * newNode){
         head = newNode;
     }
-    NodeHuff<T> * getCurr(){
+    Node<T> * getCurr(){
         return this->curr;
     }
-    NodeHuff<T> * getTemp(){
+    Node<T> * getTemp(){
         return this->temp;
     }
-    void setCurr(NodeHuff<T> * node){
+    void setCurr(Node<T> * node){
         this->curr = node;
     }
-    void setTemp(NodeHuff<T> * node){
+    void setTemp(Node<T> * node){
         this->temp = node;
     }
     /**
@@ -74,7 +74,7 @@ public:
      *
      * @return head node of list
      */
-    NodeHuff<T>* getHead(){
+    Node<T>* getHead(){
         return this->head;
     }
     /**
@@ -91,14 +91,14 @@ public:
     bool add(T v){
 
         if (isEmpty()) {
-            this->head = new NodeHuff<T>(v);
+            this->head = new Node<T>(v);
 
         } else {
             this->curr = this->getHead();
             while (curr->getNext() != 0) {
                 curr = curr->getNext();
             }
-            NodeHuff<T> *n = new NodeHuff<T>(v);
+            Node<T> *n = new Node<T>(v);
             curr->setNext(n);
         }
         size++;
@@ -111,11 +111,11 @@ public:
     void addFirst(T v){
         if(isEmpty()){
 
-            this->head = new NodeHuff<T>(v);
+            this->head = new Node<T>(v);
 
         }else{
-            NodeHuff<T>* temp = this->getHead();
-            NodeHuff<T>* n = new NodeHuff<T>(v);
+            Node<T>* temp = this->getHead();
+            Node<T>* n = new Node<T>(v);
             n->setNext(this->getHead());
             this->head = n;
         }size++;
@@ -128,7 +128,7 @@ public:
 
         if(!this->isEmpty()){
 
-            NodeHuff<T> * delPtr = nullptr;
+            Node<T> * delPtr = nullptr;
             temp = head;
             curr = head;
             if(curr->getValue() == n){
@@ -164,7 +164,7 @@ public:
      * @return true if it exists , false if not
      */
     bool in(T v){
-        NodeHuff<T>* temp = this->getHead();
+        Node<T>* temp = this->getHead();
         while(temp!=0){
             if(temp->getValue() == v){
                 return true;
@@ -180,7 +180,7 @@ public:
     void see(){
 
         if(!isEmpty()){
-            NodeHuff<T>* temp = this->getHead();
+            Node<T>* temp = this->getHead();
             cout<<"[";
             while(temp->getNext() != 0){
                 cout<<temp->getValue()<<", ";

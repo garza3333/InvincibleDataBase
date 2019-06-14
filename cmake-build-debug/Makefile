@@ -410,32 +410,32 @@ Structures/LinkedList.cpp.s:
 	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/LinkedList.cpp.s
 .PHONY : Structures/LinkedList.cpp.s
 
-Structures/NodeHuff.o: Structures/NodeHuff.cpp.o
+Structures/Node.o: Structures/Node.cpp.o
 
-.PHONY : Structures/NodeHuff.o
+.PHONY : Structures/Node.o
 
 # target to build an object file
-Structures/NodeHuff.cpp.o:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.o
-.PHONY : Structures/NodeHuff.cpp.o
+Structures/Node.cpp.o:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.o
+.PHONY : Structures/Node.cpp.o
 
-Structures/NodeHuff.i: Structures/NodeHuff.cpp.i
+Structures/Node.i: Structures/Node.cpp.i
 
-.PHONY : Structures/NodeHuff.i
+.PHONY : Structures/Node.i
 
 # target to preprocess a source file
-Structures/NodeHuff.cpp.i:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.i
-.PHONY : Structures/NodeHuff.cpp.i
+Structures/Node.cpp.i:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.i
+.PHONY : Structures/Node.cpp.i
 
-Structures/NodeHuff.s: Structures/NodeHuff.cpp.s
+Structures/Node.s: Structures/Node.cpp.s
 
-.PHONY : Structures/NodeHuff.s
+.PHONY : Structures/Node.s
 
 # target to generate assembly for a file
-Structures/NodeHuff.cpp.s:
-	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/NodeHuff.cpp.s
-.PHONY : Structures/NodeHuff.cpp.s
+Structures/Node.cpp.s:
+	$(MAKE) -f CMakeFiles/MyDataBase.dir/build.make CMakeFiles/MyDataBase.dir/Structures/Node.cpp.s
+.PHONY : Structures/Node.cpp.s
 
 Tests/test.o: Tests/test.cpp.o
 
@@ -529,9 +529,9 @@ help:
 	@echo "... Structures/LinkedList.o"
 	@echo "... Structures/LinkedList.i"
 	@echo "... Structures/LinkedList.s"
-	@echo "... Structures/NodeHuff.o"
-	@echo "... Structures/NodeHuff.i"
-	@echo "... Structures/NodeHuff.s"
+	@echo "... Structures/Node.o"
+	@echo "... Structures/Node.i"
+	@echo "... Structures/Node.s"
 	@echo "... Tests/test.o"
 	@echo "... Tests/test.i"
 	@echo "... Tests/test.s"
