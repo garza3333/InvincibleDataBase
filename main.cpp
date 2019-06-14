@@ -23,18 +23,28 @@ int main(int argc , char * argv[]) {
 
     JManager jsonM = JManager();
     auto comp = new Compressor();
+
+
     DataBase * dataB = new DataBase();
-    dataB->addGalery("Photos");
-    cout<<endl;
+
+
+    dataB->showALLImages("vacaciones");
+    dataB->showDirs();
+
+/*    dataB->addGalery("vacaciones");
 
     //IMAGEN 1
     ptree pt;
-    pt.put("table","Photos");
-    pt.put("cols","name,author,description,year,size");
-    pt.put("values","danielImage,GARZA,its a test image,2019,3");
+    pt.put("table","vacaciones");
+    pt.put("cols","name,description,year");
+    pt.put("values","aruba,bonitas,2005");
+
+    dataB->insertImage(jsonM.ptreeToString(pt));
+
+    dataB->saveToDisk();*/
 
 
-    //IMAGEN2
+/*    //IMAGEN2
     ptree pt2;
     pt2.put("table","Photos");
     pt2.put("cols","name,description,size,author,year");
@@ -132,7 +142,7 @@ int main(int argc , char * argv[]) {
     dataB->deleteGalery("galeria1");
     dataB->deleteGalery("galeria3");
     dataB->showDirs();
-    dataB->saveToDisk();
+    dataB->saveToDisk();*/
 
 
     //PRUEBA PARA INICIALIZAR EL IDLE
@@ -177,8 +187,8 @@ int main(int argc , char * argv[]) {
     comp->writeToDiskComp(code);
     comp->writeToDiskDecomp(decode);*/
 
-    cout<<"\nINIT TREE "<<endl;
-    cout<<dataB->initIdleTree()<<endl;
+/*    cout<<"\nINIT TREE "<<endl;
+    cout<<dataB->initIdleTree()<<endl;*/
 
 /*    string a = "name = daniel OR year = 2000";
     string b = dataB->replace_ALL(a,"OR",",");
@@ -198,7 +208,7 @@ int main(int argc , char * argv[]) {
 //
 // SERVIDOR
 
-    Address addr(Ipv4::any(), Port(9082));
+/*    Address addr(Ipv4::any(), Port(9082));
     auto opts = Http::Endpoint::options()
             .threads(1);
 
@@ -207,7 +217,7 @@ int main(int argc , char * argv[]) {
     server.setHandler(Http::make_handler<requestHandler>());
     server.serve();
 
-    server.shutdown();
+    server.shutdown();*/
 
     return 0;
 

@@ -28,10 +28,7 @@ HTTP_PROTOTYPE(requestHandler);
     void onRequest(const Http::Request& request, Http::ResponseWriter response) {
 
 
-
-
-
-        dataBase->addGalery("Photos");
+/*        dataBase->addGalery("Photos");
         dataBase->addGalery("vacaciones");
 
         //IMAGEN 1
@@ -64,7 +61,7 @@ HTTP_PROTOTYPE(requestHandler);
         dataBase->insertImage(jMan->ptreeToString(pt));
         dataBase->insertImage(jMan->ptreeToString(pt2));
         dataBase->insertImage(jMan->ptreeToString(pt3));
-        dataBase->insertImage(jMan->ptreeToString(pt4));
+        dataBase->insertImage(jMan->ptreeToString(pt4));*/
 
 
         std::string datos;
@@ -75,7 +72,11 @@ HTTP_PROTOTYPE(requestHandler);
                 std::cout << "Se recibe create request con cuerpo : " << datos << std::endl;
                 datos = request.body();
 
-                dataBase->addGalery(datos);
+                if(dataBase->addGalery(datos)){
+
+                    respuesta = "true";
+                }
+
                 cout<<"galery added "<<datos<<endl;
 
                 response.send(Pistache::Http::Code::Ok, respuesta);

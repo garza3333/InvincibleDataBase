@@ -1,6 +1,7 @@
 {
-    "Image0": "{\n    \"name\": \"danielImage\",\n    \"author\": \"GARZA\",\n    \"year\": \"2019\",\n    \"size\": \"3\",\n    \"description\": \"its a test image\"\n}\n",
+    "Image0": "{\n    \"name\": \"danielImage\",\n    \"author\": \"NULL\",\n    \"year\": \"2019\",\n    \"size\": \"0\",\n    \"description\": \"its a test image\"\n}\n",
     "Image1": "{\n    \"name\": \"danielImage\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2018\",\n    \"size\": \"2000\",\n    \"description\": \"this shit\"\n}\n",
     "Image2": "{\n    \"name\": \"DAVID\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2019\",\n    \"size\": \"2000\",\n    \"description\": \"this is a description\"\n}\n",
-    "Image3": "{\n    \"name\": \"danielImage\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2019\",\n    \"size\": \"1023\",\n    \"description\": \"i need coffee\"\n}\n"
+    "Image3": "{\n    \"name\": \"danielImage\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2019\",\n    \"size\": \"1023\",\n    \"description\": \"i need coffee\"\n}\n",
+    "NumImages": "4"
 }

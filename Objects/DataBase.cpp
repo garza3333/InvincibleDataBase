@@ -9,6 +9,7 @@ DataBase::DataBase() {
 
     this->MainList = new LinkedList<LinkedList<Image*>*>();
     this->jManager = new JManager();
+    this->compressor = new Compressor();
     this->root = "../Master/";
 
     ifstream inFile;
@@ -25,6 +26,8 @@ DataBase::DataBase() {
         cout << "Cant pen the file";
         this->imageID = 0;
     }
+
+    this->loadToMemory();
 
 
 }
@@ -46,7 +49,23 @@ LinkedList<LinkedList<Image*>*> *DataBase::getMainList() {
 
 bool DataBase::addGalery(string nameGalery) {
     LinkedList<Image*> * newGalery =  new LinkedList<Image*>(nameGalery);
-    return MainList->add(newGalery);
+    if(MainList->add(newGalery)){
+        MainList->setTemp(MainList->getHead());
+        string filenames;
+
+        while(MainList->getTemp() != nullptr){
+            filenames += MainList->getTemp()->getValue()->getID()+"@";
+            MainList->setTemp(MainList->getTemp()->getNext());
+        }
+
+        ofstream foldersFile;
+        foldersFile.open(root+"/FileNames.txt");
+        foldersFile<<filenames;
+        foldersFile.close();
+        return true;
+    }else{
+        return false;
+    }
 
 }
 
@@ -145,6 +164,7 @@ bool DataBase::insertImage(string json) {
 
             MainList->getTemp()->getValue()->add(newImage);
             cout<<"The image has been added!"<<endl;
+            this->saveToDisk();
             return true;
         }
 
@@ -152,6 +172,9 @@ bool DataBase::insertImage(string json) {
         cout<<"The list is empty! "<<endl;
         return false;
     }
+
+
+
 
 }
 
@@ -314,13 +337,14 @@ bool DataBase::updateImage(string json) {
 
             MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
         }
+        this->saveToDisk();
         return true;
 
 
     }
 
 }
-
+//TODO: hacer un modulo que encapsule esto y luego agregar un save to disk
 bool DataBase::deleteImage(string json) {
 
     ptree imageJson = jManager->stringToPtree(json);
@@ -438,7 +462,6 @@ void DataBase::saveToDisk() {
     }else {
         vector<string> folders;
         vector<string> foldersNot;
-        vector<string> allFolders;
 
         MainList->setTemp(MainList->getHead());
 
@@ -460,6 +483,7 @@ void DataBase::saveToDisk() {
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
                 }
+                allImages.put("NumImages",to_string(cont));
                 //Making a file
                 //TODO AGREGAR EL COMPRESOR
                 ofstream file;
@@ -467,7 +491,6 @@ void DataBase::saveToDisk() {
                 file << jManager->ptreeToString(allImages);
                 file.close();
                 folders.push_back(MainList->getTemp()->getValue()->getID());
-                allFolders.push_back(MainList->getTemp()->getValue()->getID());
             } else {
                 MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
                 ptree allImages;
@@ -483,6 +506,7 @@ void DataBase::saveToDisk() {
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
                 }
+                allImages.put("NumImages",to_string(cont));
                 //Making a file
                 //TODO: AGREGAR EL COMPRESOR
                 ofstream file;
@@ -490,7 +514,6 @@ void DataBase::saveToDisk() {
                 file << jManager->ptreeToString(allImages);
                 file.close();
                 foldersNot.push_back(MainList->getTemp()->getValue()->getID());
-                allFolders.push_back(MainList->getTemp()->getValue()->getID());
             }
             MainList->setTemp(MainList->getTemp()->getNext());
         }
@@ -502,14 +525,7 @@ void DataBase::saveToDisk() {
         for(const auto & j : foldersNot){
             cout<<"-> "<<j<<endl;
         }
-        ofstream foldersFile;
-        foldersFile.open(root+"/FileNames.txt");
-        string filenames;
-        for(const auto & allFolder : allFolders){
-            filenames += allFolder+"@";
-        }
-        foldersFile<<filenames;
-        foldersFile.close();
+
 
     }
 
@@ -520,7 +536,7 @@ void DataBase::saveToDisk() {
 
 }
 
-void DataBase::loadInMemory() {
+void DataBase::saveFileNames() {
 
 }
 
@@ -667,18 +683,56 @@ string DataBase::replace_ALL(string str , const string &from , const string &to)
 void DataBase::loadToMemory() {
 
     ifstream inFile;
-    inFile.open("../Master/FileNames.txt");
-
+    inFile.open(this->root+"FileNames.txt");
+    vector<string> galeriesVEC;
     if (inFile.is_open()) {
         string line;
         getline(inFile,line);
-        this->imageID = stoi(line);
-        cout<<"imagesID: "<<this->imageID<<endl;
+
+        galeriesVEC = split(line,'@');
+
         inFile.close();
     }else{
-        cout << "Cant pen the file";
-        this->imageID = 0;
+        cout << "Cant open the file";
     }
+
+    for(const auto & i : galeriesVEC){
+        this->addGalery(i);
+        ifstream metadata;
+        metadata.open(this->root+i+"/MetaData.txt");
+
+        if (metadata.is_open()) {
+            string jline;
+            string strjson;
+            while(getline(metadata,jline)){
+                strjson += jline;
+            }
+            metadata.close();
+
+            ptree jsonImages = this->jManager->stringToPtree(strjson);
+            for(int j = 0 ; j < stoi(jsonImages.get<string>("NumImages")) ; j++){
+
+                ptree jImage = this->jManager->stringToPtree(jsonImages.get<string>("Image"+to_string(j)));
+
+                ptree pt;
+                pt.put("table",i);
+                pt.put("cols","name,author,year,size,description");
+                pt.put("values", jImage.get<string>("name")+","+jImage.get<string>("author")+","+jImage.get<string>("year")+","+jImage.get<string>("size")+","+jImage.get<string>("description"));
+
+                this->insertImage(this->jManager->ptreeToString(pt));
+
+
+            }
+
+
+        }else{
+            cout << "Cant open the file";
+        }
+
+
+    }
+
+
 }
 
 

@@ -1490,10 +1490,6 @@ iostream
 
 /home/garza/Desktop/MydataBase/Compressor/NodeH.h
 
-/home/garza/Desktop/MydataBase/Objects/DataBase.cpp
-DataBase.h
-/home/garza/Desktop/MydataBase/Objects/DataBase.h
-
 /home/garza/Desktop/MydataBase/Objects/DataBase.h
 Image.h
 /home/garza/Desktop/MydataBase/Objects/Image.h
@@ -1555,16 +1551,6 @@ Node.h
 /home/garza/Desktop/MydataBase/Structures/Node.h
 
 /home/garza/Desktop/MydataBase/Structures/Node.h
-
-/home/garza/Desktop/MydataBase/Tests/test.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-../Structures/LinkedList.h
-/home/garza/Desktop/MydataBase/Structures/LinkedList.h
-../Objects/DataBase.h
-/home/garza/Desktop/MydataBase/Objects/DataBase.h
 
 /home/garza/Desktop/MydataBase/main.cpp
 iostream

@@ -63,7 +63,7 @@ public:
     static ptree fillPtreeImage(Node<Image*> * image, vector<string> atributeVEC);
     vector<string> split(string word , char delim);
     void saveToDisk();
-    void loadInMemory();
+    void saveFileNames();
     void showDirs();
     void showALLImages(string galery);
     void compressData(string json , string galery);
