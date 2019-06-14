@@ -26,9 +26,71 @@ public:
 HTTP_PROTOTYPE(requestHandler);
 
     void onRequest(const Http::Request& request, Http::ResponseWriter response) {
+
+
+
+
+
+        dataBase->addGalery("Photos");
+        dataBase->addGalery("vacaciones");
+
+        //IMAGEN 1
+        ptree pt;
+        pt.put("table","Photos");
+        pt.put("cols","name,author,description,year,size");
+        pt.put("values","danielImage,GARZA,its a test image,2019,3");
+
+
+        //IMAGEN2
+        ptree pt2;
+        pt2.put("table","Photos");
+        pt2.put("cols","name,description,size,author,year");
+        pt2.put("values","danielImage,this shit,2000,SOFIA,2018");
+
+
+        //IMAGEN3
+        ptree pt3;
+        pt3.put("table","Photos");
+        pt3.put("cols","name,description,size,author,year");
+        pt3.put("values","gabriel,this is a description,2000,GARZA,2019");
+
+
+        //IMAGEN4
+        ptree pt4;
+        pt4.put("table","Photos");
+        pt4.put("cols","name,description,size,author,year");
+        pt4.put("values","danielImage,i need coffee,1023,SOFIA,2019");
+
+        dataBase->insertImage(jMan->ptreeToString(pt));
+        dataBase->insertImage(jMan->ptreeToString(pt2));
+        dataBase->insertImage(jMan->ptreeToString(pt3));
+        dataBase->insertImage(jMan->ptreeToString(pt4));
+
+
         std::string datos;
         std::string respuesta  = "false";
         if (request.method() == Http::Method::Post) {
+
+            if (request.resource() == "/CREATE") {
+                std::cout << "Se recibe create request con cuerpo : " << datos << std::endl;
+                datos = request.body();
+
+                dataBase->addGalery(datos);
+                cout<<"galery added "<<datos<<endl;
+
+                response.send(Pistache::Http::Code::Ok, respuesta);
+            }
+
+            else if (request.resource() == "/RESTORE") {
+
+                datos= request.body();
+
+                respuesta = dataBase->initIdleTree();
+
+
+                response.send(Pistache::Http::Code::Ok, respuesta);
+            }
+
             if (request.resource() == "/INSERT") {
                 datos = request.body();
 
@@ -44,7 +106,7 @@ HTTP_PROTOTYPE(requestHandler);
 
                 // TODO aqui debe estar logica del insert
 
-                dataBase->addGalery("vacaciones");
+
 
                 if(this->dataBase->insertImage(jsonRequest.dump())){
                     ptree pt;
@@ -68,39 +130,6 @@ HTTP_PROTOTYPE(requestHandler);
                  * var valor = jsonRequest[nomDeLaLlave]
                  */
 
-                dataBase->addGalery("Photos");
-
-                //IMAGEN 1
-                ptree pt;
-                pt.put("table","Photos");
-                pt.put("cols","name,author,description,year,size");
-                pt.put("values","danielImage,GARZA,its a test image,2019,3");
-
-
-                //IMAGEN2
-                ptree pt2;
-                pt2.put("table","Photos");
-                pt2.put("cols","name,description,size,author,year");
-                pt2.put("values","danielImage,this shit,2000,SOFIA,2018");
-
-
-                //IMAGEN3
-                ptree pt3;
-                pt3.put("table","Photos");
-                pt3.put("cols","name,description,size,author,year");
-                pt3.put("values","gabriel,this is a description,2000,GARZA,2019");
-
-
-                //IMAGEN4
-                ptree pt4;
-                pt4.put("table","Photos");
-                pt4.put("cols","name,description,size,author,year");
-                pt4.put("values","danielImage,i need coffee,1023,SOFIA,2019");
-
-                dataBase->insertImage(jMan->ptreeToString(pt));
-                dataBase->insertImage(jMan->ptreeToString(pt2));
-                dataBase->insertImage(jMan->ptreeToString(pt3));
-                dataBase->insertImage(jMan->ptreeToString(pt4));
 
 
                 // TODO aqui debe estar logica del select
