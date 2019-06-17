@@ -71,8 +71,10 @@ HTTP_PROTOTYPE(requestHandler);
             if (request.resource() == "/CREATE") {
                 std::cout << "Se recibe create request con cuerpo : " << datos << std::endl;
                 datos = request.body();
+                json galeryName = json::parse(datos);
 
-                if(dataBase->addGalery(datos)){
+
+                if(dataBase->addGalery(galeryName["table"])){
 
                     respuesta = "true";
                 }

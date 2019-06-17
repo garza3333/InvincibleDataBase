@@ -27,11 +27,12 @@ int main(int argc , char * argv[]) {
 
     DataBase * dataB = new DataBase();
 
-
     dataB->showALLImages("vacaciones");
+    dataB->showALLImages("Photos");
     dataB->showDirs();
 
-/*    dataB->addGalery("vacaciones");
+    /*dataB->addGalery("vacaciones");
+    dataB->addGalery("Photos");
 
     //IMAGEN 1
     ptree pt;
@@ -39,12 +40,8 @@ int main(int argc , char * argv[]) {
     pt.put("cols","name,description,year");
     pt.put("values","aruba,bonitas,2005");
 
-    dataB->insertImage(jsonM.ptreeToString(pt));
 
-    dataB->saveToDisk();*/
-
-
-/*    //IMAGEN2
+    //IMAGEN2
     ptree pt2;
     pt2.put("table","Photos");
     pt2.put("cols","name,description,size,author,year");
@@ -141,8 +138,8 @@ int main(int argc , char * argv[]) {
 
     dataB->deleteGalery("galeria1");
     dataB->deleteGalery("galeria3");
-    dataB->showDirs();
-    dataB->saveToDisk();*/
+    dataB->showDirs();*/
+
 
 
     //PRUEBA PARA INICIALIZAR EL IDLE

@@ -10,12 +10,12 @@
 using namespace std;
 class Image {
 private:
-    std::string name , author , description ;
+    std::string name , author , description , extension;
     int size , year ,ID;
 
 public:
     Image();
-    Image(string nam , string aut , int yea , int siz , string des ,int id);
+    Image(string nam , string aut , int yea , int siz , string des ,int id , string exten);
 
     /**
      *
@@ -69,6 +69,10 @@ public:
     void setYear(int year);
 
     int getID();
+
+    string getExten();
+
+    void  setExtension(string exte);
 
 };
 

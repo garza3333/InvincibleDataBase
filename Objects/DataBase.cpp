@@ -23,7 +23,7 @@ DataBase::DataBase() {
         cout<<"imagesID: "<<this->imageID<<endl;
         inFile.close();
     }else{
-        cout << "Cant pen the file";
+        cout << "Cant open the file";
         this->imageID = 0;
     }
 
@@ -48,22 +48,38 @@ LinkedList<LinkedList<Image*>*> *DataBase::getMainList() {
 }
 
 bool DataBase::addGalery(string nameGalery) {
+
     LinkedList<Image*> * newGalery =  new LinkedList<Image*>(nameGalery);
     if(MainList->add(newGalery)){
-        MainList->setTemp(MainList->getHead());
-        string filenames;
+        this->saveFileNames();
+        string newFolder = this->root + nameGalery;
+        mkdir(newFolder.c_str(), 0777);
 
-        while(MainList->getTemp() != nullptr){
-            filenames += MainList->getTemp()->getValue()->getID()+"@";
-            MainList->setTemp(MainList->getTemp()->getNext());
+        std::ifstream file;
+        file.open(this->root+nameGalery+"/MetaData.txt");
+
+        bool isEmpty(true);
+        std::string line;
+
+        while( file >> line )
+            isEmpty = false;
+
+        file.close();
+
+        if(isEmpty){
+            ofstream metadata;
+            metadata.open(this->root+nameGalery+"/MetaData.txt");
+            ptree pt;
+            pt.put("NumImages",0);
+            metadata << jManager->ptreeToString(pt);
+            metadata.close();
         }
 
-        ofstream foldersFile;
-        foldersFile.open(root+"/FileNames.txt");
-        foldersFile<<filenames;
-        foldersFile.close();
+
         return true;
+
     }else{
+        cout<<"Cant add galery with name <<"<<nameGalery<<">>"<<endl;
         return false;
     }
 
@@ -83,6 +99,7 @@ bool DataBase::deleteGalery(string galery) {
             delFolder(this->root+delPtr->getValue()->getID()); // eliminando folder
             delete delPtr;
             MainList->substractSize();
+            this->saveFileNames();
             return true;
         }
         while(MainList->getCurr() != nullptr && MainList->getCurr()->getValue()->getID() != galery){
@@ -100,6 +117,7 @@ bool DataBase::deleteGalery(string galery) {
             delFolder(this->root+delPtr->getValue()->getID()); // eliminando folder
             delete delPtr;
             MainList->substractSize();
+            this->saveFileNames();
             return true;
         }
     }
@@ -138,8 +156,8 @@ bool DataBase::insertImage(string json) {
             return false;
         }else{
 
-            string name = "NULL", author = "NULL", description = "NULL";
-            int year = 0, size = 0;
+            string name = "NULL", author = "NULL", description = "NULL" , extension = "NULL";
+            int year = 0, size = 0 , id = -1;
 
             vector<string> atributVector = split(ptImage.get<string>("cols"), ',');
             vector<string> valuesVector = split(ptImage.get<string>("values"),',');
@@ -155,12 +173,23 @@ bool DataBase::insertImage(string json) {
                     size = stoi(valuesVector[i]);
                 } else if (at.compare("description") == 0) {
                     description = valuesVector[i];
+                }else if(at.compare("ID") == 0){
+                    id = stoi(valuesVector[i]);
+                }else if(at.compare("extension") == 0){
+                    extension = valuesVector[i];
                 }
 
             }
 
-            Image * newImage = new Image(name, author, year, size, description , this->imageID);
-            this->imageID++;
+            Image * newImage;
+            if(id == -1){
+                newImage = new Image(name, author, year, size, description , this->imageID , extension);
+                this->imageID++;
+            }else{
+                newImage = new Image(name, author, year, size, description , id , extension);
+ /*    dataB->showALLImages("vacaciones");
+    dataB->showDirs();*/           }
+
 
             MainList->getTemp()->getValue()->add(newImage);
             cout<<"The image has been added!"<<endl;
@@ -173,6 +202,8 @@ bool DataBase::insertImage(string json) {
         return false;
     }
 
+
+    //TODO añadir a todas las funcionalidades el atirbuto extension
 
 
 
@@ -197,6 +228,7 @@ ptree DataBase::selectImage(string json) {
         vector<string> whereVEC = split(replace_ALL(ptImage.get<string>("WHERE"),"OR",","),',');
         string name = "n-u*l-l";
         string author = "n-u*l-l";
+        string extension = "n-u*l-l";
         int year = -2;
         int size =-2;
         int id = -2;
@@ -215,8 +247,10 @@ ptree DataBase::selectImage(string json) {
                 size = stoi(set[1]);
             }else if(set[0] == "description"){
                 description = set[1];
-            }else if(set[0] == "id"){
+            }else if(set[0] == "ID"){
                 id = stoi(set[1]);
+            }else if(set[0] == "extension"){
+                extension = set[1];
             }
         }
 
@@ -231,7 +265,7 @@ ptree DataBase::selectImage(string json) {
             || description == MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription()
             || id == MainList->getTemp()->getValue()->getTemp()->getValue()->getID()){
 
-                imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(this->fillPtreeImage(MainList->getTemp()->getValue()->getTemp(),atributesVEC)));
+                imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(fillPtreeImage(MainList->getTemp()->getValue()->getTemp(),atributesVEC)));
                 cont++;
             }
             MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -345,6 +379,7 @@ bool DataBase::updateImage(string json) {
 
 }
 //TODO: hacer un modulo que encapsule esto y luego agregar un save to disk
+
 bool DataBase::deleteImage(string json) {
 
     ptree imageJson = jManager->stringToPtree(json);
@@ -390,14 +425,14 @@ bool DataBase::deleteImage(string json) {
            || MainList->getTemp()->getValue()->getCurr()->getValue()->getSize() == size
            || MainList->getTemp()->getValue()->getCurr()->getValue()->getDescription() == description){
             delPtr = MainList->getTemp()->getValue()->getHead();
-            MainList->setHEAD(MainList->getHead()->getNext());
+            MainList->getTemp()->getValue()->setHEAD(MainList->getTemp()->getValue()->getHead()->getNext());
             delPtr->setNext(nullptr);
             delete delPtr;
             MainList->getTemp()->getValue()->substractSize();
             return this->deleteImage(json);
         }
 
-        while(MainList->getTemp()->getValue()->getTemp() != nullptr && MainList->getTemp()->getValue()->getCurr()->getValue()->getName() != name
+        while(MainList->getTemp()->getValue()->getCurr() != nullptr && MainList->getTemp()->getValue()->getCurr()->getValue()->getName() != name
             && MainList->getTemp()->getValue()->getCurr()->getValue()->getAuthor() != author
             && MainList->getTemp()->getValue()->getCurr()->getValue()->getYear() != year
             && MainList->getTemp()->getValue()->getCurr()->getValue()->getSize() != size
@@ -438,6 +473,10 @@ ptree DataBase::fillPtreeImage(Node<Image*> *image, vector<string> vec) {
             ptim.put("size",image->getValue()->getSize());
         } else if (at.compare("description") == 0) {
             ptim.put("description",image->getValue()->getDescription());
+        }else if(at.compare("ID") == 0){
+            ptim.put("ID",image->getValue()->getID());
+        }else if(at.compare("extension") ==  0){
+            ptim.put("extension",image->getValue()->getExten());
         }
 
     }
@@ -479,6 +518,8 @@ void DataBase::saveToDisk() {
                     image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
                     image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
                     image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
+                    image.put("ID",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+                    image.put("extension",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
                     allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -502,6 +543,8 @@ void DataBase::saveToDisk() {
                     image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
                     image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
                     image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
+                    image.put("ID",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+                    image.put("extension",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
                     allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -537,6 +580,19 @@ void DataBase::saveToDisk() {
 }
 
 void DataBase::saveFileNames() {
+
+    MainList->setTemp(MainList->getHead());
+    string filenames;
+    while(MainList->getTemp() != nullptr){
+        filenames += MainList->getTemp()->getValue()->getID()+"@";
+        MainList->setTemp(MainList->getTemp()->getNext());
+    }
+
+    ofstream foldersFile;
+    foldersFile.open(root+"/FileNames.txt");
+    foldersFile<<filenames;
+    foldersFile.close();
+
 
 }
 
@@ -580,6 +636,7 @@ void DataBase::showALLImages(string galery) {
             ptim.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
             ptim.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
             ptim.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
+            ptim.put("ID",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
 
             imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(ptim));
             cont++;
@@ -716,8 +773,9 @@ void DataBase::loadToMemory() {
 
                 ptree pt;
                 pt.put("table",i);
-                pt.put("cols","name,author,year,size,description");
-                pt.put("values", jImage.get<string>("name")+","+jImage.get<string>("author")+","+jImage.get<string>("year")+","+jImage.get<string>("size")+","+jImage.get<string>("description"));
+                pt.put("cols","name,author,year,size,description,ID,extension");
+                pt.put("values", jImage.get<string>("name")+","+jImage.get<string>("author")+","+jImage.get<string>("year")+","+jImage.get<string>("size")+","+jImage.get<string>("description")
+                        +","+jImage.get<string>("ID")+","+jImage.get<string>("extension"));
 
                 this->insertImage(this->jManager->ptreeToString(pt));
 

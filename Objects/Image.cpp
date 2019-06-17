@@ -14,7 +14,7 @@ Image::Image() {
     this->ID = 0;
 }
 
-Image::Image(string nam, string aut, int yea, int siz, string des ,int id) {
+Image::Image(string nam, string aut, int yea, int siz, string des ,int id, string exten) {
 
     this->name = nam;
     this->author = aut;
@@ -22,6 +22,7 @@ Image::Image(string nam, string aut, int yea, int siz, string des ,int id) {
     this->size = siz;
     this->description = des;
     this->ID = id;
+    this->extension = exten;
 
 }
 
@@ -67,6 +68,14 @@ void Image::setYear(int y) {
 
 int Image::getID() {
     return this->ID;
+}
+
+string Image::getExten() {
+    return this->extension;
+}
+
+void Image::setExtension(string exte) {
+    this->extension = exte;
 }
 
 
