@@ -25,11 +25,11 @@ int main(int argc , char * argv[]) {
     auto comp = new Compressor();
 
 
-    DataBase * dataB = new DataBase();
+/*    DataBase * dataB = new DataBase();
 
     dataB->showALLImages("vacaciones");
     dataB->showALLImages("Photos");
-    dataB->showDirs();
+    dataB->showDirs();*/
 
     /*dataB->addGalery("vacaciones");
     dataB->addGalery("Photos");
@@ -144,7 +144,7 @@ int main(int argc , char * argv[]) {
 
     //PRUEBA PARA INICIALIZAR EL IDLE
 
-/*    ptree prueba;
+    ptree prueba;
     ptree Galery;
     ptree ima1;
     ptree ima2;
@@ -179,10 +179,11 @@ int main(int argc , char * argv[]) {
         ch.push_back(s.at(i));
     }
     Compressor::Codified_File * code = comp->compress(ch,"txt","../Master/compress");
-    Compressor::Decodified_File
-    * decode = comp->decompress(code);
+
     comp->writeToDiskComp(code);
-    comp->writeToDiskDecomp(decode);*/
+
+    //Compressor::Decodified_File * decode = comp->decompress(code);
+    //comp->writeToDiskDecomp(decode);
 
 /*    cout<<"\nINIT TREE "<<endl;
     cout<<dataB->initIdleTree()<<endl;*/

@@ -16,14 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf5f3c3-ab60-4361-9001-61352538b9b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/FileNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/FileNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/Photos/MetaData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/Photos/MetaData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/imagesID.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/imagesID.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/vacaciones/MetaData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/vacaciones/MetaData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/Image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/Image.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Image.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/requestHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/requestHandler.h" afterDir="false" />
     </list>
@@ -57,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+            <state relative-caret-position="300">
+              <caret line="184" column="6" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -66,10 +59,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="-308">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="e#105#123#0" expanded="true" />
+                <element signature="e#527#546#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state relative-caret-position="450">
+              <caret line="306" column="39" lean-forward="true" selection-start-line="306" selection-start-column="39" selection-end-line="306" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -87,8 +81,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="255">
+              <caret line="160" column="66" selection-start-line="160" selection-start-column="66" selection-end-line="160" selection-end-column="66" />
+              <folding>
+                <element signature="e#131#161#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +144,8 @@
         <option value="$PROJECT_DIR$/Objects/DataBase.h" />
         <option value="$PROJECT_DIR$/Objects/Image.h" />
         <option value="$PROJECT_DIR$/Objects/Image.cpp" />
-        <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
         <option value="$PROJECT_DIR$/server/requestHandler.h" />
       </list>
     </option>
@@ -296,12 +293,12 @@
       <workItem from="1560457011021" duration="14962000" />
       <workItem from="1560495800298" duration="5473000" />
       <workItem from="1560538193423" duration="2790000" />
-      <workItem from="1560790617642" duration="10319000" />
+      <workItem from="1560790617642" duration="12692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178775000" />
+    <option name="totallyTimeSpent" value="181148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,32 +570,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="-308">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="e#105#123#0" expanded="true" />
+            <element signature="e#527#546#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="184" column="6" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="306" column="39" lean-forward="true" selection-start-line="306" selection-start-column="39" selection-end-line="306" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="255">
+          <caret line="160" column="66" selection-start-line="160" selection-start-column="66" selection-end-line="160" selection-end-column="66" />
+          <folding>
+            <element signature="e#131#161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

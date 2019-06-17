@@ -151,15 +151,14 @@ HTTP_PROTOTYPE(requestHandler);
 
                 auto jsonRequest = json::parse(datos);
 
-                /*
-                 * Para accesar a parametros del json seria:
-                 * var valor = jsonRequest[nomDeLaLlave]
-                 */
 
                 // TODO aqui debe estar logica del update
 
+                if(this->dataBase->updateImage(jsonRequest.dump())){
+                    respuesta = "true";
+                }
                 // TODO definir respuesta
-                response.send(Pistache::Http::Code::Ok, jsonRequest.dump(4));
+                response.send(Pistache::Http::Code::Ok, respuesta);
             }
 
             else if (request.resource() == "/DELETE") {

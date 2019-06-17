@@ -67,10 +67,18 @@ bool DataBase::addGalery(string nameGalery) {
         file.close();
 
         if(isEmpty){
+
+
+
             ofstream metadata;
             metadata.open(this->root+nameGalery+"/MetaData.txt");
             ptree pt;
             pt.put("NumImages",0);
+            // prueba para comprimir
+            string json = jManager->ptreeToString(pt);
+
+
+
             metadata << jManager->ptreeToString(pt);
             metadata.close();
         }
@@ -277,7 +285,7 @@ ptree DataBase::selectImage(string json) {
 
 bool DataBase::updateImage(string json) {
     ptree ptImage = jManager->stringToPtree(json);
-    string from = ptImage.get<string>("UPDATE");
+    string from = ptImage.get<string>("table");
     MainList->setTemp(MainList->getHead());
     while(MainList->getTemp() != nullptr && MainList->getTemp()->getValue()->getID() != from){
         MainList->setTemp(MainList->getTemp()->getNext());
@@ -291,7 +299,7 @@ bool DataBase::updateImage(string json) {
 
 
         MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
-        vector<string> setVEC = split(ptImage.get<string>("SET"),',');
+        vector<string> setVEC = split(ptImage.get<string>("cols"),',');
         string name = "n-u*l-l";
         string author = "n-u*l-l";
         int year = -2;
@@ -526,7 +534,21 @@ void DataBase::saveToDisk() {
                 }
                 allImages.put("NumImages",to_string(cont));
                 //Making a file
+
+
+
+
+
+
                 //TODO AGREGAR EL COMPRESOR
+
+
+
+
+
+
+
+
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 file << jManager->ptreeToString(allImages);
@@ -551,7 +573,11 @@ void DataBase::saveToDisk() {
                 }
                 allImages.put("NumImages",to_string(cont));
                 //Making a file
+
+
                 //TODO: AGREGAR EL COMPRESOR
+
+
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 file << jManager->ptreeToString(allImages);
