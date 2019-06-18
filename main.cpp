@@ -31,6 +31,7 @@ int main(int argc , char * argv[]) {
     dataB->showALLImages("Photos");
     dataB->showDirs();*/
 
+
     dataB->addGalery("vacaciones");
     dataB->addGalery("Photos");
 
