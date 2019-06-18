@@ -158,6 +158,8 @@ public:
     Codified_File* treeReconstructor(string dirTree, string dirCodigo);
     void writeToDiskComp(Codified_File* file);
     void writeToDiskDecomp(Decodified_File* dec);
+
+    void writeTREE(Compressor::Codified_File * coded);
 };
 
 #endif //MYDATABASE_COMPRESSOR_H

@@ -25,13 +25,13 @@ int main(int argc , char * argv[]) {
     auto comp = new Compressor();
 
 
-/*    DataBase * dataB = new DataBase();
+    DataBase * dataB = new DataBase();
 
-    dataB->showALLImages("vacaciones");
+/*    dataB->showALLImages("vacaciones");
     dataB->showALLImages("Photos");
     dataB->showDirs();*/
 
-    /*dataB->addGalery("vacaciones");
+    dataB->addGalery("vacaciones");
     dataB->addGalery("Photos");
 
     //IMAGEN 1
@@ -111,8 +111,8 @@ int main(int argc , char * argv[]) {
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT5)));
 
     ptree updatept;
-    updatept.put("UPDATE","Photos");
-    updatept.put("SET","name = DAVID,author = SOFIA");
+    updatept.put("table","Photos");
+    updatept.put("cols","name = DAVID,author = SOFIA");
     updatept.put("WHERE","name = gabriel");
 
     dataB->updateImage(jsonM.ptreeToString(updatept));
@@ -138,12 +138,12 @@ int main(int argc , char * argv[]) {
 
     dataB->deleteGalery("galeria1");
     dataB->deleteGalery("galeria3");
-    dataB->showDirs();*/
-
+    dataB->showDirs();
 
 
     //PRUEBA PARA INICIALIZAR EL IDLE
 
+/*
     ptree prueba;
     ptree Galery;
     ptree ima1;
@@ -155,6 +155,7 @@ int main(int argc , char * argv[]) {
     ima1.put("year","2019");
     ima1.put("size","2000");
     ima1.put("description","this is a description");
+
 
     ima2.put("name","daniel");
     ima2.put("author","DAVID");
@@ -172,21 +173,35 @@ int main(int argc , char * argv[]) {
     prueba.put("Galery0",jsonM.ptreeToString(Galery));
 
     string s = jsonM.ptreeToString(prueba);
+    s.erase(remove(s.begin(),s.end(), ' '),s.end());
+    s.erase(remove(s.begin(),s.end(), '\n'),s.end());
+
+
+    ptree pt2 = jsonM.stringToPtree(s);
+
 
     vector<char> ch;
     for(int i=0;i<s.size();i++)
     {
         ch.push_back(s.at(i));
     }
-    Compressor::Codified_File * code = comp->compress(ch,"txt","../Master/compress");
 
+
+    Compressor::Codified_File * code = comp->compress(ch,"txt","../Master/Metadata");
+    comp->writeTREE(code);
     comp->writeToDiskComp(code);
 
-    //Compressor::Decodified_File * decode = comp->decompress(code);
-    //comp->writeToDiskDecomp(decode);
 
-/*    cout<<"\nINIT TREE "<<endl;
-    cout<<dataB->initIdleTree()<<endl;*/
+    Compressor::Codified_File * decodeFile = comp->treeReconstructor("../Master/Metadata_Tree.txt", "../Master/Metadata_Code.txt");
+    Compressor::Decodified_File * decode = comp->decompress(decodeFile);
+    comp->writeToDiskDecomp(decode);
+*/
+
+
+
+
+    cout<<"\nINIT TREE "<<endl;
+    cout<<dataB->initIdleTree()<<endl;
 
 /*    string a = "name = daniel OR year = 2000";
     string b = dataB->replace_ALL(a,"OR",",");

@@ -1,4 +1,1 @@
-{
-    "Image0": "{\n    \"name\": \"aruba\",\n    \"author\": \"NULL\",\n    \"year\": \"2005\",\n    \"size\": \"0\",\n    \"description\": \"bonitas\",\n    \"ID\": \"0\",\n    \"extension\": \"NULL\"\n}\n",
-    "NumImages": "1"
-}
+{"Image0":"{\n\"name\":\"aruba\",\n\"author\":\"NULL\",\n\"year\":\"2005\",\n\"size\":\"0\",\n\"description\":\"bonitas\",\n\"ID\":\"0\",\n\"extension\":\"NULL\"\n}\n","NumImages":"1"}

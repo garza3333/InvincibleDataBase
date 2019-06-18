@@ -263,6 +263,7 @@ ptree DataBase::selectImage(string json) {
         }
 
         MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getHead());
+        ptree allImages;
         int cont = 0;
         while(MainList->getTemp()->getValue()->getTemp() != nullptr){
 
@@ -279,7 +280,9 @@ ptree DataBase::selectImage(string json) {
             MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
 
         }
-        return imagesJson;
+        allImages.put("NUM",cont);
+        allImages.put("IMAGES",this->jManager->ptreeToString(imagesJson));
+        return allImages;
     }
 }
 
@@ -551,7 +554,11 @@ void DataBase::saveToDisk() {
 
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
-                file << jManager->ptreeToString(allImages);
+                string jsonString = jManager->ptreeToString(allImages);
+                jsonString.erase(remove(jsonString.begin(),jsonString.end(), ' '),jsonString.end());
+                jsonString.erase(remove(jsonString.begin(),jsonString.end(), '\n'),jsonString.end());
+
+                file << jsonString;
                 file.close();
                 folders.push_back(MainList->getTemp()->getValue()->getID());
             } else {
@@ -574,13 +581,16 @@ void DataBase::saveToDisk() {
                 allImages.put("NumImages",to_string(cont));
                 //Making a file
 
-
                 //TODO: AGREGAR EL COMPRESOR
 
 
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
-                file << jManager->ptreeToString(allImages);
+                string jsonString = jManager->ptreeToString(allImages);
+                jsonString.erase(remove(jsonString.begin(),jsonString.end(), ' '),jsonString.end());
+                jsonString.erase(remove(jsonString.begin(),jsonString.end(), '\n'),jsonString.end());
+
+                file << jsonString;
                 file.close();
                 foldersNot.push_back(MainList->getTemp()->getValue()->getID());
             }

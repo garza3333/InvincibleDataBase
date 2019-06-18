@@ -402,9 +402,9 @@ Compressor::Codified_File* Compressor:: treeReconstructor(string dirTree,string 
 
 void Compressor::writeToDiskComp(Compressor::Codified_File *file)
 {
-    ofstream outfile(file->getName()+"_Codigote."+file->getExt(), ios::out | ios::binary);
+    ofstream outfile(file->getName()+"_Code."+file->getExt(), ios::out | ios::binary);
     ofstream out;
-    out.open(file->getName()+"_Codigote."+file->getExt());
+    out.open(file->getName()+"_Code."+file->getExt());
     out<<file->getCodigote()<<endl;
 }
 
@@ -412,4 +412,25 @@ void Compressor::writeToDiskDecomp(Compressor::Decodified_File *DecFile)
 {
     ofstream outfile(DecFile->getName()+"_New."+DecFile->getExt(), ios::out | ios::binary);
     outfile.write(&DecFile->getDigits()[0], DecFile->getDigits().size());
+}
+
+
+void Compressor::writeTREE(Compressor::Codified_File * coded) {
+
+    ofstream outT(coded->getName()+"_Tree.txt",ios::out|ios::binary);
+    int ind=coded->getCodes().size();
+    outT<<coded->getName()<<endl;
+    outT<<coded->getExt()<<endl;
+    int size=coded->getCodes().size();
+    std::map<char, string>::const_iterator it = coded->getCodes().begin();
+    for(int i=0;i<size; i++)
+    {
+        char key = it->first;
+        string s;
+        s=key;
+        string value = it->second;
+        outT<<s+value<<endl;
+        it++;
+    }
+    outT.close();
 }
