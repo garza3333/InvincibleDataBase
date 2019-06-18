@@ -1,6 +1,4 @@
 {
-    "Image0": "{\n    \"name\": \"danielImage\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2018\",\n    \"size\": \"2000\",\n    \"description\": \"this shit\",\n    \"ID\": \"1\",\n    \"extension\": \"NULL\"\n}\n",
-    "Image1": "{\n    \"name\": \"DAVID\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2019\",\n    \"size\": \"2000\",\n    \"description\": \"this is a description\",\n    \"ID\": \"2\",\n    \"extension\": \"NULL\"\n}\n",
-    "Image2": "{\n    \"name\": \"danielImage\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2019\",\n    \"size\": \"1023\",\n    \"description\": \"i need coffee\",\n    \"ID\": \"3\",\n    \"extension\": \"NULL\"\n}\n",
-    "NumImages": "3"
+    "Image0": "{\n    \"name\": \"DAVID\",\n    \"author\": \"SOFIA\",\n    \"year\": \"2019\",\n    \"size\": \"2000\",\n    \"description\": \"this is a description\",\n    \"id\": \"2\",\n    \"ext\": \"NULL\"\n}\n",
+    "NumImages": "1"
 }

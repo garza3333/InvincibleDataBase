@@ -45,7 +45,7 @@ int main(int argc , char * argv[]) {
     ptree pt2;
     pt2.put("table","Photos");
     pt2.put("cols","name,description,size,author,year");
-    pt2.put("values","danielImage,this shit,2000,SOFIA,2018");
+    pt2.put("values","danielImage,just this ,2000,SOFIA,2018");
 
 
     //IMAGEN3
@@ -73,6 +73,7 @@ int main(int argc , char * argv[]) {
     selectPT.put("cols","name,author,description,year");
     selectPT.put("WHERE","name = danielImage");
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT)));
+
     //find -> size = 2000
     ptree selectPT1;
     selectPT1.put("table","Photos");
@@ -125,13 +126,16 @@ int main(int argc , char * argv[]) {
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT6)));
 
     cout<<"PHOTOS"<<endl;
-
     dataB->showALLImages("Photos");
+
+    //DELETE IMAGE danielImage
     ptree delete1;
     delete1.put("FROM","Photos");
     delete1.put("WHERE","name =  danielImage");
     dataB->deleteImage(jsonM.ptreeToString(delete1));
 
+
+    cout<<"PHOTOS"<<endl;
     dataB->showALLImages("Photos");
 
 
@@ -199,17 +203,6 @@ int main(int argc , char * argv[]) {
 
     cout<<"\nINIT TREE "<<endl;
     cout<<dataB->initIdleTree()<<endl;
-
-/*    string a = "name = daniel OR year = 2000";
-    string b = dataB->replace_ALL(a,"OR",",");
-    b.erase(remove(b.begin(), b.end(), ' '), b.end());
-    cout<<a<<endl;
-    cout<<b<<endl;
-    vector<string> vector = dataB->split(b,',');
-    for(int i = 0 ; i<vector.size() ; i++){
-        cout<<vector[i]<<endl;
-    }*/
-
 
 
 //cgas

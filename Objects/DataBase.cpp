@@ -189,9 +189,9 @@ bool DataBase::insertImage(string json) {
                     size = stoi(valuesVector[i]);
                 } else if (at.compare("description") == 0) {
                     description = valuesVector[i];
-                }else if(at.compare("ID") == 0){
+                }else if(at.compare("id") == 0){
                     id = stoi(valuesVector[i]);
-                }else if(at.compare("extension") == 0){
+                }else if(at.compare("ext") == 0){
                     extension = valuesVector[i];
                 }
 
@@ -258,9 +258,9 @@ ptree DataBase::selectImage(string json) {
                 size = stoi(set[1]);
             }else if(set[0] == "description"){
                 description = set[1];
-            }else if(set[0] == "ID"){
+            }else if(set[0] == "id"){
                 id = stoi(set[1]);
-            }else if(set[0] == "extension"){
+            }else if(set[0] == "ext"){
                 extension = set[1];
             }
         }
@@ -457,6 +457,7 @@ bool DataBase::deleteImage(string json) {
         }
         if(MainList->getTemp()->getValue()->getCurr() == nullptr){
             delete delPtr;
+            this->saveToDisk();
             return true;
         }else{
             MainList->getTemp()->getValue()->getTemp()->setNext(MainList->getTemp()->getValue()->getCurr()->getNext());
@@ -488,8 +489,8 @@ ptree DataBase::fillPtreeImage(Node<Image*> *image, vector<string> vec) {
         } else if (at.compare("description") == 0) {
             ptim.put("description",image->getValue()->getDescription());
         }
-        ptim.put("ID",image->getValue()->getID());
-        ptim.put("extension",image->getValue()->getExten());
+        ptim.put("id",image->getValue()->getID());
+        ptim.put("ext",image->getValue()->getExten());
 
 
     }
@@ -533,8 +534,8 @@ void DataBase::saveToDisk() {
                     image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
                     image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
                     image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
-                    image.put("ID",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
-                    image.put("extension",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
+                    image.put("id",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+                    image.put("ext",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
                     allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -574,8 +575,8 @@ void DataBase::saveToDisk() {
                     image.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
                     image.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
                     image.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
-                    image.put("ID",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
-                    image.put("extension",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
+                    image.put("id",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+                    image.put("ext",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
                     allImages.put("Image"+to_string(cont),jManager->ptreeToString(image));
                     cont++;
                     MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -693,7 +694,7 @@ void DataBase::showALLImages(string galery) {
             ptim.put("year",MainList->getTemp()->getValue()->getTemp()->getValue()->getYear());
             ptim.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
             ptim.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
-            ptim.put("ID",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+            ptim.put("id",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
 
             imagesJson.put("Image"+to_string(cont),jManager->ptreeToString(ptim));
             cont++;
@@ -769,7 +770,7 @@ string DataBase::initIdleTree() {
             oneImage.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
             oneImage.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
             oneImage.put("code",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
-            oneImage.put("extension",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
+            oneImage.put("ext",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
             oneGalery.put("Image"+to_string(contImages),this->jManager->ptreeToString(oneImage));
             contImages++;
             MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -831,9 +832,9 @@ void DataBase::loadToMemory() {
 
                 ptree pt;
                 pt.put("table",i);
-                pt.put("cols","name,author,year,size,description,ID,extension");
+                pt.put("cols","name,author,year,size,description,id,ext");
                 pt.put("values", jImage.get<string>("name")+","+jImage.get<string>("author")+","+jImage.get<string>("year")+","+jImage.get<string>("size")+","+jImage.get<string>("description")
-                        +","+jImage.get<string>("ID")+","+jImage.get<string>("extension"));
+                        +","+jImage.get<string>("id")+","+jImage.get<string>("ext"));
 
                 this->insertImage(this->jManager->ptreeToString(pt));
 
