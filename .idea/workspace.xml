@@ -16,14 +16,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf5f3c3-ab60-4361-9001-61352538b9b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Compressor/Compressor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Compressor/Compressor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Compressor/Compressor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Compressor/Compressor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/Photos/MetaData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/Photos/MetaData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/compress_Codigote.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/compress_New.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/vacaciones/MetaData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Master/vacaciones/MetaData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/FileNames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/Photos/MetaData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/galeria1/MetaData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/galeria2/MetaData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/galeria3/MetaData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/imagesID.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/vacaciones/MetaData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/DataBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/requestHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/requestHandler.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="198" selection-start-line="198" selection-end-line="198" />
+            <state relative-caret-position="675">
+              <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -76,11 +79,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+            <state relative-caret-position="7">
+              <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="e#105#123#0" expanded="true" />
                 <element signature="e#527#546#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Objects/Image.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-487">
+              <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+              <folding>
+                <element signature="e#98#117#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,11 +113,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="275" selection-start-line="275" selection-end-line="275" />
+            <state relative-caret-position="-300">
+              <caret line="157" column="30" lean-forward="true" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+              <folding>
+                <element signature="e#131#161#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +143,7 @@
       <find>List</find>
       <find>NodeHuff</find>
       <find>tree</find>
+      <find>root</find>
     </findStrings>
     <replaceStrings>
       <replace>HuffmanNode</replace>
@@ -157,22 +185,22 @@
         <option value="$PROJECT_DIR$/Compressor/List.h" />
         <option value="$PROJECT_DIR$/Structures/LinkedList.h" />
         <option value="$PROJECT_DIR$/Structures/Node.h" />
-        <option value="$PROJECT_DIR$/Objects/DataBase.h" />
-        <option value="$PROJECT_DIR$/Objects/Image.h" />
         <option value="$PROJECT_DIR$/Objects/Image.cpp" />
-        <option value="$PROJECT_DIR$/server/requestHandler.h" />
         <option value="$PROJECT_DIR$/Compressor/Compressor.h" />
         <option value="$PROJECT_DIR$/Compressor/Compressor.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Objects/DataBase.h" />
         <option value="$PROJECT_DIR$/Objects/DataBase.cpp" />
+        <option value="$PROJECT_DIR$/server/requestHandler.h" />
+        <option value="$PROJECT_DIR$/Objects/Image.h" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
-    <option name="y" value="27" />
+    <option name="y" value="25" />
     <option name="width" value="650" />
-    <option name="height" value="555" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -316,12 +344,12 @@
       <workItem from="1560457011021" duration="14962000" />
       <workItem from="1560495800298" duration="5473000" />
       <workItem from="1560538193423" duration="2790000" />
-      <workItem from="1560790617642" duration="22713000" />
+      <workItem from="1560790617642" duration="34553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191169000" />
+    <option name="totallyTimeSpent" value="203009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,15 +361,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="67" y="25" width="650" height="743" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.54588985" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.95033115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49880287" visible="true" weight="0.5162867" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49880287" weight="0.5162867" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5162867" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -544,16 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/Image.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
-          <folding>
-            <element signature="e#98#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/7/bits/basic_string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -565,16 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="157" column="39" selection-start-line="157" selection-start-column="39" selection-end-line="157" selection-end-column="39" />
-          <folding>
-            <element signature="e#131#161#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,27 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/JManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#43#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-          <folding>
-            <element signature="e#105#123#0" expanded="true" />
-            <element signature="e#527#546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Compressor/Compressor.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -626,17 +613,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/JManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#43#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
+        <state relative-caret-position="675">
+          <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/DataBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="e#105#123#0" expanded="true" />
+            <element signature="e#527#546#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Objects/DataBase.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="275" selection-start-line="275" selection-end-line="275" />
+        <state relative-caret-position="-300">
+          <caret line="157" column="30" lean-forward="true" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/requestHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+          <folding>
+            <element signature="e#131#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objects/Image.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+          <folding>
+            <element signature="e#98#117#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

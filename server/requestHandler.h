@@ -115,6 +115,7 @@ HTTP_PROTOTYPE(requestHandler);
                     ptree pt;
                     pt.put("id",dataBase->getImageId()-1);
                     respuesta = this->jMan->ptreeToString(pt);
+
                 }
 
 

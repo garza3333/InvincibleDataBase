@@ -42,6 +42,7 @@ private:
     Compressor * compressor;
     JManager * jManager;
     string root;
+    string root_;
     int imageID;
 
 public:

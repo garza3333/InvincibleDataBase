@@ -143,8 +143,7 @@ int main(int argc , char * argv[]) {
 
     //PRUEBA PARA INICIALIZAR EL IDLE
 
-/*
-    ptree prueba;
+/*    ptree prueba;
     ptree Galery;
     ptree ima1;
     ptree ima2;
@@ -173,11 +172,7 @@ int main(int argc , char * argv[]) {
     prueba.put("Galery0",jsonM.ptreeToString(Galery));
 
     string s = jsonM.ptreeToString(prueba);
-    s.erase(remove(s.begin(),s.end(), ' '),s.end());
-    s.erase(remove(s.begin(),s.end(), '\n'),s.end());
 
-
-    ptree pt2 = jsonM.stringToPtree(s);
 
 
     vector<char> ch;
@@ -189,13 +184,12 @@ int main(int argc , char * argv[]) {
 
     Compressor::Codified_File * code = comp->compress(ch,"txt","../Master/Metadata");
     comp->writeTREE(code);
-    comp->writeToDiskComp(code);
+    comp->writeToDiskComp(code);*/
 
 
-    Compressor::Codified_File * decodeFile = comp->treeReconstructor("../Master/Metadata_Tree.txt", "../Master/Metadata_Code.txt");
+/*    Compressor::Codified_File * decodeFile = comp->treeReconstructor("../Master/Metadata_Tree.txt", "../Master/Metadata_Code.txt");
     Compressor::Decodified_File * decode = comp->decompress(decodeFile);
-    comp->writeToDiskDecomp(decode);
-*/
+    comp->writeToDiskDecomp(decode);*/
 
 
 
@@ -212,8 +206,6 @@ int main(int argc , char * argv[]) {
     for(int i = 0 ; i<vector.size() ; i++){
         cout<<vector[i]<<endl;
     }*/
-
-
 
 
 

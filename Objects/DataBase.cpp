@@ -10,10 +10,13 @@ DataBase::DataBase() {
     this->MainList = new LinkedList<LinkedList<Image*>*>();
     this->jManager = new JManager();
     this->compressor = new Compressor();
-    this->root = "../Master/";
+
+    this->root = "../cmake-build-debug/CMakeFiles/Master/";
+    this->root_ = "../Master/";
+
 
     ifstream inFile;
-    inFile.open("../Master/imagesID.txt");
+    inFile.open(root+"imagesID.txt");
 
     if (inFile.is_open()) {
 
@@ -52,12 +55,15 @@ bool DataBase::addGalery(string nameGalery) {
     LinkedList<Image*> * newGalery =  new LinkedList<Image*>(nameGalery);
     if(MainList->add(newGalery)){
         this->saveFileNames();
+        //TODO: REPETIR
         string newFolder = this->root + nameGalery;
         mkdir(newFolder.c_str(), 0777);
 
+
         std::ifstream file;
         file.open(this->root+nameGalery+"/MetaData.txt");
-
+        string newFolde = this->root_ + nameGalery;
+        mkdir(newFolde.c_str(), 0777);
         bool isEmpty(true);
         std::string line;
 
@@ -104,7 +110,7 @@ bool DataBase::deleteGalery(string galery) {
             delPtr = MainList->getHead();
             MainList->setHEAD(MainList->getHead()->getNext());
             delPtr->setNext(nullptr);
-            delFolder(this->root+delPtr->getValue()->getID()); // eliminando folder
+            delFolder(delPtr->getValue()->getID()); // eliminando folder
             delete delPtr;
             MainList->substractSize();
             this->saveFileNames();
@@ -122,7 +128,7 @@ bool DataBase::deleteGalery(string galery) {
             MainList->getTemp()->setNext(MainList->getCurr()->getNext());
             MainList->getCurr()->setNext(nullptr);
             delPtr = MainList->getCurr();
-            delFolder(this->root+delPtr->getValue()->getID()); // eliminando folder
+            delFolder(delPtr->getValue()->getID()); // eliminando folder
             delete delPtr;
             MainList->substractSize();
             this->saveFileNames();
@@ -131,17 +137,19 @@ bool DataBase::deleteGalery(string galery) {
     }
 
 }
+ void DataBase::delFolder(string name) {
 
-void DataBase::delFolder(string name) {
 
-
-/*
-    const int result = rmdir(name.c_str());
-    if( result == 0 ){
-        cout<<"success"<<endl;
-    } else {
-        cout<<"cant delete the galery >> "<<name<<" <<"<<endl;
-    }*/
+        string str = root_+name+"/Metadata_Code.txt";
+        remove(str.c_str());
+        str = root_+name+"/Metadata_Tree.txt";
+        remove(str.c_str());
+        str = root_+name;
+        remove(str.c_str());
+        str = root+name+"/MetaData.txt";
+        remove(str.c_str());
+        str = root+name;
+        remove(str.c_str());
 
 }
 
@@ -195,8 +203,7 @@ bool DataBase::insertImage(string json) {
                 this->imageID++;
             }else{
                 newImage = new Image(name, author, year, size, description , id , extension);
- /*    dataB->showALLImages("vacaciones");
-    dataB->showDirs();*/           }
+            }
 
 
             MainList->getTemp()->getValue()->add(newImage);
@@ -209,10 +216,6 @@ bool DataBase::insertImage(string json) {
         cout<<"The list is empty! "<<endl;
         return false;
     }
-
-
-    //TODO añadir a todas las funcionalidades el atirbuto extension
-
 
 
 }
@@ -484,11 +487,10 @@ ptree DataBase::fillPtreeImage(Node<Image*> *image, vector<string> vec) {
             ptim.put("size",image->getValue()->getSize());
         } else if (at.compare("description") == 0) {
             ptim.put("description",image->getValue()->getDescription());
-        }else if(at.compare("ID") == 0){
-            ptim.put("ID",image->getValue()->getID());
-        }else if(at.compare("extension") ==  0){
-            ptim.put("extension",image->getValue()->getExten());
         }
+        ptim.put("ID",image->getValue()->getID());
+        ptim.put("extension",image->getValue()->getExten());
+
 
     }
 
@@ -507,11 +509,13 @@ vector<string> DataBase::split(string word, char delim) {
 }
 
 void DataBase::saveToDisk() {
+
     if(MainList->isEmpty()){
         cout<<"NO hay ninguna galeria para ser creada";
     }else {
         vector<string> folders;
         vector<string> foldersNot;
+
 
         MainList->setTemp(MainList->getHead());
 
@@ -539,24 +543,22 @@ void DataBase::saveToDisk() {
                 //Making a file
 
 
-
-
-
-
-                //TODO AGREGAR EL COMPRESOR
-
-
-
-
-
-
-
-
+                //TODO: REPETIR
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 string jsonString = jManager->ptreeToString(allImages);
-                jsonString.erase(remove(jsonString.begin(),jsonString.end(), ' '),jsonString.end());
-                jsonString.erase(remove(jsonString.begin(),jsonString.end(), '\n'),jsonString.end());
+
+
+                vector<char> ch;
+                for(char i : jsonString)
+                {
+                    ch.push_back(i);
+                }
+
+                Compressor::Codified_File * code = this->compressor->compress(ch,"txt",root_+MainList->getTemp()->getValue()->getID()+"/Metadata");
+                compressor->writeTREE(code);
+                compressor->writeToDiskComp(code);
+
 
                 file << jsonString;
                 file.close();
@@ -581,14 +583,23 @@ void DataBase::saveToDisk() {
                 allImages.put("NumImages",to_string(cont));
                 //Making a file
 
-                //TODO: AGREGAR EL COMPRESOR
 
+                //TODO: REPETIR
 
                 ofstream file;
                 file.open(root+MainList->getTemp()->getValue()->getID()+"/MetaData.txt");
                 string jsonString = jManager->ptreeToString(allImages);
-                jsonString.erase(remove(jsonString.begin(),jsonString.end(), ' '),jsonString.end());
-                jsonString.erase(remove(jsonString.begin(),jsonString.end(), '\n'),jsonString.end());
+
+
+                vector<char> ch;
+                for(char i : jsonString)
+                {
+                    ch.push_back(i);
+                }
+
+                Compressor::Codified_File * code = this->compressor->compress(ch,"txt",root_+MainList->getTemp()->getValue()->getID()+"/Metadata");
+                compressor->writeTREE(code);
+                compressor->writeToDiskComp(code);
 
                 file << jsonString;
                 file.close();
@@ -609,7 +620,11 @@ void DataBase::saveToDisk() {
     }
 
     ofstream file;
-    file.open("../Master/imagesID.txt");
+    file.open(root+"imagesID.txt");
+    file << this->imageID;
+    file.close();
+
+    file.open(root_+"imagesID.txt");
     file << this->imageID;
     file.close();
 
@@ -624,10 +639,16 @@ void DataBase::saveFileNames() {
         MainList->setTemp(MainList->getTemp()->getNext());
     }
 
+    //TODO: REPETIR
     ofstream foldersFile;
     foldersFile.open(root+"/FileNames.txt");
     foldersFile<<filenames;
     foldersFile.close();
+
+    ofstream foldersFil;
+    foldersFil.open(root_+"/FileNames.txt");
+    foldersFil<<filenames;
+    foldersFil.close();
 
 
 }
@@ -748,6 +769,7 @@ string DataBase::initIdleTree() {
             oneImage.put("size",MainList->getTemp()->getValue()->getTemp()->getValue()->getSize());
             oneImage.put("description",MainList->getTemp()->getValue()->getTemp()->getValue()->getDescription());
             oneImage.put("code",MainList->getTemp()->getValue()->getTemp()->getValue()->getID());
+            oneImage.put("extension",MainList->getTemp()->getValue()->getTemp()->getValue()->getExten());
             oneGalery.put("Image"+to_string(contImages),this->jManager->ptreeToString(oneImage));
             contImages++;
             MainList->getTemp()->getValue()->setTemp(MainList->getTemp()->getValue()->getTemp()->getNext());
@@ -776,7 +798,7 @@ string DataBase::replace_ALL(string str , const string &from , const string &to)
 void DataBase::loadToMemory() {
 
     ifstream inFile;
-    inFile.open(this->root+"FileNames.txt");
+    inFile.open(root+"FileNames.txt");
     vector<string> galeriesVEC;
     if (inFile.is_open()) {
         string line;
@@ -792,7 +814,7 @@ void DataBase::loadToMemory() {
     for(const auto & i : galeriesVEC){
         this->addGalery(i);
         ifstream metadata;
-        metadata.open(this->root+i+"/MetaData.txt");
+        metadata.open(root+i+"/MetaData.txt");
 
         if (metadata.is_open()) {
             string jline;
