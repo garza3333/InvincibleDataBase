@@ -134,8 +134,6 @@ HTTP_PROTOTYPE(requestHandler);
                  * var valor = jsonRequest[nomDeLaLlave]
                  */
 
-
-
                 // TODO aqui debe estar logica del select
 
                 respuesta = this->jMan->ptreeToString(dataBase->selectImage(jsonRequest.dump()));

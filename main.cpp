@@ -125,10 +125,13 @@ int main(int argc , char * argv[]) {
     jsonM.printJson(dataB->selectImage(jsonM.ptreeToString(selectPT6)));
 
     cout<<"PHOTOS"<<endl;
+
+    dataB->showALLImages("Photos");
     ptree delete1;
     delete1.put("FROM","Photos");
     delete1.put("WHERE","name =  danielImage");
-    //dataB->deleteImage(jsonM.ptreeToString(delete1));
+    dataB->deleteImage(jsonM.ptreeToString(delete1));
+
     dataB->showALLImages("Photos");
 
 
